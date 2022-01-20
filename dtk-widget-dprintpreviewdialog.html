@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- dprintpreviewdialog.cpp -->
+  <title>DPrintPreviewDialog Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DPrintPreviewDialog</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#"><b>基本使用</b></a></li>
+<li class="level2"><a href="#"><b>其他接口</b></a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DPrintPreviewDialog Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DPrintPreviewDialog</span>
+<!-- $$$DPrintPreviewDialog-brief -->
+<p>Dtk 风格的打印预览页面. <a href="#details">More...</a></p>
+<!-- @@@DPrintPreviewDialog -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DPrintPreviewDialog&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="dtk-widget-ddialog.html">Dtk::Widget::DDialog</a></td></tr></table></div><ul>
+<li><a href="dtk-widget-dprintpreviewdialog-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$DPrintPreviewDialog-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>一个用于创建 Dtk 风格的打印预览页面，通常情况下，只需要 构建一个 DPrintPreivewDialog 对象，并将原始数据绘制 到连接 DPrintPreview::paintRequested 信号的槽函数 中,最后以模态的形式显示就可以正常使用。</p>
+<p>dtkwidget 项目的 collection 示例中有对打印预览的简单 示例。简单的讲：打印预览拥有两种预览模式，1. 同步预览模式 ，适用于数据量较小，且更新不太频繁的原始数据中，这种模式下 默认情况下的，打印预览仅会在页面大小或者打印机属性发生变化 时发射 DPrintPreview::paintRequested 信号。2. 异步 预览模式，该模式适用于数据量较大，且更新较频繁的原始数据， 这种模式下，打印预览会频繁触发异步的 DPrintPreview::paintRequested 信号，但每次接收的数据量较小，因此不用担心响应速度的问题。 默认情况下的打印预览窗口为同步模式。</p>
+<a name=""></a>
+<h3 id=""><b>基本使用</b></h3>
+<p>该代码在 example 中可以看到，这里简单贴出对应内容.</p>
+<pre class="cpp">
+         DPrintPreviewDialog dialog(<span class="keyword">this</span>);
+         <span class="comment">//测试保存PDF文件名称接口</span>
+         dialog<span class="operator">.</span>setDocName(<span class="string">&quot;test&quot;</span>);
+ <span class="preprocessor">#ifdef AsynPreview</span>
+         dialog<span class="operator">.</span>setAsynPreview(<span class="number">31</span>);
+         connect(<span class="operator">&amp;</span>dialog<span class="operator">,</span> <span class="type">QOverload</span><span class="operator">&lt;</span>DPrinter <span class="operator">*</span><span class="operator">,</span> <span class="keyword">const</span> <span class="type">QVector</span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> <span class="operator">&amp;</span><span class="operator">&gt;</span><span class="operator">::</span>of(<span class="operator">&amp;</span>DPrintPreviewDialog<span class="operator">::</span>paintRequested)<span class="operator">,</span>
+ <span class="preprocessor">#else</span>
+         connect(<span class="operator">&amp;</span>dialog<span class="operator">,</span> <span class="type">QOverload</span><span class="operator">&lt;</span>DPrinter <span class="operator">*</span><span class="operator">&gt;</span><span class="operator">::</span>of(<span class="operator">&amp;</span>DPrintPreviewDialog<span class="operator">::</span>paintRequested)<span class="operator">,</span>
+ <span class="preprocessor">#endif</span>
+ <span class="preprocessor">#ifdef AsynPreview</span>
+                 <span class="keyword">this</span><span class="operator">,</span> <span class="operator">[</span><span class="operator">=</span><span class="operator">]</span>(DPrinter <span class="operator">*</span>_printer<span class="operator">,</span> <span class="keyword">const</span> <span class="type">QVector</span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">&gt;</span> <span class="operator">&amp;</span>pageRange) {
+ <span class="preprocessor">#else</span>
+                 <span class="keyword">this</span><span class="operator">,</span> <span class="operator">[</span><span class="operator">=</span><span class="operator">]</span>(DPrinter <span class="operator">*</span>_printer) {
+ <span class="preprocessor">#endif</span>
+                     <span class="comment">// 此函数内代码为调试打印内容代码，调整较随意！</span>
+                     _printer<span class="operator">-</span><span class="operator">&gt;</span>setFromTo(<span class="number">1</span><span class="operator">,</span> <span class="number">31</span>);
+                     <span class="type">QPainter</span> painter(_printer);
+                     bool firstPage <span class="operator">=</span> <span class="keyword">true</span>;
+                     <span class="keyword">for</span> (<span class="type">int</span> page <span class="operator">=</span> _printer<span class="operator">-</span><span class="operator">&gt;</span>fromPage(); page <span class="operator">&lt;</span><span class="operator">=</span> _printer<span class="operator">-</span><span class="operator">&gt;</span>toPage(); <span class="operator">+</span><span class="operator">+</span>page) {
+ <span class="preprocessor">#ifdef AsynPreview</span>
+                         <span class="keyword">if</span> (<span class="operator">!</span>pageRange<span class="operator">.</span>contains(page))
+                             <span class="keyword">continue</span>;
+ <span class="preprocessor">#endif</span>
+
+                         painter<span class="operator">.</span>resetTransform();
+                         <span class="keyword">if</span> (<span class="operator">!</span>firstPage)
+                             _printer<span class="operator">-</span><span class="operator">&gt;</span>newPage();
+                         <span class="comment">// qApp-&gt;processEvents();</span>
+
+                         <span class="comment">// 给出调用方widget界面作为打印内容</span>
+                         <span class="type">double</span> xscale <span class="operator">=</span> _printer<span class="operator">-</span><span class="operator">&gt;</span>pageRect()<span class="operator">.</span>width() <span class="operator">/</span> <span class="type">double</span>(<span class="keyword">this</span><span class="operator">-</span><span class="operator">&gt;</span>width());
+                         <span class="type">double</span> yscale <span class="operator">=</span> _printer<span class="operator">-</span><span class="operator">&gt;</span>pageRect()<span class="operator">.</span>height() <span class="operator">/</span> <span class="type">double</span>(<span class="keyword">this</span><span class="operator">-</span><span class="operator">&gt;</span>height());
+                         <span class="type">double</span> scale <span class="operator">=</span> qMin(xscale<span class="operator">,</span> yscale);
+                         painter<span class="operator">.</span>translate(_printer<span class="operator">-</span><span class="operator">&gt;</span>pageRect()<span class="operator">.</span>width() <span class="operator">/</span> <span class="number">2.0</span><span class="operator">,</span> _printer<span class="operator">-</span><span class="operator">&gt;</span>pageRect()<span class="operator">.</span>height() <span class="operator">/</span> <span class="number">2.0</span>);
+                         painter<span class="operator">.</span>scale(scale<span class="operator">,</span> scale);
+                         painter<span class="operator">.</span>translate(<span class="operator">-</span><span class="keyword">this</span><span class="operator">-</span><span class="operator">&gt;</span>width() <span class="operator">/</span> <span class="number">2</span><span class="operator">,</span> <span class="operator">-</span><span class="keyword">this</span><span class="operator">-</span><span class="operator">&gt;</span>height() <span class="operator">/</span> <span class="number">2</span>);
+                         <span class="keyword">this</span><span class="operator">-</span><span class="operator">&gt;</span>render(<span class="operator">&amp;</span>painter);
+
+                         painter<span class="operator">.</span>resetTransform();
+                         <span class="type">QFont</span> font <span class="comment">/*(&quot;CESI仿宋-GB2312&quot;)*/</span>;
+                         font<span class="operator">.</span>setPixelSize(<span class="number">16</span>);
+                         font <span class="operator">=</span> <span class="type">QFont</span>(font<span class="operator">,</span> painter<span class="operator">.</span>device());
+                         <span class="type">QRectF</span> rect <span class="operator">=</span> _printer<span class="operator">-</span><span class="operator">&gt;</span>pageRect();
+                         rect <span class="operator">=</span> <span class="type">QRectF</span>(<span class="number">0</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> rect<span class="operator">.</span>width()<span class="operator">,</span> rect<span class="operator">.</span>height());
+                         painter<span class="operator">.</span>setFont(font);
+                         <span class="comment">// 画可用页面矩形,提供调试效果参考</span>
+                         painter<span class="operator">.</span>drawRect(rect);
+                         <span class="type">QFontMetricsF</span> fontMetrics(font);
+                         <span class="type">QString</span> text <span class="operator">=</span> <span class="type">QString</span>(<span class="string">&quot;统信软件 第%1页&quot;</span>)<span class="operator">.</span>arg(page);
+                         <span class="type">QRectF</span> stringRect <span class="operator">=</span> fontMetrics<span class="operator">.</span>boundingRect(text);
+                         <span class="comment">//添加页脚页面信息</span>
+                         painter<span class="operator">.</span>drawText(<span class="type">QPointF</span>(rect<span class="operator">.</span>bottomRight()<span class="operator">.</span>x() <span class="operator">-</span> stringRect<span class="operator">.</span>width()<span class="operator">,</span> rect<span class="operator">.</span>bottomRight()<span class="operator">.</span>y() <span class="operator">-</span> stringRect<span class="operator">.</span>height())<span class="operator">,</span>
+                                          <span class="type">QString</span>(<span class="string">&quot;统信软件 第%1页&quot;</span>)<span class="operator">.</span>arg(page));
+                         firstPage <span class="operator">=</span> <span class="keyword">false</span>;
+                     }
+                 });
+         dialog<span class="operator">.</span>exec();
+</pre>
+<p>示例的预览效果如下：</p>
+<p class="centerAlign"><img src="images/DPrintPreviewExample.png" alt="" /></p><p>上述代码中用宏 AsynPreview 控制是否使用异步模式，并且通过 分别连接两种模式的 DPrintPreview::paintRequested 信号 将原始数据绘制到打印机 printer 中。需要注意的是，异步模式下 该信号会传递一个 pageRange 的页码数据，这个数据里面会放置 本次重绘需要展示的页面，应用可以根据原始数据，动态提供对应 页码的数据给打印预览。同样地，在打印预览最后打印的阶段，也会 根据用户选择的页码多少，向外获取对应页码的原始数据。</p>
+<p><b>Warning:</b> pageRange 对应的数据为页码值，而非页面索引值！</p>
+<a name=""></a>
+<h3 id=""><b>其他接口</b></h3>
+<p>除同步和异步接口之外，打印预览还提供给外部一些其他接口，例如 setDocName 设置数据文件名，在输出 pdf 或者图片时可以看到 效果。 setPrintFromPath 按照文件路径打印的接口，使用这个 接口将文件的路径传递给打印机，打印预览会在用户点击打印按钮后 将该路径和用户操作的属性直接传递给打印机，而不通过打印预览进行 中间处理，需要注意的是，使用了这个接口后，仍需要通过DPrintPreview::paintRequested 信号传递原始数据，并且，由于使用该接口后，属性操作完全取决于打印机 ，因此部分打印预览的高级功能会禁用。</p>
+</div>
+<!-- @@@DPrintPreviewDialog -->
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

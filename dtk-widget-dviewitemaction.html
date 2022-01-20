@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- dstyleditemdelegate.cpp -->
+  <title>DViewItemAction Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DViewItemAction</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DViewItemAction Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DViewItemAction</span>
+<!-- $$$DViewItemAction-brief -->
+<p>是一个 action 活动, 其默认是不能被点击的. <a href="#details">More...</a></p>
+<!-- @@@DViewItemAction -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DViewItemAction&gt;</span>
+</td></tr></table></div><ul>
+</ul>
+<a name="details"></a>
+<!-- $$$DViewItemAction-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>setActionList(Qt::BottomEdge, *list) 的 BottomEdge 为水平方向的枚举值时候: LeftEdge, RightEdge, 其对应 alignment 枚举数值只有如下的有效：</p>
+<p>其参数 alignment 为如下值时候(才有效):</p>
+<ul>
+<li>AlignTop</li>
+<li>AlignVCenter</li>
+<li>AlignBottom</li>
+</ul>
+<p>此处举一个小例子, 可以自行修改相关参数, 查看结果, 理解参数:</p>
+<pre class="cpp">
+ <span class="type">QMainWindow</span> <span class="operator">*</span>wid <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QMainWindow</span>();
+ wid<span class="operator">-</span><span class="operator">&gt;</span>resize(<span class="number">800</span><span class="operator">,</span> <span class="number">600</span>);
+
+ <span class="comment">//视图和模型</span>
+ DListView <span class="operator">*</span>view <span class="operator">=</span> <span class="keyword">new</span> DListView(wid);
+ <span class="type">QStandardItemModel</span> <span class="operator">*</span>model <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QStandardItemModel</span>(view);
+ view<span class="operator">-</span><span class="operator">&gt;</span>setModel(model);
+
+ <span class="comment">//标准DStandardItem item</span>
+ DStandardItem <span class="operator">*</span>item <span class="operator">=</span> <span class="keyword">new</span> DStandardItem();
+ item<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;@1:这是同一个item 的text\n@2:这是同一个item 的text\n@3:这是同一个item 的text\n@4:这是同一个item 的text\n@5:这是同一个item 的text\n@6:这是同一个item 的text&quot;</span>);
+
+ <span class="comment">//DViewItemAction() 的形参: 其参数 alignment = AlignLeft 或 AlignHCenter 或  AlignRight; 设置为 AlignTop, AlignVCenter, AlignBottom 也是无效的</span>
+ DViewItemAction <span class="operator">*</span>act1 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignBottom<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">50</span><span class="operator">,</span> <span class="number">50</span>));
+ act1<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act1&quot;</span>);
+ act1<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ DViewItemAction <span class="operator">*</span>act2 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignVCenter<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>());
+ act2<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act2&quot;</span>);
+ act2<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ DViewItemAction <span class="operator">*</span>act3 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignTop<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">100</span><span class="operator">,</span> <span class="number">50</span>));
+ act3<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act3&quot;</span>);
+ act3<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ DViewItemAction <span class="operator">*</span>act4 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignBottom<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">100</span><span class="operator">,</span> <span class="number">50</span>));
+ act4<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act4&quot;</span>);
+ act4<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+
+ DViewItemActionList <span class="operator">*</span>list <span class="operator">=</span> <span class="keyword">new</span> DViewItemActionList();
+ list<span class="operator">-</span><span class="operator">&gt;</span>append(act1);
+ list<span class="operator">-</span><span class="operator">&gt;</span>append(act2);
+ list<span class="operator">-</span><span class="operator">&gt;</span>append(act3);
+ list<span class="operator">-</span><span class="operator">&gt;</span>append(act4);
+
+ <span class="comment">//edge实参: TopEdg, BottomEdge (主要设置前面两个参数), LeftEdge, RightEdge</span>
+ item<span class="operator">-</span><span class="operator">&gt;</span>setActionList(<span class="type">Qt</span><span class="operator">::</span>LeftEdge<span class="operator">,</span> <span class="operator">*</span>list);
+ model<span class="operator">-</span><span class="operator">&gt;</span>appendRow(item);
+
+ wid<span class="operator">-</span><span class="operator">&gt;</span>setCentralWidget(view);
+ wid<span class="operator">-</span><span class="operator">&gt;</span>show();
+</pre>
+<p>//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>setActionList(Qt::BottomEdge, *list) 的 BottomEdge 为竖直方向的枚举值时候: TopEdge, BottomEdge, 其对应 alignment 枚举数值只有如下的有效：</p>
+<p>其参数 alignment 为如下值时候(才有效):</p>
+<ul>
+<li>AlignLeft</li>
+<li>AlignHCenter</li>
+<li>AlignRight</li>
+</ul>
+<p>此处举一个小例子, 可以自行修改相关参数, 查看结果, 理解参数:</p>
+<pre class="cpp">
+ <span class="type">QMainWindow</span> <span class="operator">*</span>wid <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QMainWindow</span>();
+ wid<span class="operator">-</span><span class="operator">&gt;</span>resize(<span class="number">800</span><span class="operator">,</span> <span class="number">600</span>);
+
+ <span class="comment">//视图和模型</span>
+ DListView <span class="operator">*</span>view <span class="operator">=</span> <span class="keyword">new</span> DListView(wid);
+ <span class="type">QStandardItemModel</span> <span class="operator">*</span>model <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QStandardItemModel</span>(view);
+ view<span class="operator">-</span><span class="operator">&gt;</span>setModel(model);
+
+ <span class="comment">//标准DStandardItem item</span>
+ DStandardItem <span class="operator">*</span>item <span class="operator">=</span> <span class="keyword">new</span> DStandardItem();
+ item<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;这是一个item 的text&quot;</span>);
+
+ <span class="comment">//DViewItemAction() 的形参: 其参数 alignment = AlignLeft 或 AlignHCenter 或  AlignRight; 设置为 AlignTop, AlignVCenter, AlignBottom 也是无效的</span>
+ DViewItemAction <span class="operator">*</span>act1 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignLeft<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">50</span><span class="operator">,</span> <span class="number">50</span>));
+ act1<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act1&quot;</span>);
+ act1<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ DViewItemAction <span class="operator">*</span>act2 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignRight<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>());
+ act2<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act2&quot;</span>);
+ act2<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ DViewItemAction <span class="operator">*</span>act3 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignHCenter<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">100</span><span class="operator">,</span> <span class="number">50</span>));
+ act3<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act3&quot;</span>);
+ act3<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ DViewItemAction <span class="operator">*</span>act4 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignLeft<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">100</span><span class="operator">,</span> <span class="number">50</span>));
+ act4<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act4&quot;</span>);
+ act4<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+
+ DViewItemActionList <span class="operator">*</span>list <span class="operator">=</span> <span class="keyword">new</span> DViewItemActionList();
+ list<span class="operator">-</span><span class="operator">&gt;</span>append(act1);
+ list<span class="operator">-</span><span class="operator">&gt;</span>append(act2);
+ list<span class="operator">-</span><span class="operator">&gt;</span>append(act3);
+ list<span class="operator">-</span><span class="operator">&gt;</span>append(act4);
+
+ <span class="comment">//edge实参: TopEdg, BottomEdge (主要设置前面两个参数), LeftEdge, RightEdge</span>
+ item<span class="operator">-</span><span class="operator">&gt;</span>setActionList(<span class="type">Qt</span><span class="operator">::</span>BottomEdge<span class="operator">,</span> <span class="operator">*</span>list);
+ model<span class="operator">-</span><span class="operator">&gt;</span>appendRow(item);
+
+ wid<span class="operator">-</span><span class="operator">&gt;</span>setCentralWidget(view);
+ wid<span class="operator">-</span><span class="operator">&gt;</span>show();
+</pre>
+<p><i>alignment</i> 设置本控件对象(在父控件的)方向位置: 居左, 居中, 居右 (其他枚举值此处无效) <i>iconSize</i> 本控件的图标 icon 的大小</p>
+</div>
+<!-- @@@DViewItemAction -->
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

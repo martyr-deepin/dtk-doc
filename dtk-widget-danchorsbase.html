@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- danchors.cpp -->
+  <title>DAnchorsBase Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DAnchorsBase</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#margin-offset">margin_offset 锚定的间隔和偏移</a></li>
+<li class="level2"><a href="#loop-anchor">loop_anchor 判断循环锚定的方式</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DAnchorsBase Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DAnchorsBase</span>
+<!-- $$$DAnchorsBase-brief -->
+<p>DAnchorsBase 提供了一种指定 QWidget 与其它 QWidget 之间的关系来确定 其位置的方法. <a href="#details">More...</a></p>
+<!-- @@@DAnchorsBase -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DAnchorsBase&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="dtk-widget-danchors.html">Dtk::Widget::DAnchors</a></p>
+</td></tr></table></div><ul>
+<li><a href="dtk-widget-danchorsbase-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#moveBottom">moveBottom</a></b>(int <i>arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#moveHorizontalCenter">moveHorizontalCenter</a></b>(int <i>arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#moveLeft">moveLeft</a></b>(int <i>arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#moveRight">moveRight</a></b>(int <i>arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#moveTop">moveTop</a></b>(int <i>arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#moveVerticalCenter">moveVerticalCenter</a></b>(int <i>arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#setAnchor-1">setAnchor</a></b>(const int &amp;<i>p</i>, QWidget *<i>target</i>, const int &amp;<i>point</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#setCenterIn-1">setCenterIn</a></b>(Dtk::Widget::DAnchorsBase *<i>centerIn</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#setFill-1">setFill</a></b>(Dtk::Widget::DAnchorsBase *<i>fill</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DAnchorsBase-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>除了比较传统的布局方式之外，DtkWidget 还提供了一种使用锚定概念布局控件的方法（ 类似于 QQuickItem 中的 anchors 属性），可以认为每个控件具有一组6个不可见的“锚 线”：left，horizontalCenter，right，top，verticalCenter和bottom，如图所示：</p>
+<p class="centerAlign"><img src="images/edges_anchors.png" alt="" /></p><p>使用 <a href="dtk-widget-danchors.html">DAnchors</a> 可以让 QWidget 基于这些“锚线”来确定相互间的关系，如：</p>
+<pre class="cpp">
+ DAnchors<span class="operator">&lt;</span><span class="type">QLabel</span><span class="operator">&gt;</span> rect1(<span class="keyword">new</span> <span class="type">QLabel</span>(<span class="string">&quot;rect1&quot;</span>));
+ DAnchors<span class="operator">&lt;</span><span class="type">QLabel</span><span class="operator">&gt;</span> rect2(<span class="keyword">new</span> <span class="type">QLabel</span>(<span class="string">&quot;rect2&quot;</span>));
+
+ rect2<span class="operator">.</span>setLeft(rect1<span class="operator">.</span>right());
+</pre>
+<p>这样 rect2 的左边界就会和 rect1 的右边界对齐：</p>
+<p class="centerAlign"><img src="images/edge1.png" alt="" /></p><p>另外还可以同时设置多个“锚线”：</p>
+<pre class="cpp">
+ DAnchors<span class="operator">&lt;</span><span class="type">QLabel</span><span class="operator">&gt;</span> rect1(<span class="keyword">new</span> <span class="type">QLabel</span>(<span class="string">&quot;rect1&quot;</span>));
+ DAnchors<span class="operator">&lt;</span><span class="type">QLabel</span><span class="operator">&gt;</span> rect2(<span class="keyword">new</span> <span class="type">QLabel</span>(<span class="string">&quot;rect2&quot;</span>));
+
+ rect2<span class="operator">.</span>setTop(rect1<span class="operator">.</span>bottom());
+ rect2<span class="operator">.</span>setLeft(rect1<span class="operator">.</span>right());
+</pre>
+<p class="centerAlign"><img src="images/edge3.png" alt="" /></p><p>锚定布局同时在多个控件中使用，控件之间只需要满足以下条件： <i>控件之间为兄弟关系，或被锚定控件为父控件</i> <i>锚定关系不能循环绑定</i></p>
+<a name="margin-offset"></a>
+<h3 id="margin-offset">margin_offset 锚定的间隔和偏移</h3>
+<p>锚定系统允许设置“锚线”之间的间距，和“锚线”一一对应，每个控件都有一组4个 margin： leftMargin, rightMargin, topMargin 和 bottomMargin 以及两个 offset： horizontalCenterOffset 和 verticalCenterOffset。</p>
+<p class="centerAlign"><img src="images/margins_anchors.png" alt="" /></p><p>下面是左margin的例子：</p>
+<pre class="cpp">
+ DAnchors<span class="operator">&lt;</span><span class="type">QLabel</span><span class="operator">&gt;</span> rect1(<span class="keyword">new</span> <span class="type">QLabel</span>(<span class="string">&quot;rect1&quot;</span>));
+ DAnchors<span class="operator">&lt;</span><span class="type">QLabel</span><span class="operator">&gt;</span> rect2(<span class="keyword">new</span> <span class="type">QLabel</span>(<span class="string">&quot;rect2&quot;</span>));
+
+ rect2<span class="operator">.</span>setLeftMargin(<span class="number">5</span>);
+ rect2<span class="operator">.</span>setLeft(rect1<span class="operator">.</span>right());
+</pre>
+<p>rect2 的左边界相距 rect1 的右边界5个像素：</p>
+<p class="centerAlign"><img src="images/edge2.png" alt="" /></p><p><b>Note: </b>margin 仅仅是对设置的锚点生效，并不是让控件本身增加了边距，如果设置了 margin，但并没有设置相应的锚点，对控件本身而已是没有任何影响的。margin 的值可以 为负数，通过值的正负来决定margin的方向（内 margin 还是外 margin）</p>
+<p>除了基于“锚线”来设置锚定外，另外还有 <a href="dtk-widget-danchorsbase.html#setCenterIn-1">setCenterIn</a> 和 <a href="dtk-widget-danchorsbase.html#setFill-1">setFill</a> 这两个比较特殊的 的实现。</p>
+<a name="loop-anchor"></a>
+<h3 id="loop-anchor">loop_anchor 判断循环锚定的方式</h3>
+<p>假设 DAnchorsBase a1, a2; a1.setRight(a2.left()); 则判断 a1 和 a2 之间 会不会存在循环绑定的逻辑为: 尝试更改 a1 右边界的值，更新后如果 a2 左边界的值产出了变化，则认为会导致循环绑 定，否则认为不存在</p>
+</div>
+<!-- @@@DAnchorsBase -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$moveBottom[overload1]$$$moveBottomint -->
+<h3 class="fn" id="moveBottom"><a name="moveBottom"></a><span class="type">void</span> DAnchorsBase::<span class="name">moveBottom</span>(<span class="type">int</span> <i>arg</i>)</h3>
+<p>移动 target 控件的下边界到 arg 这个位置 <i>arg</i> 要移动到的位置</p>
+<!-- @@@moveBottom -->
+<!-- $$$moveHorizontalCenter[overload1]$$$moveHorizontalCenterint -->
+<h3 class="fn" id="moveHorizontalCenter"><a name="moveHorizontalCenter"></a><span class="type">void</span> DAnchorsBase::<span class="name">moveHorizontalCenter</span>(<span class="type">int</span> <i>arg</i>)</h3>
+<p>移动 target 控件的水平中线到 arg 这个位置 <i>arg</i> 要移动到的位置</p>
+<!-- @@@moveHorizontalCenter -->
+<!-- $$$moveLeft[overload1]$$$moveLeftint -->
+<h3 class="fn" id="moveLeft"><a name="moveLeft"></a><span class="type">void</span> DAnchorsBase::<span class="name">moveLeft</span>(<span class="type">int</span> <i>arg</i>)</h3>
+<p>移动 target 控件的左边界到 arg 这个位置 <i>arg</i> 要移动到的位置</p>
+<!-- @@@moveLeft -->
+<!-- $$$moveRight[overload1]$$$moveRightint -->
+<h3 class="fn" id="moveRight"><a name="moveRight"></a><span class="type">void</span> DAnchorsBase::<span class="name">moveRight</span>(<span class="type">int</span> <i>arg</i>)</h3>
+<p>移动 target 控件的右边界到 arg 这个位置 <i>arg</i> 要移动到的位置</p>
+<!-- @@@moveRight -->
+<!-- $$$moveTop[overload1]$$$moveTopint -->
+<h3 class="fn" id="moveTop"><a name="moveTop"></a><span class="type">void</span> DAnchorsBase::<span class="name">moveTop</span>(<span class="type">int</span> <i>arg</i>)</h3>
+<p>移动 target 控件的上边界到 arg 这个位置 <i>arg</i> 要移动到的位置</p>
+<!-- @@@moveTop -->
+<!-- $$$moveVerticalCenter[overload1]$$$moveVerticalCenterint -->
+<h3 class="fn" id="moveVerticalCenter"><a name="moveVerticalCenter"></a><span class="type">void</span> DAnchorsBase::<span class="name">moveVerticalCenter</span>(<span class="type">int</span> <i>arg</i>)</h3>
+<p>移动 target 控件的竖直中线到 arg 这个位置 <i>arg</i> 要移动到的位置</p>
+<!-- @@@moveVerticalCenter -->
+<!-- $$$setAnchor$$$setAnchorconstint&QWidget*constint& -->
+<h3 class="fn" id="setAnchor-1"><a name="setAnchor-1"></a><span class="type">bool</span> DAnchorsBase::<span class="name">setAnchor</span>(const <span class="type">int</span> &amp;<i>p</i>, <span class="type">QWidget</span> *<i>target</i>, const <span class="type">int</span> &amp;<i>point</i>)</h3>
+<p>为 DAnchorsBase::target 对象设置锚定规则</p>
+<p><b>Note: </b>可能会为目标控件隐式创建其对应的 <a href="dtk-widget-danchorsbase.html">DAnchorsBase</a> 对象 <i>p</i> 为当前控件的哪个锚线/锚点设置锚定规则 <i>target</i> 锚定的目标控件 <i>point</i> 锚定的目标锚线/锚点 Returns 如果设置成功，则返回 true，否则返回 false</p>
+<!-- @@@setAnchor -->
+<!-- $$$setCenterIn$$$setCenterInDtk::Widget::DAnchorsBase* -->
+<h3 class="fn" id="setCenterIn-1"><a name="setCenterIn-1"></a><span class="type">bool</span> DAnchorsBase::<span class="name">setCenterIn</span>(<span class="type"><a href="dtk-widget-danchorsbase.html">Dtk::Widget::DAnchorsBase</a></span> *<i>centerIn</i>)</h3>
+<p>将 centerIn 中的target()作为参数调用其它重载函数 <i>centerIn</i> Returns</p>
+<!-- @@@setCenterIn -->
+<!-- $$$setFill$$$setFillDtk::Widget::DAnchorsBase* -->
+<h3 class="fn" id="setFill-1"><a name="setFill-1"></a><span class="type">bool</span> DAnchorsBase::<span class="name">setFill</span>(<span class="type"><a href="dtk-widget-danchorsbase.html">Dtk::Widget::DAnchorsBase</a></span> *<i>fill</i>)</h3>
+<p>将 fill 中的target()作为参数调用其它重载函数 <i>fill</i> Returns</p>
+<!-- @@@setFill -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- dfiledragclient.cpp -->
+  <title>DFileDragClient Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DFileDragClient</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DFileDragClient Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-gui.html">Gui</a>::DFileDragClient</span>
+<!-- $$$DFileDragClient-brief -->
+<p>提供拖拽文件时与文件发送方交互的接口. <a href="#details">More...</a></p>
+<!-- @@@DFileDragClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DFileDragClient&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="dtk-gui-dfiledragclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledragclient.html#checkMimeData">checkMimeData</a></b>(const QMimeData *<i>data</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledragclient.html#setTargetData">setTargetData</a></b>(const QMimeData *<i>data</i>, int <i>key</i>, int <i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledragclient.html#setTargetUrl">setTargetUrl</a></b>(const QMimeData *<i>data</i>, int <i>url</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DFileDragClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+</div>
+<!-- @@@DFileDragClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$checkMimeData[overload1]$$$checkMimeDataconstQMimeData* -->
+<h3 class="fn" id="checkMimeData"><a name="checkMimeData"></a><code>[static] </code><span class="type">bool</span> DFileDragClient::<span class="name">checkMimeData</span>(const <span class="type">QMimeData</span> *<i>data</i>)</h3>
+<p>DFileDragClient::checkMimeData <i>data</i> Returns 包含 DND_MIME_PID 格式的数据时返回 true，否则返回 false</p>
+<p><b>Note: </b>通常在接收拖放数据的应用的dropEvent(QDropEvent *event)函数中检测当前 event-&gt;mimeData() 是否是 <a href="dtk-gui-dfiledrag.html">DFileDrag</a></p>
+<!-- @@@checkMimeData -->
+<!-- $$$setTargetData[overload1]$$$setTargetDataconstQMimeData*intint -->
+<h3 class="fn" id="setTargetData"><a name="setTargetData"></a><code>[static] </code><span class="type">void</span> DFileDragClient::<span class="name">setTargetData</span>(const <span class="type">QMimeData</span> *<i>data</i>, <span class="type">int</span> <i>key</i>, <span class="type">int</span> <i>value</i>)</h3>
+<p>DFileDragClient::setTargetData <i>data</i> 拖放时传入的data,用于获取和发送数据的应用dbus通讯需要的一些信息 <i>key</i> <i>value</i></p>
+<p><b>Note: </b>向文件发送方设置自定义数据</p>
+<!-- @@@setTargetData -->
+<!-- $$$setTargetUrl[overload1]$$$setTargetUrlconstQMimeData*int -->
+<h3 class="fn" id="setTargetUrl"><a name="setTargetUrl"></a><code>[static] </code><span class="type">void</span> DFileDragClient::<span class="name">setTargetUrl</span>(const <span class="type">QMimeData</span> *<i>data</i>, <span class="type">int</span> <i>url</i>)</h3>
+<p>DFileDragClient::setTargetUrl <i>data</i> <i>url</i></p>
+<p><b>Note: </b>告知文件发送方拖拽目标路径</p>
+<!-- @@@setTargetUrl -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

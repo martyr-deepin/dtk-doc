@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- denhancedwidget.cpp -->
+  <title>DEnhancedWidget Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DEnhancedWidget</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DEnhancedWidget Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DEnhancedWidget</span>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DEnhancedWidget&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="dtk-widget-denhancedwidget-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#enabledChanged">enabledChanged</a></b>(bool <i>enabled</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#heightChanged">heightChanged</a></b>(int <i>height</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#setEnabled">setEnabled</a></b>(bool <i>enabled</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#showed">showed</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#sizeChanged">sizeChanged</a></b>(const int &amp;<i>size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#targetChanged">targetChanged</a></b>(QWidget *<i>target</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#widthChanged">widthChanged</a></b>(int <i>width</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#yChanged">yChanged</a></b>(int <i>y</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DEnhancedWidget-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>QWidget 中只有少量的信号用于通知和窗口相关的属性变化，常用的如 x y width height 等属性的改变只能通过继承重写对应的事件才能知晓。DEnhancedWidget 中通过使用事件 过滤器监听目标控件的事件，收到对应事件之后转换为自身的信号发射出来，以此来实现对 QWidget 对象的信号扩展。</p>
+</div>
+<!-- @@@DEnhancedWidget -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$enabledChanged[overload1]$$$enabledChangedbool -->
+<h3 class="fn" id="enabledChanged"><a name="enabledChanged"></a><span class="type">void</span> DEnhancedWidget::<span class="name">enabledChanged</span>(<span class="type">bool</span> <i>enabled</i>)</h3>
+<p><i>enabled</i> 是否可用. 这个信号在属性 DEnhancedWidget::enabled <i>enabled</i> 被改变后发送</p>
+<!-- @@@enabledChanged -->
+<!-- $$$heightChanged[overload1]$$$heightChangedint -->
+<h3 class="fn" id="heightChanged"><a name="heightChanged"></a><span class="type">void</span> DEnhancedWidget::<span class="name">heightChanged</span>(<span class="type">int</span> <i>height</i>)</h3>
+<p><i>height</i> 改变的高度大小. 这个信号在目标控件的高度改变后被发送</p>
+<!-- @@@heightChanged -->
+<!-- $$$setEnabled[overload1]$$$setEnabledbool -->
+<h3 class="fn" id="setEnabled"><a name="setEnabled"></a><span class="type">void</span> DEnhancedWidget::<span class="name">setEnabled</span>(<span class="type">bool</span> <i>enabled</i>)</h3>
+<p>DEnhancedWidget::setEnabled <i>enabled</i></p>
+<p><b>See also </b>DEnhancedWidget::enabled.</p>
+<!-- @@@setEnabled -->
+<!-- $$$showed[overload1]$$$showed -->
+<h3 class="fn" id="showed"><a name="showed"></a><span class="type">void</span> DEnhancedWidget::<span class="name">showed</span>()</h3>
+<p>这个信号在目标控件显示后发送</p>
+<!-- @@@showed -->
+<!-- $$$sizeChanged[overload1]$$$sizeChangedconstint& -->
+<h3 class="fn" id="sizeChanged"><a name="sizeChanged"></a><span class="type">void</span> DEnhancedWidget::<span class="name">sizeChanged</span>(const <span class="type">int</span> &amp;<i>size</i>)</h3>
+<p><i>size</i> 改变的大小. 这个信号在目标控件的大小改变后被发送</p>
+<!-- @@@sizeChanged -->
+<!-- $$$targetChanged[overload1]$$$targetChangedQWidget* -->
+<h3 class="fn" id="targetChanged"><a name="targetChanged"></a><span class="type">void</span> DEnhancedWidget::<span class="name">targetChanged</span>(<span class="type">QWidget</span> *<i>target</i>)</h3>
+<p><i>target</i> 目标控件. 这个信号在属性 DEnhancedWidget::target 被改变后发送</p>
+<!-- @@@targetChanged -->
+<!-- $$$widthChanged[overload1]$$$widthChangedint -->
+<h3 class="fn" id="widthChanged"><a name="widthChanged"></a><span class="type">void</span> DEnhancedWidget::<span class="name">widthChanged</span>(<span class="type">int</span> <i>width</i>)</h3>
+<p><i>width</i> 改变的宽度大小. 这个信号在目标控件的宽度改变后被发送</p>
+<!-- @@@widthChanged -->
+<!-- $$$yChanged[overload1]$$$yChangedint -->
+<h3 class="fn" id="yChanged"><a name="yChanged"></a><span class="type">void</span> DEnhancedWidget::<span class="name">yChanged</span>(<span class="type">int</span> <i>y</i>)</h3>
+<p><i>y</i> 改变的 y 轴坐标. 这个信号在目标控件的 y 坐标改变后被发送</p>
+<!-- @@@yChanged -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

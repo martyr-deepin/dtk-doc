@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- dstyleoption.cpp -->
+  <title>DFontSizeManager Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DFontSizeManager</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DFontSizeManager Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DFontSizeManager</span>
+<!-- $$$DFontSizeManager-brief -->
+<p>字体大小设置的一个类,系统默认只设置T6. <a href="#details">More...</a></p>
+<!-- @@@DFontSizeManager -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DFontSizeManager&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="dtk-widget-dfontsizemanager-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dfontsizemanager.html#SizeType-enum">SizeType</a></b> { T1, T2, T3, T4, T5, &hellip;, T10 }</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dfontsizemanager.html#bind-1">bind</a></b>(QWidget *<i>widget</i>, Dtk::Widget::DFontSizeManager::SizeType <i>type</i>, int <i>weight</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dfontsizemanager.html#fontPixelSize">fontPixelSize</a></b>(<i>Dtk::Widget::DFontSizeManager::SizeType</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dfontsizemanager.html#get-1">get</a></b>(<i>Dtk::Widget::DFontSizeManager::SizeType</i>, <i>int</i>, <i>const int &amp;</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dfontsizemanager.html#setFontGenericPixelSize">setFontGenericPixelSize</a></b>(int <i>size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dfontsizemanager.html#setFontPixelSize">setFontPixelSize</a></b>(Dtk::Widget::DFontSizeManager::SizeType <i>type</i>, int <i>size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dfontsizemanager.html#unbind">unbind</a></b>(QWidget *<i>widget</i>)</td></tr>
+</table></div>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Dtk::Widget::DFontSizeManager *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dfontsizemanager.html#instance">instance</a></b>()</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DFontSizeManager-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+</div>
+<!-- @@@DFontSizeManager -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$SizeType$$$T1$$$T2$$$T3$$$T4$$$T5$$$T6$$$T7$$$T8$$$T9$$$T10$$$NSizeTypes -->
+<h3 class="fn" id="SizeType-enum"><a name="SizeType-enum"></a>enum DFontSizeManager::<span class="name">SizeType</span></h3>
+<p>DFontSizeManager::SizeType 定义了 <a href="dtk-widget-dfontsizemanager.html">DFontSizeManager</a> 的系统字体的定义的大小; 而系统只会设置 T6 为系统默认的字体.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DFontSizeManager::T1</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">系统级别为 T1 的字体大小, 默认是40 px</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DFontSizeManager::T2</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">系统级别为 T2 的字体大小, 默认是30 px</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DFontSizeManager::T3</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">系统级别为 T3 的字体大小, 默认是24 px</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DFontSizeManager::T4</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">系统级别为 T4 的字体大小, 默认是20 px</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DFontSizeManager::T5</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">系统级别为 T5 的字体大小, 默认是17 px</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DFontSizeManager::T6</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">系统级别为 T6 的字体大小, 默认是14 px</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DFontSizeManager::T7</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">系统级别为 T7 的字体大小, 默认是13 px</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DFontSizeManager::T8</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">系统级别为 T8 的字体大小, 默认是12 px</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DFontSizeManager::T9</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">系统级别为 T9 的字体大小, 默认是11 px</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DFontSizeManager::T10</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">系统级别为 T10 的字体大小, 默认是10 px</td></tr>
+</table></div>
+<!-- @@@SizeType -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$bind$$$bindQWidget*Dtk::Widget::DFontSizeManager::SizeTypeint -->
+<h3 class="fn" id="bind-1"><a name="bind-1"></a><span class="type">void</span> DFontSizeManager::<span class="name">bind</span>(<span class="type">QWidget</span> *<i>widget</i>, <span class="type"><a href="dtk-widget-dfontsizemanager.html#SizeType-enum">Dtk::Widget::DFontSizeManager::SizeType</a></span> <i>type</i>, <span class="type">int</span> <i>weight</i>)</h3>
+<p>将字体的大小枚举 <a href="dtk-widget-dfontsizemanager.html#SizeType-enum">SizeType</a> 和控件 widget 进行绑定, 其控件的字体大小(随绑定的枚举的)对应值的改变而改变; 系统自定义的绑定枚举值 T6, 若 T6 = 14px, 则其他枚举 T1 - T10 的数值,依次为:40, 30, 24, 20, 17, 14(T6), 13, 12, 11, 10; 系统自定义的绑定枚举值 T6 改为 T6 = 20px, 则其他枚举 T1 - T10 的数值,依次为:46, 36, 30, 26, 23, 20(T6), 19, 18, 17, 16; 即: 其对应的无论 T6 为何值, 其两个相邻的 T 值的差是定值: T(n) - T(n-1) == 定值 而系统是只设置 T6 这以枚举, 作为基准.</p>
+<p><i>widget</i> 将要绑定字体大小枚举数值的控件 <i>type</i> 字体的枚举类型, 每一个枚举数值对应着一个字体像素大小</p>
+<!-- @@@bind -->
+<!-- $$$fontPixelSize[overload1]$$$fontPixelSizeDtk::Widget::DFontSizeManager::SizeType -->
+<h3 class="fn" id="fontPixelSize"><a name="fontPixelSize"></a><span class="type">int</span> DFontSizeManager::<span class="name">fontPixelSize</span>(<i>Dtk::Widget::DFontSizeManager::SizeType</i>) const</h3>
+<p>获取字体像素的大小.</p>
+<p><i>type</i> 字体枚举类型 Returns 返回字体像素的大小</p>
+<p><b>See also </b><a href="dtk-widget-dfontsizemanager.html#setFontPixelSize">setFontPixelSize</a>().</p>
+<!-- @@@fontPixelSize -->
+<!-- $$$get$$$getDtk::Widget::DFontSizeManager::SizeTypeintconstint& -->
+<h3 class="fn" id="get-1"><a name="get-1"></a>const <span class="type">int</span> DFontSizeManager::<span class="name">get</span>(<i>Dtk::Widget::DFontSizeManager::SizeType</i>, <i>int</i>, <i>const int &amp;</i>) const</h3>
+<p>获取字体.</p>
+<p><i>type</i> 字体的大小枚举 <i>base</i> 将改变大小的字体 Returns 返回设置字体大小后的字体</p>
+<!-- @@@get -->
+<!-- $$$instance[overload1]$$$instance -->
+<h3 class="fn" id="instance"><a name="instance"></a><code>[static] </code><span class="type"><a href="dtk-widget-dfontsizemanager.html">Dtk::Widget::DFontSizeManager</a></span> *DFontSizeManager::<span class="name">instance</span>()</h3>
+<p>创建一个字体管理的实例.</p>
+<p>Returns 返回一个创建的 static <a href="dtk-widget-dfontsizemanager.html">DFontSizeManager</a> 实例</p>
+<!-- @@@instance -->
+<!-- $$$setFontGenericPixelSize[overload1]$$$setFontGenericPixelSizeint -->
+<h3 class="fn" id="setFontGenericPixelSize"><a name="setFontGenericPixelSize"></a><span class="type">void</span> DFontSizeManager::<span class="name">setFontGenericPixelSize</span>(<span class="type">int</span> <i>size</i>)</h3>
+<p>设置字体的通用像素大小.</p>
+<p><i>size</i> 预设计的字体像素的大小</p>
+<!-- @@@setFontGenericPixelSize -->
+<!-- $$$setFontPixelSize[overload1]$$$setFontPixelSizeDtk::Widget::DFontSizeManager::SizeTypeint -->
+<h3 class="fn" id="setFontPixelSize"><a name="setFontPixelSize"></a><span class="type">void</span> DFontSizeManager::<span class="name">setFontPixelSize</span>(<span class="type"><a href="dtk-widget-dfontsizemanager.html#SizeType-enum">Dtk::Widget::DFontSizeManager::SizeType</a></span> <i>type</i>, <span class="type">int</span> <i>size</i>)</h3>
+<p>设置字体像素大小.</p>
+<p><i>type</i> 字体枚举类型 <i>size</i> 字体大小</p>
+<p><b>See also </b><a href="dtk-widget-dfontsizemanager.html#fontPixelSize">fontPixelSize</a>().</p>
+<!-- @@@setFontPixelSize -->
+<!-- $$$unbind[overload1]$$$unbindQWidget* -->
+<h3 class="fn" id="unbind"><a name="unbind"></a><span class="type">void</span> DFontSizeManager::<span class="name">unbind</span>(<span class="type">QWidget</span> *<i>widget</i>)</h3>
+<p>将字体大小枚举值和 widget 的绑定解除, 不跟随 &quot;枚举对应的像素值&quot; 而改变本控件的字体大小.</p>
+<p><i>widget</i> 与 &quot;字体枚举所对应的像素值&quot; 的 (解除绑定的控件) 对象</p>
+<!-- @@@unbind -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

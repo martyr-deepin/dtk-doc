@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- ddialog.cpp -->
+  <title>DDialog Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DDialog</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#differences-differences-with-qdialog">differences Differences with QDialog</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DDialog Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DDialog</span>
+<!-- $$$DDialog-brief -->
+<p>可以使用 DDialog 类快速创建符合 DDE 风格的简要对话框窗口. <a href="#details">More...</a></p>
+<!-- @@@DDialog -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DDialog&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="dtk-widget-daboutdialog.html">Dtk::Widget::DAboutDialog</a> and <a href="dtk-widget-dprintpreviewdialog.html">Dtk::Widget::DPrintPreviewDialog</a></p>
+</td></tr></table></div><ul>
+<li><a href="dtk-widget-ddialog-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#addButtons">addButtons</a></b>(const int &amp;<i>text</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#addContent">addContent</a></b>(QWidget *<i>widget</i>, int <i>alignment</i> = {})</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#addSpacing">addSpacing</a></b>(int <i>spacing</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#clearButtons">clearButtons</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#clearContents">clearContents</a></b>(bool <i>isDelete</i> = true)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#clearSpacing">clearSpacing</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#insertButton">insertButton</a></b>(int <i>index</i>, const int &amp;<i>text</i>, bool <i>isDefault</i> = false, int <i>type</i> = ...)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#insertButton-1">insertButton</a></b>(int <i>index</i>, QAbstractButton *<i>button</i>, bool <i>isDefault</i> = false)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#insertButtons">insertButtons</a></b>(int <i>index</i>, const int &amp;<i>text</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#insertContent">insertContent</a></b>(int <i>index</i>, QWidget *<i>widget</i>, int <i>alignment</i> = {})</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#insertSpacing">insertSpacing</a></b>(int <i>index</i>, int <i>spacing</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#removeButton">removeButton</a></b>(int <i>index</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#removeButton-1">removeButton</a></b>(QAbstractButton *<i>button</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#removeButtonByText">removeButtonByText</a></b>(const int &amp;<i>text</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#removeContent">removeContent</a></b>(QWidget *<i>widget</i>, bool <i>isDelete</i> = true)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#setButtonIcon">setButtonIcon</a></b>(int <i>index</i>, const int &amp;<i>icon</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#setButtonText">setButtonText</a></b>(int <i>index</i>, const int &amp;<i>text</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#setDefaultButton">setDefaultButton</a></b>(int <i>index</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#setDefaultButton-1">setDefaultButton</a></b>(const int &amp;<i>str</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#setDefaultButton-2">setDefaultButton</a></b>(QAbstractButton *<i>button</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#setIcon">setIcon</a></b>(const int &amp;<i>icon</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#setIcon-1">setIcon</a></b>(const int &amp;<i>icon</i>, const int &amp;<i>expectedSize</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#setIconPixmap">setIconPixmap</a></b>(const int &amp;<i>iconPixmap</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#setMessage">setMessage</a></b>(const int &amp;<i>message</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#setSpacing">setSpacing</a></b>(int <i>spacing</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#setTitle">setTitle</a></b>(const int &amp;<i>title</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-ddialog.html#setWordWrapTitle">setWordWrapTitle</a></b>(bool <i>wordWrap</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DDialog-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>DDialog 旨在提供简要的讯问式对话框的快速实现。提供了包含标题，对话框内容，默认图标，用以添加按钮的布局和一个可以自由添加内容的内容布局。 可以使用 addButton() , <a href="dtk-widget-ddialog.html#insertButton">insertButton</a>(), <a href="dtk-widget-ddialog.html#setDefaultButton">setDefaultButton</a>() 等函数方便的给对话框插入按钮并进行管理，可以使用 <a href="dtk-widget-ddialog.html#addContent">addContent</a>(), <a href="dtk-widget-ddialog.html#insertContent">insertContent</a>() 等函数操作内容布局。</p>
+<p>此外， DDialog 还提供了一些额外的函数以供实现一些常见的需求。如，可以通过设置 setOnButtonClickedClose() 为 true 来使得用 户在点击任何对话框上的按钮后关闭对话框。</p>
+<p>当你需要快速构建较为简单结构的对话框，你应当使用 DDialog ，对于较为复杂的需求，请参阅 DAbstractDialog 或 QDialog 相关文档。</p>
+<a name="differences-differences-with-qdialog"></a>
+<h3 id="differences-differences-with-qdialog">differences Differences with QDialog</h3>
+<p>DDialog is designed to provide a easy way to create information dialog which include title, dialog content, dialog icon, buttons. You can use addButton() , <a href="dtk-widget-ddialog.html#insertButton">insertButton</a>() and related functions to insert buttons to the dialog easily, and use <a href="dtk-widget-ddialog.html#addContent">addContent</a>(), <a href="dtk-widget-ddialog.html#insertContent">insertContent</a>() and related functions to manage the dialog's built-in content layout.</p>
+<p>DDialog also provided some extra function which maybe useful for some common use case, for example, you can set setOnButtonClickedClose() to <code>true</code> , then once user clicked a button, the dialog will got closed.</p>
+</div>
+<p><b>See also </b>DAbstractDialog and QDialog.</p>
+<!-- @@@DDialog -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$addButtons[overload1]$$$addButtonsconstint& -->
+<h3 class="fn" id="addButtons"><a name="addButtons"></a><span class="type">int</span> DDialog::<span class="name">addButtons</span>(const <span class="type">int</span> &amp;<i>text</i>)</h3>
+<p>向对话框添加按钮.</p>
+<p><i>text</i> 按钮文字</p>
+<p>Returns 所添加的按钮的下标</p>
+<!-- @@@addButtons -->
+<!-- $$$addContent[overload1]$$$addContentQWidget*int -->
+<h3 class="fn" id="addContent"><a name="addContent"></a><span class="type">void</span> DDialog::<span class="name">addContent</span>(<span class="type">QWidget</span> *<i>widget</i>, <span class="type">int</span> <i>alignment</i> = {})</h3>
+<p>添加控件到对话框内容布局.</p>
+<p><i>widget</i> 待添加的控件 <i>alignment</i> 对齐方式</p>
+<!-- @@@addContent -->
+<!-- $$$addSpacing[overload1]$$$addSpacingint -->
+<h3 class="fn" id="addSpacing"><a name="addSpacing"></a><span class="type">void</span> DDialog::<span class="name">addSpacing</span>(<span class="type">int</span> <i>spacing</i>)</h3>
+<p>追加对话框内容间隔.</p>
+<p>在对话框的内容布局后追加一个非弹性，大小为 <i>spacing</i> 的间隔（一个 QSpacerItem ）。</p>
+<p><b>See also </b>QBoxLayout::addSpacing.</p>
+<!-- @@@addSpacing -->
+<!-- $$$clearButtons[overload1]$$$clearButtons -->
+<h3 class="fn" id="clearButtons"><a name="clearButtons"></a><span class="type">void</span> DDialog::<span class="name">clearButtons</span>()</h3>
+<p>清除所有按钮.</p>
+<!-- @@@clearButtons -->
+<!-- $$$clearContents[overload1]$$$clearContentsbool -->
+<h3 class="fn" id="clearContents"><a name="clearContents"></a><span class="type">void</span> DDialog::<span class="name">clearContents</span>(<span class="type">bool</span> <i>isDelete</i> = true)</h3>
+<p>清空对话框内容布局中的所有内容.</p>
+<p><i>isDelete</i> 是否删除</p>
+<!-- @@@clearContents -->
+<!-- $$$clearSpacing[overload1]$$$clearSpacing -->
+<h3 class="fn" id="clearSpacing"><a name="clearSpacing"></a><span class="type">void</span> DDialog::<span class="name">clearSpacing</span>()</h3>
+<p>清除内容间隔.</p>
+<p>清除对话框内容布局中包含的所有 QSpacerItem 。</p>
+<!-- @@@clearSpacing -->
+<!-- $$$insertButton[overload1]$$$insertButtonintconstint&boolint -->
+<h3 class="fn" id="insertButton"><a name="insertButton"></a><span class="type">void</span> DDialog::<span class="name">insertButton</span>(<span class="type">int</span> <i>index</i>, const <span class="type">int</span> &amp;<i>text</i>, <span class="type">bool</span> <i>isDefault</i> = false, <span class="type">int</span> <i>type</i> = ...)</h3>
+<p>向对话框插入按钮.</p>
+<p><i>index</i> 下标 <i>text</i> 按钮文字 <i>isDefault</i> 是否是默认按钮 <i>type</i> 按钮类型</p>
+<!-- @@@insertButton -->
+<!-- $$$insertButton$$$insertButtonintQAbstractButton*bool -->
+<h3 class="fn" id="insertButton-1"><a name="insertButton-1"></a><span class="type">void</span> DDialog::<span class="name">insertButton</span>(<span class="type">int</span> <i>index</i>, <span class="type">QAbstractButton</span> *<i>button</i>, <span class="type">bool</span> <i>isDefault</i> = false)</h3>
+<p>向对话框插入按钮.</p>
+<p><i>index</i> 下标 <i>button</i> 待插入的按钮 <i>isDefault</i> 是否是默认按钮</p>
+<!-- @@@insertButton -->
+<!-- $$$insertButtons[overload1]$$$insertButtonsintconstint& -->
+<h3 class="fn" id="insertButtons"><a name="insertButtons"></a><span class="type">void</span> DDialog::<span class="name">insertButtons</span>(<span class="type">int</span> <i>index</i>, const <span class="type">int</span> &amp;<i>text</i>)</h3>
+<p>向对话框插入按钮.</p>
+<p><i>index</i> 下标 <i>text</i> 按钮文字</p>
+<!-- @@@insertButtons -->
+<!-- $$$insertContent[overload1]$$$insertContentintQWidget*int -->
+<h3 class="fn" id="insertContent"><a name="insertContent"></a><span class="type">void</span> DDialog::<span class="name">insertContent</span>(<span class="type">int</span> <i>index</i>, <span class="type">QWidget</span> *<i>widget</i>, <span class="type">int</span> <i>alignment</i> = {})</h3>
+<p>在对话框内容布局指定位置插入控件.</p>
+<p><i>index</i> 待插入的位置下标 <i>widget</i> 待插入的控件 <i>alignment</i> 对齐方式</p>
+<!-- @@@insertContent -->
+<!-- $$$insertSpacing[overload1]$$$insertSpacingintint -->
+<h3 class="fn" id="insertSpacing"><a name="insertSpacing"></a><span class="type">void</span> DDialog::<span class="name">insertSpacing</span>(<span class="type">int</span> <i>index</i>, <span class="type">int</span> <i>spacing</i>)</h3>
+<p>插入对话框内容间隔.</p>
+<p>在对话框的内容布局的指定位置插入一个非弹性，大小为 <i>spacing</i> 的间隔（一个 QSpacerItem ）。 <i>index</i> 插入间隔的索引位置.</p>
+<p><b>See also </b>QBoxLayout::insertSpacing.</p>
+<!-- @@@insertSpacing -->
+<!-- $$$removeButton[overload1]$$$removeButtonint -->
+<h3 class="fn" id="removeButton"><a name="removeButton"></a><span class="type">void</span> DDialog::<span class="name">removeButton</span>(<span class="type">int</span> <i>index</i>)</h3>
+<p>从对话框移除按钮.</p>
+<p><i>index</i> 待移除按钮的下标</p>
+<!-- @@@removeButton -->
+<!-- $$$removeButton$$$removeButtonQAbstractButton* -->
+<h3 class="fn" id="removeButton-1"><a name="removeButton-1"></a><span class="type">void</span> DDialog::<span class="name">removeButton</span>(<span class="type">QAbstractButton</span> *<i>button</i>)</h3>
+<p>从对话框移除按钮.</p>
+<p><i>button</i> 待移除的按钮</p>
+<!-- @@@removeButton -->
+<!-- $$$removeButtonByText[overload1]$$$removeButtonByTextconstint& -->
+<h3 class="fn" id="removeButtonByText"><a name="removeButtonByText"></a><span class="type">void</span> DDialog::<span class="name">removeButtonByText</span>(const <span class="type">int</span> &amp;<i>text</i>)</h3>
+<p>从对话框移除按钮.</p>
+<p><i>text</i> 待移除按钮的文本内容</p>
+<!-- @@@removeButtonByText -->
+<!-- $$$removeContent[overload1]$$$removeContentQWidget*bool -->
+<h3 class="fn" id="removeContent"><a name="removeContent"></a><span class="type">void</span> DDialog::<span class="name">removeContent</span>(<span class="type">QWidget</span> *<i>widget</i>, <span class="type">bool</span> <i>isDelete</i> = true)</h3>
+<p>从对话框内容布局中移除指定控件.</p>
+<p><i>widget</i> 待移除的控件 <i>isDelete</i> 是否执行删除</p>
+<!-- @@@removeContent -->
+<!-- $$$setButtonIcon[overload1]$$$setButtonIconintconstint& -->
+<h3 class="fn" id="setButtonIcon"><a name="setButtonIcon"></a><span class="type">void</span> DDialog::<span class="name">setButtonIcon</span>(<span class="type">int</span> <i>index</i>, const <span class="type">int</span> &amp;<i>icon</i>)</h3>
+<p>设置按钮图标. <i>index</i> 需要设置图标的按钮的下标 <i>icon</i> 所需要设置的图标</p>
+<!-- @@@setButtonIcon -->
+<!-- $$$setButtonText[overload1]$$$setButtonTextintconstint& -->
+<h3 class="fn" id="setButtonText"><a name="setButtonText"></a><span class="type">void</span> DDialog::<span class="name">setButtonText</span>(<span class="type">int</span> <i>index</i>, const <span class="type">int</span> &amp;<i>text</i>)</h3>
+<p>设置按钮文字.</p>
+<p><i>index</i> 需要设置文字的按钮的下标 <i>text</i> 所需要设置的文字</p>
+<!-- @@@setButtonText -->
+<!-- $$$setDefaultButton[overload1]$$$setDefaultButtonint -->
+<h3 class="fn" id="setDefaultButton"><a name="setDefaultButton"></a><span class="type">bool</span> DDialog::<span class="name">setDefaultButton</span>(<span class="type">int</span> <i>index</i>)</h3>
+<p>设置默认按钮.</p>
+<p><i>index</i> 要设置的默认按钮的下标. Returns 设置成功返回 true，否则返回false.</p>
+<!-- @@@setDefaultButton -->
+<!-- $$$setDefaultButton$$$setDefaultButtonconstint& -->
+<h3 class="fn" id="setDefaultButton-1"><a name="setDefaultButton-1"></a><span class="type">bool</span> DDialog::<span class="name">setDefaultButton</span>(const <span class="type">int</span> &amp;<i>str</i>)</h3>
+<p>设置默认按钮.</p>
+<p><i>str</i> 要设置的默认按钮的文本内容</p>
+<p><b>See also </b>default.</p>
+<!-- @@@setDefaultButton -->
+<!-- $$$setDefaultButton$$$setDefaultButtonQAbstractButton* -->
+<h3 class="fn" id="setDefaultButton-2"><a name="setDefaultButton-2"></a><span class="type">void</span> DDialog::<span class="name">setDefaultButton</span>(<span class="type">QAbstractButton</span> *<i>button</i>)</h3>
+<p>设置默认按钮</p>
+<p><i>button</i> 要设置的默认按钮</p>
+<p><b>See also </b>default.</p>
+<!-- @@@setDefaultButton -->
+<!-- $$$setIcon[overload1]$$$setIconconstint& -->
+<h3 class="fn" id="setIcon"><a name="setIcon"></a><span class="type">void</span> DDialog::<span class="name">setIcon</span>(const <span class="type">int</span> &amp;<i>icon</i>)</h3>
+<p>设置对话框图标. <i>icon</i> 对话框图标.</p>
+<!-- @@@setIcon -->
+<!-- $$$setIcon$$$setIconconstint&constint& -->
+<h3 class="fn" id="setIcon-1"><a name="setIcon-1"></a><span class="type">int</span> DDialog::<span class="name">setIcon</span>(const <span class="type">int</span> &amp;<i>icon</i>, const <span class="type">int</span> &amp;<i>expectedSize</i>)</h3>
+<p>设置对话框图标. <p>This is an overloaded function.</p>
+</p>
+<p>为对话框设置图标，同时可以指定一个期望的图标大小。</p>
+<p><i>icon</i> 对话框图标 <i>expectedSize</i> 期望大小.</p>
+<!-- @@@setIcon -->
+<!-- $$$setIconPixmap[overload1]$$$setIconPixmapconstint& -->
+<h3 class="fn" id="setIconPixmap"><a name="setIconPixmap"></a><span class="type">int</span> DDialog::<span class="name">setIconPixmap</span>(const <span class="type">int</span> &amp;<i>iconPixmap</i>)</h3>
+<p>设置对话框位图图标.</p>
+<p><i>iconPixmap</i> pixmap类型图标.</p>
+<!-- @@@setIconPixmap -->
+<!-- $$$setMessage[overload1]$$$setMessageconstint& -->
+<h3 class="fn" id="setMessage"><a name="setMessage"></a><span class="type">void</span> DDialog::<span class="name">setMessage</span>(const <span class="type">int</span> &amp;<i>message</i>)</h3>
+<p>设置对话框消息内容.</p>
+<p><i>message</i> 对话框消息.</p>
+<!-- @@@setMessage -->
+<!-- $$$setSpacing[overload1]$$$setSpacingint -->
+<h3 class="fn" id="setSpacing"><a name="setSpacing"></a><span class="type">void</span> DDialog::<span class="name">setSpacing</span>(<span class="type">int</span> <i>spacing</i>)</h3>
+<p>设置对话框内容间隔.</p>
+<p>设置对话框的内容布局的间隔 <i>spacing</i> 大小</p>
+<p><b>See also </b>QBoxLayout::setSpacing.</p>
+<!-- @@@setSpacing -->
+<!-- $$$setTitle[overload1]$$$setTitleconstint& -->
+<h3 class="fn" id="setTitle"><a name="setTitle"></a><span class="type">void</span> DDialog::<span class="name">setTitle</span>(const <span class="type">int</span> &amp;<i>title</i>)</h3>
+<p>设置对话框标题.</p>
+<p><i>title</i> 对话框标题.</p>
+<!-- @@@setTitle -->
+<!-- $$$setWordWrapTitle[overload1]$$$setWordWrapTitlebool -->
+<h3 class="fn" id="setWordWrapTitle"><a name="setWordWrapTitle"></a><span class="type">void</span> DDialog::<span class="name">setWordWrapTitle</span>(<span class="type">bool</span> <i>wordWrap</i>)</h3>
+<p>设定标题Label内容是否可截断换行.</p>
+<p><i>wordWrap</i> true可换行 false不可以换行</p>
+<!-- @@@setWordWrapTitle -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

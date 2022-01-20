@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- dplatformhandle.cpp -->
+  <title>DPlatformHandle Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DPlatformHandle</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DPlatformHandle Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-gui.html">Gui</a>::DPlatformHandle</span>
+<!-- $$$DPlatformHandle-brief -->
+<p>一个和Qt dxcb平台插件交互的工具类. <a href="#details">More...</a></p>
+<!-- @@@DPlatformHandle -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DPlatformHandle&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="dtk-widget-dplatformwindowhandle.html">Dtk::Widget::DPlatformWindowHandle</a></p>
+</td></tr></table></div><ul>
+<li><a href="dtk-gui-dplatformhandle-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> struct </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle-wmblurarea.html">WMBlurArea</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle.html#autoInputMaskByClipPathChanged">autoInputMaskByClipPathChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle.html#borderColorChanged">borderColorChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle.html#borderWidthChanged">borderWidthChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle.html#clipPathChanged">clipPathChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle.html#enableBlurWindowChanged">enableBlurWindowChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle.html#enableSystemMoveChanged">enableSystemMoveChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle.html#enableSystemResizeChanged">enableSystemResizeChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle.html#frameMaskChanged">frameMaskChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle.html#shadowColorChanged">shadowColorChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle.html#shadowOffsetChanged">shadowOffsetChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle.html#shadowRadiusChanged">shadowRadiusChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle.html#translucentBackgroundChanged">translucentBackgroundChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dplatformhandle.html#windowRadiusChanged">windowRadiusChanged</a></b>()</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DPlatformHandle-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>实质性的功能皆在dxcb插件中实现，此插件目前只 支持X11平台，在其它平台上使用这个类不会有任何效果。关于dxcb：它介于Qt应用和Qt xcb平台 插件之间，通过覆写xcb插件中某些对象的虚函数来改变它的一些行为，本质上来讲是Qt xcb插件的 扩展，在X11平台上为DTK应用提供了一些改变窗口效果的功能（比如自定义窗口的边框）、其它和平 台密切相关的实现（比如修复Qt应用在X11平台的一些bug），不能脱离Qt xcb插件独立运行。dxcb 通过重载 QPlatformNativeInterface 提供接口，DPlatformHandle 中使用 QGuiApplication::platformFunction 调用这些接口。Application、dxcb、qt xcb 之间 的关系：</p>
+  <pre style="font-family: FreeMono, Consolas, Menlo, 'Noto Mono', 'Courier New', Courier, monospace;line-height: 100%;">
+        ┏━━━━━━━━━━━━━━━━┓
+        ┃   Application  ┃
+        ┗━━━━━━━━━━━━━━━━┛
+                ⇅
+      ┏━━━━━━━━━━━━━━━━━━━━┓
+      ┃     dxcb plugin    ┃
+      ┗━━━━━━━━━━━━━━━━━━━━┛
+                ⇅
+   ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+   ┃      qt xcb platform      ┃
+   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+  </pre>
+  <p><a href="http://doc.qt.io/qt-5/qpa.html">QPA</a> <a href="https://github.com/linuxdeepin/qt5dxcb-plugin/">dxcb插件</a></p>
+<p><b>Warning:</b> 使用此工具前要确保应用加载了dxcb插件</p>
+<p><b>Warning:</b> 因为 QGuiApplication::platformFunction 是在 Qt 5.4&#x2e;0 版本引入的新接口， 所以 DPlatformHandle 不支持 Qt 5.4&#x2e;0 以下版本。</p>
+</div>
+<p><b>See also </b>Dtk::Gui::DPlatformHandle::isDXcbPlatform, QGuiApplication::platformNativeInterface, Dtk::Widget::DMainWindow, and <a href="dtk-gui-dwindowmanagerhelper.html">DWindowManagerHelper</a>.</p>
+<!-- @@@DPlatformHandle -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$autoInputMaskByClipPathChanged[overload1]$$$autoInputMaskByClipPathChanged -->
+<h3 class="fn" id="autoInputMaskByClipPathChanged"><a name="autoInputMaskByClipPathChanged"></a><span class="type">void</span> DPlatformHandle::<span class="name">autoInputMaskByClipPathChanged</span>()</h3>
+<p>信号会在 autoInputMaskByClipPath 属性的值改变时被发送</p>
+<!-- @@@autoInputMaskByClipPathChanged -->
+<!-- $$$borderColorChanged[overload1]$$$borderColorChanged -->
+<h3 class="fn" id="borderColorChanged"><a name="borderColorChanged"></a><span class="type">void</span> DPlatformHandle::<span class="name">borderColorChanged</span>()</h3>
+<p>信号会在 borderColor 属性的值改变时被发送</p>
+<!-- @@@borderColorChanged -->
+<!-- $$$borderWidthChanged[overload1]$$$borderWidthChanged -->
+<h3 class="fn" id="borderWidthChanged"><a name="borderWidthChanged"></a><span class="type">void</span> DPlatformHandle::<span class="name">borderWidthChanged</span>()</h3>
+<p>信号会在 borderWidth 属性的值改变时被发送</p>
+<!-- @@@borderWidthChanged -->
+<!-- $$$clipPathChanged[overload1]$$$clipPathChanged -->
+<h3 class="fn" id="clipPathChanged"><a name="clipPathChanged"></a><span class="type">void</span> DPlatformHandle::<span class="name">clipPathChanged</span>()</h3>
+<p>信号会在 clipPath 属性的值改变时被发送</p>
+<!-- @@@clipPathChanged -->
+<!-- $$$enableBlurWindowChanged[overload1]$$$enableBlurWindowChanged -->
+<h3 class="fn" id="enableBlurWindowChanged"><a name="enableBlurWindowChanged"></a><span class="type">void</span> DPlatformHandle::<span class="name">enableBlurWindowChanged</span>()</h3>
+<p>信号会在 enableBlurWindow 属性的值改变时被发送</p>
+<!-- @@@enableBlurWindowChanged -->
+<!-- $$$enableSystemMoveChanged[overload1]$$$enableSystemMoveChanged -->
+<h3 class="fn" id="enableSystemMoveChanged"><a name="enableSystemMoveChanged"></a><span class="type">void</span> DPlatformHandle::<span class="name">enableSystemMoveChanged</span>()</h3>
+<p>信号会在 enableSystemMove 属性的值改变时被发送</p>
+<!-- @@@enableSystemMoveChanged -->
+<!-- $$$enableSystemResizeChanged[overload1]$$$enableSystemResizeChanged -->
+<h3 class="fn" id="enableSystemResizeChanged"><a name="enableSystemResizeChanged"></a><span class="type">void</span> DPlatformHandle::<span class="name">enableSystemResizeChanged</span>()</h3>
+<p>信号会在 enableSystemResize 属性的值改变时被发送</p>
+<!-- @@@enableSystemResizeChanged -->
+<!-- $$$frameMaskChanged[overload1]$$$frameMaskChanged -->
+<h3 class="fn" id="frameMaskChanged"><a name="frameMaskChanged"></a><span class="type">void</span> DPlatformHandle::<span class="name">frameMaskChanged</span>()</h3>
+<p>信号会在 frameMask 属性的值改变时被发送</p>
+<!-- @@@frameMaskChanged -->
+<!-- $$$shadowColorChanged[overload1]$$$shadowColorChanged -->
+<h3 class="fn" id="shadowColorChanged"><a name="shadowColorChanged"></a><span class="type">void</span> DPlatformHandle::<span class="name">shadowColorChanged</span>()</h3>
+<p>信号会在 shadowColor 属性的值改变时被发送</p>
+<!-- @@@shadowColorChanged -->
+<!-- $$$shadowOffsetChanged[overload1]$$$shadowOffsetChanged -->
+<h3 class="fn" id="shadowOffsetChanged"><a name="shadowOffsetChanged"></a><span class="type">void</span> DPlatformHandle::<span class="name">shadowOffsetChanged</span>()</h3>
+<p>信号会在 shadowOffset 属性的值改变时被发送</p>
+<!-- @@@shadowOffsetChanged -->
+<!-- $$$shadowRadiusChanged[overload1]$$$shadowRadiusChanged -->
+<h3 class="fn" id="shadowRadiusChanged"><a name="shadowRadiusChanged"></a><span class="type">void</span> DPlatformHandle::<span class="name">shadowRadiusChanged</span>()</h3>
+<p>信号会在 shadowRadius 属性的值改变时被发送</p>
+<!-- @@@shadowRadiusChanged -->
+<!-- $$$translucentBackgroundChanged[overload1]$$$translucentBackgroundChanged -->
+<h3 class="fn" id="translucentBackgroundChanged"><a name="translucentBackgroundChanged"></a><span class="type">void</span> DPlatformHandle::<span class="name">translucentBackgroundChanged</span>()</h3>
+<p>信号会在 translucentBackground 属性的值改变时被发送</p>
+<!-- @@@translucentBackgroundChanged -->
+<!-- $$$windowRadiusChanged[overload1]$$$windowRadiusChanged -->
+<h3 class="fn" id="windowRadiusChanged"><a name="windowRadiusChanged"></a><span class="type">void</span> DPlatformHandle::<span class="name">windowRadiusChanged</span>()</h3>
+<p>信号会在 windowRadius 属性的值改变时被发送</p>
+<!-- @@@windowRadiusChanged -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

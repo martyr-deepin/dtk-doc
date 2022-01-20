@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- dgraphicsclipeffect.cpp -->
+  <title>DGraphicsClipEffect Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DGraphicsClipEffect</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DGraphicsClipEffect Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DGraphicsClipEffect</span>
+<!-- $$$DGraphicsClipEffect-brief -->
+<p>用于裁剪窗口的绘制内容. <a href="#details">More...</a></p>
+<!-- @@@DGraphicsClipEffect -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DGraphicsClipEffect&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="dtk-widget-dgraphicsclipeffect-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dgraphicsclipeffect.html#clipPathChanged">clipPathChanged</a></b>(int <i>clipPath</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dgraphicsclipeffect.html#setClipPath">setClipPath</a></b>(const int &amp;<i>clipPath</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DGraphicsClipEffect-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>支持使用 QPainterPath 设置一个区域，位于区域外的窗口内容将被裁剪,可以通过设置 margins 控制有效的裁剪区域。如下图所示：</p>
+  <pre style="font-family: FreeMono, Consolas, Menlo, 'Noto Mono', 'Courier New', Courier, monospace;line-height: 100%;">
+  ┏━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━┓
+  ┃              │              ┃
+  ┃              │              ┃
+  ┃     A        m              ┃
+  ┃              │              ┃
+  ┃              │              ┃
+  ┃       ┏┅┅┅┅┅┅┷┅┅┅┅┅┅┓       ┃
+  ┃       ┋B ╭───────╮  ┋       ┃
+  ┃       ┋  │       │  ┋       ┃
+  ┃── m ──┋  │   C   │  ┋── m ──┃
+  ┃       ┋  │       │  ┋       ┃
+  ┃       ┋  ╰───────╯  ┋       ┃
+  ┃       ┗┅┅┅┅┅┅┯┅┅┅┅┅┅┛       ┃
+  ┃              │              ┃
+  ┃              │              ┃
+  ┃              m              ┃
+  ┃              │              ┃
+  ┃              │              ┃
+  ┗━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━┛
+  </pre>
+  <p>A为被作用的控件区域，B为有效的被裁剪区域，C 为 clipPath 区域，m为 margins ，则被裁剪掉的区域为： B - C，裁掉的部分将显示 下层控件内容，如果下层没有其它控件，将显示主窗口背景。</p>
+<p><b>Warning:</b> 以这种方式实现对 QWidget 的剪切在性能上会有较大的影响，一般情况下，我们推荐使用 <a href="dtk-widget-dclipeffectwidget.html">DClipEffectWidget</a></p>
+</div>
+<p><b>See also </b><a href="dtk-widget-dclipeffectwidget.html">DClipEffectWidget</a> and QWidget::setGraphicsEffect.</p>
+<!-- @@@DGraphicsClipEffect -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$clipPathChanged[overload1]$$$clipPathChangedint -->
+<h3 class="fn" id="clipPathChanged"><a name="clipPathChanged"></a><span class="type">void</span> DGraphicsClipEffect::<span class="name">clipPathChanged</span>(<span class="type">int</span> <i>clipPath</i>)</h3>
+<p>这个信号在 <i>clipPath</i> 改变时被发送</p>
+<!-- @@@clipPathChanged -->
+<!-- $$$setClipPath[overload1]$$$setClipPathconstint& -->
+<h3 class="fn" id="setClipPath"><a name="setClipPath"></a><span class="type">void</span> DGraphicsClipEffect::<span class="name">setClipPath</span>(const <span class="type">int</span> &amp;<i>clipPath</i>)</h3>
+<p><i>clipPath</i></p>
+<!-- @@@setClipPath -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

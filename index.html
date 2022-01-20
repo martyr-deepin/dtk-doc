@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- dtkdoc.qdoc -->
+  <title>Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li>Dtk Reference Documentation</li>
+<li id="buildversion">Qt 5.15.2 Reference Documentation</li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">Dtk Reference Documentation</h1>
+<span class="subtitle"></span>
+<!-- $$$index.html-description -->
+<div class="descr"> <a name="details"></a>
+<div class="col-1"><a name="dtk-deepin-toolkit"></a>
+<h2 id="dtk-deepin-toolkit">DTK（Deepin Toolkit）</h2>
+<p>DTK（Deepin Toolkit，<a href="https://github.com/linuxdeepin/dtkwidget/">https://github.com/linuxdeepin/dtkwidget/</a>）是深度操作系统（现UOS）提供的一套应用程序开发框架。 其前身为Deepin UI项目以及后来的DUI项目，这两个项目均为在深度操作系统的桌面环境、原创应用开发的过程中积累的一些常见工具类和控件库。 大多数的DDE（Deepin Desktop Environment）应用（“深度终端”除外）都使用Qt+DTK作为基础开发库。 <a href="https://docsin.uniontech.com/?p=6268">DTK的历史起源、发展，和简单入门</a></p>
+<p><b>DTK模块</b></p>
+<p>DTK目前分为三个模块，dtkcore、dtkgui，dtkwidget，主要功能如下：</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >项目</th><th >功能描述</th></tr></thead>
+<tr valign="top" class="odd"><td >dtkcore</td><td >提供应用程序开发中的工具类，如程序日志、文件系统监控、格式转换等工具类</td></tr>
+<tr valign="top" class="even"><td >dtkgui</td><td >包含了开发图形用户界面应用程序所需的功能。主要是控制窗口主题这种外观性，调色板等信息。</td></tr>
+<tr valign="top" class="odd"><td >dtkwidget</td><td >提供各种dtk基础控件，方便开发统一风格的应用。</td></tr>
+</table></div>
+<p><b>授权模式</b></p>
+<p>DTK开放源代码，并且提供自由软件的用户协议LGPLv3 允许企业与软件开发者使用，或将LGPL授权的软件集成至他们自己的软件内（即使该软件是私有软件也被允许），同时不会受到Copyleft特性的许可证强制对软件开源的限制。</p>
+<p><b>支持平台</b></p>
+<p>使用DTK开发的软件，相同的代码可以在任何支持的平台上编译与运行，而不需要修改源代码。会自动依平台的不同，表现平台特有的图形界面风格。 Linux/X11：用于X Window System（如uos/debian）、(windows/mac)</p>
+<p>DTK 的hello world</p>
+<pre class="cpp">
+ <span class="preprocessor">#include &lt;DApplication&gt;</span>
+ <span class="preprocessor">#include &lt;DMainWindow&gt;</span>
+ <span class="preprocessor">#include &lt;DTitlebar&gt;</span>
+ DWIDGET_USE_NAMESPACE <span class="comment">// using dtkwidget namespace</span>
+
+ <span class="type">int</span> main(<span class="type">int</span> argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span>argv<span class="operator">[</span><span class="operator">]</span>)
+ {
+     DApplication app(argc<span class="operator">,</span> argv);
+     <span class="type">QIcon</span> icon <span class="operator">=</span> <span class="type">QIcon</span><span class="operator">::</span>fromTheme(<span class="string">&quot;face-smile&quot;</span>);
+     app<span class="operator">.</span>setApplicationVersion(<span class="string">&quot;1.0.0&quot;</span>);<span class="comment">// 设置(关于中显示)版本号</span>
+     app<span class="operator">.</span>setProductName(<span class="string">&quot;dtk-dialog-demo&quot;</span>);<span class="comment">// 设置(关于中显示)产品名称</span>
+     app<span class="operator">.</span>setProductIcon(icon); <span class="comment">// 设置(关于中显示)产品icon</span>
+     DMainWindow w;
+     w<span class="operator">.</span>titlebar()<span class="operator">-</span><span class="operator">&gt;</span>setIcon(icon); <span class="comment">//设置标题栏左</span>上角icon
+     w<span class="operator">.</span>show();
+     <span class="keyword">return</span> app<span class="operator">.</span>exec();
+ }
+</pre>
+<p><b>编译与运行</b></p>
+<p>新建一个文件夹，命名为hello，将代码hello.cpp放入hello文件夹 在hello文件夹运行下列命令</p>
+<pre class="cpp">
+ <span class="number">1.</span> qmake <span class="operator">-</span>project
+ <span class="number">2.</span> 编辑 <span class="operator">.</span>pro 文件，加上下面代码
+    CONFIG <span class="operator">+</span><span class="operator">=</span> link_pkgconfig
+    QT <span class="operator">+</span><span class="operator">=</span> core gui widgets
+    PKGCONFIG <span class="operator">+</span><span class="operator">=</span> dtkwidget
+ <span class="number">3.</span> qmake
+ <span class="number">4.</span> make
+ <span class="number">5.</span> 执行 <span class="operator">.</span><span class="operator">/</span>hello
+</pre>
+</div><div class="col-2 sidebar"><a name=""></a>
+<h2 id="">引用</h2>
+<ul>
+<li><a href="dtkgui-index.html">DTK Gui Docs</a></li>
+<li><a href="dtkgui-module.html">DTK Gui 模块</a></li>
+<li><a href="dtkcore-index.html">DTK Core Docs</a></li>
+<li><a href="dtkcore-module.html">DTK Core 模块</a></li>
+<li><a href="dtkwidget-index.html">DTK Widget Docs</a></li>
+<li><a href="dtkwidget-module.html">DTK Widget 模块</a></li>
+</ul>
+</div></div>
+<!-- @@@index.html -->
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>
