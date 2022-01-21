@@ -39,6 +39,7 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -46,12 +47,20 @@
 <h1 class="title">DToolTip Class</h1>
 <span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DToolTip</span>
 <!-- $$$DToolTip-brief -->
-<p>DToolTip类似于 QToolTip 功能的类. <a href="#details">More...</a></p>
+<p>DToolTip类似于 <a href="http://doc.qt.io/qt-5/qtooltip.html">QToolTip</a> 功能的类. <a href="#details">More...</a></p>
 <!-- @@@DToolTip -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DToolTip&gt;</span>
-</td></tr></table></div><ul>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="dtk-widget-dtiplabel.html">Dtk::Widget::DTipLabel</a></td></tr></table></div><ul>
+<li><a href="dtk-widget-dtooltip-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtooltip.html#DToolTip">DToolTip</a></b>(const QString &amp;<i>text</i>, bool <i>completionClose</i> = true)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtooltip.html#show">show</a></b>(const QPoint &amp;<i>pos</i>, int <i>duration</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtooltip.html#sizeHint">sizeHint</a></b>() const</td></tr>
+</table></div>
 <a name="details"></a>
 <!-- $$$DToolTip-description -->
 <div class="descr">
@@ -59,6 +68,24 @@
 <p>DToolTip提供了将 DToolTip 显示在指定位置的函数</p>
 </div>
 <!-- @@@DToolTip -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DToolTip[overload1]$$$DToolTipconstQString&bool -->
+<h3 class="fn" id="DToolTip"><a name="DToolTip"></a>DToolTip::<span class="name">DToolTip</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>text</i>, <span class="type">bool</span> <i>completionClose</i> = true)</h3>
+<p>DToolTip的构造函数.</p>
+<p><i>text</i> 文本信息 <i>completionClose</i> 提示消息消失后是否销毁</p>
+<!-- @@@DToolTip -->
+<!-- $$$show[overload1]$$$showconstQPoint&int -->
+<h3 class="fn" id="show"><a name="show"></a><span class="type">void</span> DToolTip::<span class="name">show</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qpoint.html">QPoint</a></span> &amp;<i>pos</i>, <span class="type">int</span> <i>duration</i>)</h3>
+<p>DToolTip::show设置提示消息出现的位置.</p>
+<p><i>pos</i> 提示消息位置 <i>duration</i> 提示消息存在时间，单位毫秒</p>
+<!-- @@@show -->
+<!-- $$$sizeHint[overload1]$$$sizeHint -->
+<h3 class="fn" id="sizeHint"><a name="sizeHint"></a><span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span> DToolTip::<span class="name">sizeHint</span>() const</h3>
+<p>DToolTip::sizeHint.</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qlabel.html#sizeHint">QLabel::sizeHint</a>().</p>
+<!-- @@@sizeHint -->
+</div>
         </div>
        </div>
    </div>

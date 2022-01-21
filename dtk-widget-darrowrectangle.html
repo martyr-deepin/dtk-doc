@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- darrowrectangle.cpp -->
+  <title>DArrowRectangle Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DArrowRectangle</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DArrowRectangle Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DArrowRectangle</span>
+<!-- $$$DArrowRectangle-brief -->
+<p>DArrowRectangle 提供了可以在四个边中的任意一个边显示箭头的矩形控件. <a href="#details">More...</a></p>
+<!-- @@@DArrowRectangle -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DArrowRectangle&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="dtk-widget-darrowrectangle-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#ArrowDirection-enum">ArrowDirection</a></b> { ArrowLeft, ArrowRight, ArrowTop, ArrowBottom }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#FloatMode-enum">FloatMode</a></b> { FloatWindow, FloatWidget }</td></tr>
+</table></div>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<div class="table"><table class="propsummary">
+<tr><td class="topAlign"><ul>
+<li class="fn"><b><a href="dtk-widget-darrowrectangle.html#arrowDirection-prop">arrowDirection</a></b> : ArrowDirection</li>
+<li class="fn"><b><a href="dtk-widget-darrowrectangle.html#arrowHeight-prop">arrowHeight</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-darrowrectangle.html#arrowWidth-prop">arrowWidth</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-darrowrectangle.html#arrowX-prop">arrowX</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-darrowrectangle.html#arrowY-prop">arrowY</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-darrowrectangle.html#backgroundColor-prop">backgroundColor</a></b> : QColor</li>
+<li class="fn"><b><a href="dtk-widget-darrowrectangle.html#borderColor-prop">borderColor</a></b> : QColor</li>
+</ul></td><td class="topAlign"><ul>
+<li class="fn"><b><a href="dtk-widget-darrowrectangle.html#borderWidth-prop">borderWidth</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-darrowrectangle.html#margin-prop">margin</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-darrowrectangle.html#radius-prop">radius</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-darrowrectangle.html#shadowBlurRadius-prop">shadowBlurRadius</a></b> : qreal</li>
+<li class="fn"><b><a href="dtk-widget-darrowrectangle.html#shadowXOffset-prop">shadowXOffset</a></b> : qreal</li>
+<li class="fn"><b><a href="dtk-widget-darrowrectangle.html#shadowYOffset-prop">shadowYOffset</a></b> : qreal</li>
+</ul>
+</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#DArrowRectangle-2">DArrowRectangle</a></b>(Dtk::Widget::DArrowRectangle::ArrowDirection <i>direction</i>, Dtk::Widget::DArrowRectangle::FloatMode <i>floatMode</i>, QWidget *<i>parent</i> = nullptr)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#DArrowRectangle-1">DArrowRectangle</a></b>(Dtk::Widget::DArrowRectangle::ArrowDirection <i>direction</i>, QWidget *<i>parent</i> = nullptr)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Dtk::Widget::DArrowRectangle::ArrowDirection </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#arrowDirection-prop">arrowDirection</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#arrowHeight-prop">arrowHeight</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#arrowWidth-prop">arrowWidth</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#arrowX-prop">arrowX</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#arrowY-prop">arrowY</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QColor </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#backgroundColor-prop">backgroundColor</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QColor </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#borderColor-prop">borderColor</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#borderWidth-prop">borderWidth</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWidget *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#getContent">getContent</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#getFixedSize">getFixedSize</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#margin-prop">margin</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#move">move</a></b>(int <i>x</i>, int <i>y</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#radius-prop">radius</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#resizeWithContent">resizeWithContent</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#setArrowDirection">setArrowDirection</a></b>(Dtk::Widget::DArrowRectangle::ArrowDirection <i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#setArrowHeight">setArrowHeight</a></b>(int <i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#setArrowWidth">setArrowWidth</a></b>(int <i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#setArrowX">setArrowX</a></b>(int <i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#setArrowY">setArrowY</a></b>(int <i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#backgroundColor-prop">setBackgroundColor</a></b>(const QColor &amp;<i>backgroundColor</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#setBackgroundColor-1">setBackgroundColor</a></b>(DBlurEffectWidget::MaskColorType <i>type</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#borderColor-prop">setBorderColor</a></b>(const QColor &amp;<i>borderColor</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#borderWidth-prop">setBorderWidth</a></b>(int <i>borderWidth</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#setContent">setContent</a></b>(QWidget *<i>content</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#setHeight">setHeight</a></b>(int <i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#setLeftRightRadius">setLeftRightRadius</a></b>(bool <i>enable</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#setMargin">setMargin</a></b>(int <i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#setRadius">setRadius</a></b>(int <i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#setRadiusArrowStyleEnable">setRadiusArrowStyleEnable</a></b>(bool <i>enable</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#shadowBlurRadius-prop">setShadowBlurRadius</a></b>(const int &amp;<i>shadowBlurRadius</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#shadowXOffset-prop">setShadowXOffset</a></b>(const int &amp;<i>shadowXOffset</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#shadowYOffset-prop">setShadowYOffset</a></b>(const int &amp;<i>shadowYOffset</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#setWidth">setWidth</a></b>(int <i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#shadowBlurRadius-prop">shadowBlurRadius</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#shadowXOffset-prop">shadowXOffset</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#shadowYOffset-prop">shadowYOffset</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-darrowrectangle.html#show">show</a></b>(int <i>x</i>, int <i>y</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DArrowRectangle-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>通常用于作为其他控件的容器，将其显示在矩形内作为内容控件 It's usually used as a container of some other widgets, see <a href="dtk-widget-darrowrectangle.html#setContent">DArrowRectangle::setContent</a>()</p>
+</div>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#setContent">DArrowRectangle::setContent</a>().</p>
+<!-- @@@DArrowRectangle -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$ArrowDirection$$$ArrowLeft$$$ArrowRight$$$ArrowTop$$$ArrowBottom -->
+<h3 class="fn" id="ArrowDirection-enum"><a name="ArrowDirection-enum"></a>enum DArrowRectangle::<span class="name">ArrowDirection</span></h3>
+<p>箭头方向枚举包含 <a href="dtk-widget-darrowrectangle.html">DArrowRectangle</a> 的箭头可能指向的可能方向.</p>
+<p>The ArrowDirection enum contains the possible directions that the <a href="dtk-widget-darrowrectangle.html">DArrowRectangle</a>'s arrow may point to.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DArrowRectangle::ArrowLeft</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">指示此矩形的箭头将指向左侧 indicates the arrow of this rectangle will point left</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DArrowRectangle::ArrowRight</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">指示此矩形的箭头将指向右侧 indicates the arrow of this rectangle will point right</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DArrowRectangle::ArrowTop</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">指示此矩形的箭头将指向上方 indicates the arrow of this rectangle will point up</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DArrowRectangle::ArrowBottom</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">指示此矩形的箭头将向下指向 indicates the arrow of this rectangle will point down</td></tr>
+</table></div>
+<!-- @@@ArrowDirection -->
+<!-- $$$FloatMode$$$FloatWindow$$$FloatWidget -->
+<h3 class="fn" id="FloatMode-enum"><a name="FloatMode-enum"></a>enum DArrowRectangle::<span class="name">FloatMode</span></h3>
+<p>FloatMode 表示不同的控件的浮动模式</p>
+<p>The FloatMode enum decide the WindowType when <a href="dtk-widget-darrowrectangle.html">DArrowRectangle</a> show</p>
+<p>控件的浮动模式表示控件如何显示在布局中，DArrowRectangle::FloatWindow 表示控件将会以一个单独的窗口显示，而 DArrowRectangle::FloatWidget 则表示控件只能显示在其父控件的布局中，不能超出父控件大小</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DArrowRectangle::FloatWindow</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">窗口模式 Window will show a separate window</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DArrowRectangle::FloatWidget</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">控件模式 Widget must by show in the rect of parentWidget</td></tr>
+</table></div>
+<!-- @@@FloatMode -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$ -->
+<div class="fngroup">
+<h3 class="fn fngroupitem" id="shadowYOffset-prop"><a name="shadowYOffset-prop"></a><span class="name">shadowYOffset</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#qreal-typedef">qreal</a></span></h3><h3 class="fn fngroupitem" id="shadowYOffset-prop"><a name="shadowYOffset-prop"></a><span class="name">shadowYOffset</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#qreal-typedef">qreal</a></span></h3></div>
+<p>这属性表示小部件及其阴影在y轴上的偏移量.</p>
+<p>the offset of the widget and its shadow on y axis.</p>
+<p>Getter: <a href="dtk-widget-darrowrectangle.html#shadowYOffset-prop">DArrowRectangle::shadowYOffset</a> Setter: <a href="dtk-widget-darrowrectangle.html#shadowYOffset-prop">DArrowRectangle::setShadowYOffset</a></p>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#shadowXOffset-prop">DArrowRectangle::shadowXOffset</a>.</p>
+<!-- @@@ -->
+<!-- $$$arrowDirection-prop$$$arrowDirection$$$setArrowDirectionDtk::Widget::DArrowRectangle::ArrowDirection -->
+<h3 class="fn" id="arrowDirection-prop"><a name="arrowDirection-prop"></a><span class="name">arrowDirection</span> : <span class="type"><a href="dtk-widget-darrowrectangle.html#ArrowDirection-enum">ArrowDirection</a></span></h3>
+<p>This property holds the direction of the rectangle's arrow points to.</p>
+<p>这个属性表示箭头的方向</p>
+<p>Getter: DArrowRectangle::arrowDirection , Setter: <a href="dtk-widget-darrowrectangle.html#setArrowDirection">DArrowRectangle::setArrowDirection</a></p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> Dtk::Widget::DArrowRectangle::ArrowDirection </td><td class="memItemRight bottomAlign"><span class="name"><b>arrowDirection</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-darrowrectangle.html#setArrowDirection">setArrowDirection</a></b></span>(Dtk::Widget::DArrowRectangle::ArrowDirection <i>value</i>)</td></tr>
+</table></div>
+<!-- @@@arrowDirection -->
+<!-- $$$arrowHeight-prop$$$arrowHeight$$$setArrowHeightint -->
+<h3 class="fn" id="arrowHeight-prop"><a name="arrowHeight-prop"></a><span class="name">arrowHeight</span> : <span class="type">int</span></h3>
+<p>height of rectangle's arrow</p>
+<p>这个属性表示箭头的高度</p>
+<p>Getter: DArrowRectangle::arrowHeight , Setter: <a href="dtk-widget-darrowrectangle.html#setArrowHeight">DArrowRectangle::setArrowHeight</a></p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>arrowHeight</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-darrowrectangle.html#setArrowHeight">setArrowHeight</a></b></span>(int <i>value</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#arrowWidth-prop">DArrowRectangle::arrowWidth</a>.</p>
+<!-- @@@arrowHeight -->
+<!-- $$$arrowWidth-prop$$$arrowWidth$$$setArrowWidthint -->
+<h3 class="fn" id="arrowWidth-prop"><a name="arrowWidth-prop"></a><span class="name">arrowWidth</span> : <span class="type">int</span></h3>
+<p>这个属性表示箭头的宽度</p>
+<p>width of the rectangle's arrow</p>
+<p>Getter: DArrowRectangle::arrowWidth , Setter: <a href="dtk-widget-darrowrectangle.html#setArrowWidth">DArrowRectangle::setArrowWidth</a></p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>arrowWidth</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-darrowrectangle.html#setArrowWidth">setArrowWidth</a></b></span>(int <i>value</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#arrowHeight-prop">DArrowRectangle::arrowHeight</a>.</p>
+<!-- @@@arrowWidth -->
+<!-- $$$arrowX-prop$$$arrowX$$$setArrowXint -->
+<h3 class="fn" id="arrowX-prop"><a name="arrowX-prop"></a><span class="name">arrowX</span> : <span class="type">int</span></h3>
+<p>This property holds the x coordinate of the rectangle's arrow</p>
+<p>这个属性表示箭头的x轴坐标</p>
+<p>Getter: DArrowRectangle::arrowX , Setter: <a href="dtk-widget-darrowrectangle.html#setArrowX">DArrowRectangle::setArrowX</a></p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>arrowX</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-darrowrectangle.html#setArrowX">setArrowX</a></b></span>(int <i>value</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#arrowY-prop">DArrowRectangle::arrowY</a>.</p>
+<!-- @@@arrowX -->
+<!-- $$$arrowY-prop$$$arrowY$$$setArrowYint -->
+<h3 class="fn" id="arrowY-prop"><a name="arrowY-prop"></a><span class="name">arrowY</span> : <span class="type">int</span></h3>
+<p>这个属性表示箭头的y轴坐标</p>
+<p>This property holds the y coordinate of the rectangle's arrow</p>
+<p>Getter: DArrowRectangle::arrowY , Setter: <a href="dtk-widget-darrowrectangle.html#setArrowY">DArrowRectangle::setArrowY</a></p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>arrowY</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-darrowrectangle.html#setArrowY">setArrowY</a></b></span>(int <i>value</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#arrowX-prop">DArrowRectangle::arrowX</a>.</p>
+<!-- @@@arrowY -->
+<!-- $$$backgroundColor-prop$$$backgroundColor$$$setBackgroundColorconstQColor&$$$setBackgroundColorDBlurEffectWidget::MaskColorType -->
+<h3 class="fn" id="backgroundColor-prop"><a name="backgroundColor-prop"></a><span class="name">backgroundColor</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qcolor.html">QColor</a></span></h3>
+<p>这个属性表示矩形控件的背景颜色</p>
+<p>This property holds the background color of this rectangle.</p>
+<p>Getter: DArrowRectangle::backgroundColor , Setter: DArrowRectangle::setBackgroundColor</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QColor </td><td class="memItemRight bottomAlign"><span class="name"><b>backgroundColor</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setBackgroundColor</b></span>(const QColor &amp;<i>backgroundColor</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-darrowrectangle.html#setBackgroundColor-1">setBackgroundColor</a></b></span>(DBlurEffectWidget::MaskColorType <i>type</i>)</td></tr>
+</table></div>
+<!-- @@@backgroundColor -->
+<!-- $$$borderColor-prop$$$borderColor$$$setBorderColorconstQColor& -->
+<h3 class="fn" id="borderColor-prop"><a name="borderColor-prop"></a><span class="name">borderColor</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qcolor.html">QColor</a></span></h3>
+<p>这个属性表示控件边框的颜色</p>
+<p>This property holds the border color of this widget.</p>
+<p>Getter: DArrowRectangle::borderColor , Setter: DArrowRectangle::setBorderColor</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QColor </td><td class="memItemRight bottomAlign"><span class="name"><b>borderColor</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setBorderColor</b></span>(const QColor &amp;<i>borderColor</i>)</td></tr>
+</table></div>
+<!-- @@@borderColor -->
+<!-- $$$borderWidth-prop$$$borderWidth$$$setBorderWidthint -->
+<h3 class="fn" id="borderWidth-prop"><a name="borderWidth-prop"></a><span class="name">borderWidth</span> : <span class="type">int</span></h3>
+<p>这个属性表示控件边框的宽度</p>
+<p>This property holds the border width of this widget.</p>
+<p>Getter: DArrowRectangle::borderWidth , Setter: DArrowRectangle::setBorderWidth</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>borderWidth</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setBorderWidth</b></span>(int <i>borderWidth</i>)</td></tr>
+</table></div>
+<!-- @@@borderWidth -->
+<!-- $$$margin-prop$$$margin$$$setMarginint -->
+<h3 class="fn" id="margin-prop"><a name="margin-prop"></a><span class="name">margin</span> : <span class="type">int</span></h3>
+<p>这个属性表示边距大小</p>
+<p>This property holds the width of the margin</p>
+<p>The margin is the distance between the innermost pixel of the rectangle and the outermost pixel of its contents. The default margin is 0. 边距是指矩形最里面的像素与其内容最外面的像素之间的距离 Getter: DArrowRectangle::margin , Setter: <a href="dtk-widget-darrowrectangle.html#setMargin">DArrowRectangle::setMargin</a></p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>margin</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-darrowrectangle.html#setMargin">setMargin</a></b></span>(int <i>value</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#setMargin">DArrowRectangle::setMargin</a>.</p>
+<!-- @@@margin -->
+<!-- $$$radius-prop$$$radius$$$setRadiusint -->
+<h3 class="fn" id="radius-prop"><a name="radius-prop"></a><span class="name">radius</span> : <span class="type">int</span></h3>
+<p>这个属性表示矩形的圆角</p>
+<p>radius of the rectangle</p>
+<p>Getter: DArrowRectangle::radius , Setter: <a href="dtk-widget-darrowrectangle.html#setRadius">DArrowRectangle::setRadius</a></p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>radius</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-darrowrectangle.html#setRadius">setRadius</a></b></span>(int <i>value</i>)</td></tr>
+</table></div>
+<!-- @@@radius -->
+<!-- $$$shadowBlurRadius-prop$$$shadowBlurRadius$$$setShadowBlurRadiusconstint& -->
+<h3 class="fn" id="shadowBlurRadius-prop"><a name="shadowBlurRadius-prop"></a><span class="name">shadowBlurRadius</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#qreal-typedef">qreal</a></span></h3>
+<p>这个属性保存小部件阴影的模糊半径</p>
+<p>This property holds the blur radius of the widget's shadow.</p>
+<p>Getter: DArrowRectangle::shadowBlurRadius Setter: DArrowRectangle::setShadowBlurRadius</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>shadowBlurRadius</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setShadowBlurRadius</b></span>(const int &amp;<i>shadowBlurRadius</i>)</td></tr>
+</table></div>
+<!-- @@@shadowBlurRadius -->
+<!-- $$$shadowXOffset-prop$$$shadowXOffset$$$setShadowXOffsetconstint& -->
+<h3 class="fn" id="shadowXOffset-prop"><a name="shadowXOffset-prop"></a><span class="name">shadowXOffset</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#qreal-typedef">qreal</a></span></h3>
+<p>这属性表示小部件及其阴影在x轴上的偏移量</p>
+<p>This property holds the offset of the widget and its shadow on x axis.</p>
+<p>Getter: DArrowRectangle::shadowXOffset Setter: DArrowRectangle::setShadowXOffset</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>shadowXOffset</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setShadowXOffset</b></span>(const int &amp;<i>shadowXOffset</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#shadowYOffset-prop">DArrowRectangle::shadowYOffset</a>.</p>
+<!-- @@@shadowXOffset -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DArrowRectangle$$$DArrowRectangleDtk::Widget::DArrowRectangle::ArrowDirectionDtk::Widget::DArrowRectangle::FloatModeQWidget* -->
+<h3 class="fn" id="DArrowRectangle-2"><a name="DArrowRectangle-2"></a>DArrowRectangle::<span class="name">DArrowRectangle</span>(<span class="type"><a href="dtk-widget-darrowrectangle.html#ArrowDirection-enum">Dtk::Widget::DArrowRectangle::ArrowDirection</a></span> <i>direction</i>, <span class="type"><a href="dtk-widget-darrowrectangle.html#FloatMode-enum">Dtk::Widget::DArrowRectangle::FloatMode</a></span> <i>floatMode</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>parent</i> = nullptr)</h3>
+<p>获取 DArrowRectangle 实例，并指定浮动模式.</p>
+<p><a href="dtk-widget-darrowrectangle.html">DArrowRectangle::DArrowRectangle</a> can set DArrowRectangle show as a window or a widget in parentWidget by floatMode</p>
+<p><i>direction</i> 用于初始化箭头的方向 <i>floatMode</i> <i>parent</i> 作为其父控件</p>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#FloatMode-enum">DArrowRectangle::FloatMode</a>.</p>
+<!-- @@@DArrowRectangle -->
+<!-- $$$DArrowRectangle$$$DArrowRectangleDtk::Widget::DArrowRectangle::ArrowDirectionQWidget* -->
+<h3 class="fn" id="DArrowRectangle-1"><a name="DArrowRectangle-1"></a>DArrowRectangle::<span class="name">DArrowRectangle</span>(<span class="type"><a href="dtk-widget-darrowrectangle.html#ArrowDirection-enum">Dtk::Widget::DArrowRectangle::ArrowDirection</a></span> <i>direction</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>parent</i> = nullptr)</h3>
+<p><a href="dtk-widget-darrowrectangle.html">DArrowRectangle::DArrowRectangle</a> constructs an instance of DArrowRectangle.</p>
+<p>获取 DArrowRectangle 实例</p>
+<p><i>direction</i> is used to initialize the direction of which the arrow points to. <i>parent</i> is the parent widget the arrow rectangle will be attached to. <i>direction</i> 用于初始化箭头的方向 <i>parent</i> 作为其父控件</p>
+<!-- @@@DArrowRectangle -->
+<!-- $$$getContent[overload1]$$$getContent -->
+<h3 class="fn" id="getContent"><a name="getContent"></a><span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *DArrowRectangle::<span class="name">getContent</span>() const</h3>
+<p>获取内容控件.</p>
+<p>Returns 正在显示的内容控件</p>
+<!-- @@@getContent -->
+<!-- $$$getFixedSize[overload1]$$$getFixedSize -->
+<h3 class="fn" id="getFixedSize"><a name="getFixedSize"></a><span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span> DArrowRectangle::<span class="name">getFixedSize</span>()</h3>
+<p>获取整个矩形控件的大小.</p>
+<p>DArrowRectangle::getFixedSize.</p>
+<p>Returns 矩形控件的大小 Returns the size of the whole widget.</p>
+<!-- @@@getFixedSize -->
+<!-- $$$move[overload1]$$$moveintint -->
+<h3 class="fn" id="move"><a name="move"></a><span class="type">void</span> DArrowRectangle::<span class="name">move</span>(<span class="type">int</span> <i>x</i>, <span class="type">int</span> <i>y</i>)</h3>
+<p>移动到指定的坐标位置.</p>
+<p>DArrowRectangle::move moves the widget to the coordinate that provided,</p>
+<p>参数的作用类似于 <a href="dtk-widget-darrowrectangle.html#show">DArrowRectangle::show</a> , 移动整个控件直到箭头出现在参数中指定的坐标 Like the rules in <a href="dtk-widget-darrowrectangle.html#show">DArrowRectangle::show</a>(int x, int y), it moves the widget so that the arrow head's coordinate matches the one that provided.</p>
+<p><i>x</i> 控件箭头的x轴坐标 <i>y</i> 控件箭头的y轴坐标 <i>x</i> is the x coordinate of the arrow head. <i>y</i> is the y coordinate of the arrow head.</p>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#show">DArrowRectangle::show</a>(int x, int y) and <a href="dtk-widget-darrowrectangle.html#show">DArrowRectangle::show</a>.</p>
+<!-- @@@move -->
+<!-- $$$resizeWithContent[overload1]$$$resizeWithContent -->
+<h3 class="fn" id="resizeWithContent"><a name="resizeWithContent"></a><span class="type">void</span> DArrowRectangle::<span class="name">resizeWithContent</span>()</h3>
+<p>根据内容控件的大小自动设置矩形控件的大小.</p>
+<p>DArrowRectangle::resizeWithContent automatically adjust the rectangle's size to fit the its content.</p>
+<!-- @@@resizeWithContent -->
+<!-- $$$setArrowDirection -->
+<h3 class="fn" id="setArrowDirection"><a name="setArrowDirection"></a><span class="type">void</span> DArrowRectangle::<span class="name">setArrowDirection</span>(<span class="type"><a href="dtk-widget-darrowrectangle.html#ArrowDirection-enum">Dtk::Widget::DArrowRectangle::ArrowDirection</a></span> <i>value</i>)</h3>
+<p>该函数用于设置箭头方向.</p>
+<p><i>value</i> 箭头方向.</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-darrowrectangle.html#arrowDirection-prop">arrowDirection</a>. </p>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#arrowDirection-prop">DArrowRectangle::arrowDirection</a>.</p>
+<!-- @@@setArrowDirection -->
+<!-- $$$setArrowHeight -->
+<h3 class="fn" id="setArrowHeight"><a name="setArrowHeight"></a><span class="type">void</span> DArrowRectangle::<span class="name">setArrowHeight</span>(<span class="type">int</span> <i>value</i>)</h3>
+<p>设置箭头高度.</p>
+<p><i>value</i> 箭头高度.</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-darrowrectangle.html#arrowHeight-prop">arrowHeight</a>. </p>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#arrowHeight-prop">DArrowRectangle::arrowHeight</a>.</p>
+<!-- @@@setArrowHeight -->
+<!-- $$$setArrowWidth -->
+<h3 class="fn" id="setArrowWidth"><a name="setArrowWidth"></a><span class="type">void</span> DArrowRectangle::<span class="name">setArrowWidth</span>(<span class="type">int</span> <i>value</i>)</h3>
+<p>设置箭头宽度.</p>
+<p><i>value</i> 箭头宽度.</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-darrowrectangle.html#arrowWidth-prop">arrowWidth</a>. </p>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#arrowWidth-prop">DArrowRectangle::arrowWidth</a>.</p>
+<!-- @@@setArrowWidth -->
+<!-- $$$setArrowX -->
+<h3 class="fn" id="setArrowX"><a name="setArrowX"></a><span class="type">void</span> DArrowRectangle::<span class="name">setArrowX</span>(<span class="type">int</span> <i>value</i>)</h3>
+<p>设置箭头 x 坐标的值.</p>
+<p><i>value</i> x 坐标的值.</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-darrowrectangle.html#arrowX-prop">arrowX</a>. </p>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#arrowX-prop">DArrowRectangle::arrowX</a>.</p>
+<!-- @@@setArrowX -->
+<!-- $$$setArrowY -->
+<h3 class="fn" id="setArrowY"><a name="setArrowY"></a><span class="type">void</span> DArrowRectangle::<span class="name">setArrowY</span>(<span class="type">int</span> <i>value</i>)</h3>
+<p>设置箭头 y 坐标的值.</p>
+<p><i>value</i> y 坐标的值.</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-darrowrectangle.html#arrowY-prop">arrowY</a>. </p>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#arrowY-prop">DArrowRectangle::arrowY</a>.</p>
+<!-- @@@setArrowY -->
+<!-- $$$setBackgroundColor -->
+<h3 class="fn" id="setBackgroundColor-1"><a name="setBackgroundColor-1"></a><span class="type">void</span> DArrowRectangle::<span class="name">setBackgroundColor</span>(<span class="type"><a href="dtk-widget-dblureffectwidget.html#MaskColorType-enum">DBlurEffectWidget::MaskColorType</a></span> <i>type</i>)</h3>
+<p><a href="dtk-widget-darrowrectangle.html#backgroundColor-prop">DArrowRectangle::setBackgroundColor</a> is an overloaded function.</p>
+<p><a href="dtk-widget-darrowrectangle.html#backgroundColor-prop">DArrowRectangle::setBackgroundColor</a> 是一个重载方法</p>
+<p>通过改变 <a href="dtk-widget-dblureffectwidget.html#MaskColorType-enum">DBlurEffectWidget::MaskColorType</a> 来修改控件矩形的背景 It sets the background color by modifing the mask color of the <a href="dtk-widget-dblureffectwidget.html">Dtk::Widget::DBlurEffectWidget</a>.</p>
+<p><i>type</i> is the mask color to set.</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-darrowrectangle.html#backgroundColor-prop">backgroundColor</a>. </p>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#backgroundColor-prop">DArrowRectangle::backgroundColor</a> and <a href="dtk-widget-dblureffectwidget.html#MaskColorType-enum">DBlurEffectWidget::MaskColorType</a>.</p>
+<!-- @@@setBackgroundColor -->
+<!-- $$$setContent[overload1]$$$setContentQWidget* -->
+<h3 class="fn" id="setContent"><a name="setContent"></a><span class="type">void</span> DArrowRectangle::<span class="name">setContent</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>content</i>)</h3>
+<p>DArrowRectangle::setContent sets the content of the arrow rectangle.</p>
+<p>设置要显示在矩形内的内容控件.</p>
+<p><i>content</i> 要显示内容控件</p>
+<!-- @@@setContent -->
+<!-- $$$setHeight[overload1]$$$setHeightint -->
+<h3 class="fn" id="setHeight"><a name="setHeight"></a><span class="type">void</span> DArrowRectangle::<span class="name">setHeight</span>(<span class="type">int</span> <i>value</i>)</h3>
+<p>设置整个控件固定的高度</p>
+<p><i>value</i> 高度大小</p>
+<!-- @@@setHeight -->
+<!-- $$$setLeftRightRadius[overload1]$$$setLeftRightRadiusbool -->
+<h3 class="fn" id="setLeftRightRadius"><a name="setLeftRightRadius"></a><span class="type">void</span> DArrowRectangle::<span class="name">setLeftRightRadius</span>(<span class="type">bool</span> <i>enable</i>)</h3>
+<p>DArrowRectangle::setLeftRightRadius 设置左右箭头时的圆角.</p>
+<p><i>enable</i> 是否开启.</p>
+<!-- @@@setLeftRightRadius -->
+<!-- $$$setMargin -->
+<h3 class="fn" id="setMargin"><a name="setMargin"></a><span class="type">void</span> DArrowRectangle::<span class="name">setMargin</span>(<span class="type">int</span> <i>value</i>)</h3>
+<p>设置边距大小.</p>
+<p><i>value</i> 边距大小.</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-darrowrectangle.html#margin-prop">margin</a>. </p>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#margin-prop">DArrowRectangle::margin</a>.</p>
+<!-- @@@setMargin -->
+<!-- $$$setRadius -->
+<h3 class="fn" id="setRadius"><a name="setRadius"></a><span class="type">void</span> DArrowRectangle::<span class="name">setRadius</span>(<span class="type">int</span> <i>value</i>)</h3>
+<p>该函数用于设置圆角大小.</p>
+<p><i>value</i> 圆角大小.</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-darrowrectangle.html#radius-prop">radius</a>. </p>
+<p><b>See also </b><a href="dtk-widget-darrowrectangle.html#radius-prop">DArrowRectangle::radius</a>.</p>
+<!-- @@@setRadius -->
+<!-- $$$setRadiusArrowStyleEnable[overload1]$$$setRadiusArrowStyleEnablebool -->
+<h3 class="fn" id="setRadiusArrowStyleEnable"><a name="setRadiusArrowStyleEnable"></a><span class="type">void</span> DArrowRectangle::<span class="name">setRadiusArrowStyleEnable</span>(<span class="type">bool</span> <i>enable</i>)</h3>
+<p>DArrowRectangle::setArrowStyleEnable 设置圆角箭头样式.</p>
+<p><i>enable</i> 是否开启.</p>
+<!-- @@@setRadiusArrowStyleEnable -->
+<!-- $$$setWidth[overload1]$$$setWidthint -->
+<h3 class="fn" id="setWidth"><a name="setWidth"></a><span class="type">void</span> DArrowRectangle::<span class="name">setWidth</span>(<span class="type">int</span> <i>value</i>)</h3>
+<p>该函数用于设置整个控件固定的宽度</p>
+<p><i>value</i> 宽度大小</p>
+<!-- @@@setWidth -->
+<!-- $$$show[overload1]$$$showintint -->
+<h3 class="fn" id="show"><a name="show"></a><code>[virtual] </code><span class="type">void</span> DArrowRectangle::<span class="name">show</span>(<span class="type">int</span> <i>x</i>, <span class="type">int</span> <i>y</i>)</h3>
+<p>在指定的坐标位置显示本控件；</p>
+<p>DArrowRectangle::show shows the widget at the given coordinate.</p>
+<p><b>Note: </b>坐标被计算为箭头的位置，所以你不需要自己计算箭头位置</p>
+<p><b>Note: </b>The coordiate is calculated to be the arrow head's position, so you don't need to calculate the position yourself.</p>
+<p><i>x</i> 控件箭头的x轴坐标 <i>y</i> 控件箭头的y轴坐标 <i>x</i> is the x coordinate of the arrow head. <i>y</i> is the y coordinate of the arrow head.</p>
+<!-- @@@show -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

@@ -39,6 +39,8 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
 <li class="level1"><a href="#static-public-members">Static Public Members</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
@@ -54,12 +56,25 @@
 </td></tr></table></div><ul>
 <li><a href="dtk-gui-dfiledragclient-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledragclient.html#progress">progress</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Dtk::Gui::DFileDragState </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledragclient.html#state">state</a></b>() const</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledragclient.html#progressChanged">progressChanged</a></b>(int <i>progress</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledragclient.html#serverDestroyed">serverDestroyed</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledragclient.html#stateChanged">stateChanged</a></b>(Dtk::Gui::DFileDragState <i>state</i>)</td></tr>
+</table></div>
 <a name="static-public-members"></a>
 <h2 id="static-public-members">Static Public Members</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledragclient.html#checkMimeData">checkMimeData</a></b>(const QMimeData *<i>data</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledragclient.html#setTargetData">setTargetData</a></b>(const QMimeData *<i>data</i>, int <i>key</i>, int <i>value</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledragclient.html#setTargetUrl">setTargetUrl</a></b>(const QMimeData *<i>data</i>, int <i>url</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledragclient.html#setTargetData">setTargetData</a></b>(const QMimeData *<i>data</i>, QString <i>key</i>, QVariant <i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledragclient.html#setTargetUrl">setTargetUrl</a></b>(const QMimeData *<i>data</i>, QUrl <i>url</i>)</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$DFileDragClient-description -->
@@ -69,21 +84,44 @@
 <!-- @@@DFileDragClient -->
 <div class="func">
 <h2>Member Function Documentation</h2>
+<!-- $$$progressChanged[overload1]$$$progressChangedint -->
+<h3 class="fn" id="progressChanged"><a name="progressChanged"></a><code>[signal] </code><span class="type">void</span> DFileDragClient::<span class="name">progressChanged</span>(<span class="type">int</span> <i>progress</i>)</h3>
+<p><i>progress</i> 当前进度</p>
+<p>信号会在当前进度变化时被发送.</p>
+<!-- @@@progressChanged -->
+<!-- $$$serverDestroyed[overload1]$$$serverDestroyed -->
+<h3 class="fn" id="serverDestroyed"><a name="serverDestroyed"></a><code>[signal] </code><span class="type">void</span> DFileDragClient::<span class="name">serverDestroyed</span>()</h3>
+<p>信号会在发送方析构销毁前被发送.</p>
+<p><b>Note: </b><a href="dtk-gui-dfiledragclient.html">DFileDragClient</a> 收到后会自删除(deletelater)，因此不用去管理 new 出来的 <a href="dtk-gui-dfiledragclient.html">DFileDragClient</a></p>
+<!-- @@@serverDestroyed -->
+<!-- $$$stateChanged[overload1]$$$stateChangedDtk::Gui::DFileDragState -->
+<h3 class="fn" id="stateChanged"><a name="stateChanged"></a><code>[signal] </code><span class="type">void</span> DFileDragClient::<span class="name">stateChanged</span>(<span class="type">Dtk::Gui::DFileDragState</span> <i>state</i>)</h3>
+<p><i>state</i> 改变后的新状态</p>
+<p>信号会在当前状态变化时被发送.</p>
+<!-- @@@stateChanged -->
 <!-- $$$checkMimeData[overload1]$$$checkMimeDataconstQMimeData* -->
-<h3 class="fn" id="checkMimeData"><a name="checkMimeData"></a><code>[static] </code><span class="type">bool</span> DFileDragClient::<span class="name">checkMimeData</span>(const <span class="type">QMimeData</span> *<i>data</i>)</h3>
+<h3 class="fn" id="checkMimeData"><a name="checkMimeData"></a><code>[static] </code><span class="type">bool</span> DFileDragClient::<span class="name">checkMimeData</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qmimedata.html">QMimeData</a></span> *<i>data</i>)</h3>
 <p>DFileDragClient::checkMimeData <i>data</i> Returns 包含 DND_MIME_PID 格式的数据时返回 true，否则返回 false</p>
-<p><b>Note: </b>通常在接收拖放数据的应用的dropEvent(QDropEvent *event)函数中检测当前 event-&gt;mimeData() 是否是 <a href="dtk-gui-dfiledrag.html">DFileDrag</a></p>
+<p><b>Note: </b>通常在接收拖放数据的应用的dropEvent(<a href="http://doc.qt.io/qt-5/qdropevent.html">QDropEvent</a> *event)函数中检测当前 event-&gt;mimeData() 是否是 <a href="dtk-gui-dfiledrag.html">DFileDrag</a></p>
 <!-- @@@checkMimeData -->
-<!-- $$$setTargetData[overload1]$$$setTargetDataconstQMimeData*intint -->
-<h3 class="fn" id="setTargetData"><a name="setTargetData"></a><code>[static] </code><span class="type">void</span> DFileDragClient::<span class="name">setTargetData</span>(const <span class="type">QMimeData</span> *<i>data</i>, <span class="type">int</span> <i>key</i>, <span class="type">int</span> <i>value</i>)</h3>
+<!-- $$$progress[overload1]$$$progress -->
+<h3 class="fn" id="progress"><a name="progress"></a><span class="type">int</span> DFileDragClient::<span class="name">progress</span>() const</h3>
+<p>DFileDragClient::progress Returns 返回当前拖拽的进度</p>
+<!-- @@@progress -->
+<!-- $$$setTargetData[overload1]$$$setTargetDataconstQMimeData*QStringQVariant -->
+<h3 class="fn" id="setTargetData"><a name="setTargetData"></a><code>[static] </code><span class="type">void</span> DFileDragClient::<span class="name">setTargetData</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qmimedata.html">QMimeData</a></span> *<i>data</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> <i>key</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qvariant.html">QVariant</a></span> <i>value</i>)</h3>
 <p>DFileDragClient::setTargetData <i>data</i> 拖放时传入的data,用于获取和发送数据的应用dbus通讯需要的一些信息 <i>key</i> <i>value</i></p>
 <p><b>Note: </b>向文件发送方设置自定义数据</p>
 <!-- @@@setTargetData -->
-<!-- $$$setTargetUrl[overload1]$$$setTargetUrlconstQMimeData*int -->
-<h3 class="fn" id="setTargetUrl"><a name="setTargetUrl"></a><code>[static] </code><span class="type">void</span> DFileDragClient::<span class="name">setTargetUrl</span>(const <span class="type">QMimeData</span> *<i>data</i>, <span class="type">int</span> <i>url</i>)</h3>
+<!-- $$$setTargetUrl[overload1]$$$setTargetUrlconstQMimeData*QUrl -->
+<h3 class="fn" id="setTargetUrl"><a name="setTargetUrl"></a><code>[static] </code><span class="type">void</span> DFileDragClient::<span class="name">setTargetUrl</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qmimedata.html">QMimeData</a></span> *<i>data</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qurl.html">QUrl</a></span> <i>url</i>)</h3>
 <p>DFileDragClient::setTargetUrl <i>data</i> <i>url</i></p>
 <p><b>Note: </b>告知文件发送方拖拽目标路径</p>
 <!-- @@@setTargetUrl -->
+<!-- $$$state[overload1]$$$state -->
+<h3 class="fn" id="state"><a name="state"></a><span class="type">Dtk::Gui::DFileDragState</span> DFileDragClient::<span class="name">state</span>() const</h3>
+<p>DFileDragClient::state Returns 返回当前状态,见 DFileDragState</p>
+<!-- @@@state -->
 </div>
         </div>
        </div>

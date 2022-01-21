@@ -39,7 +39,12 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#properties">Properties</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 <li class="level2"><a href="#margin-offset">margin_offset 锚定的间隔和偏移</a></li>
 <li class="level2"><a href="#loop-anchor">loop_anchor 判断循环锚定的方式</a></li>
@@ -49,7 +54,7 @@
 <h1 class="title">DAnchorsBase Class</h1>
 <span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DAnchorsBase</span>
 <!-- $$$DAnchorsBase-brief -->
-<p>DAnchorsBase 提供了一种指定 QWidget 与其它 QWidget 之间的关系来确定 其位置的方法. <a href="#details">More...</a></p>
+<p>DAnchorsBase 提供了一种指定 <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> 与其它 <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> 之间的关系来确定 其位置的方法. <a href="#details">More...</a></p>
 <!-- @@@DAnchorsBase -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DAnchorsBase&gt;</span>
@@ -57,36 +62,120 @@
 </td></tr></table></div><ul>
 <li><a href="dtk-widget-danchorsbase-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#AnchorError-enum">AnchorError</a></b> { NoError, Conflict, TargetInvalid, PointInvalid, LoopBind }</td></tr>
+</table></div>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<div class="table"><table class="propsummary">
+<tr><td class="topAlign"><ul>
+<li class="fn"><b><a href="dtk-widget-danchorsbase.html#bottomMargin-prop">bottomMargin</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-danchorsbase.html#centerIn-prop">centerIn</a></b> : QWidget*</li>
+<li class="fn"><b><a href="dtk-widget-danchorsbase.html#enabled-prop">enabled</a></b> : bool</li>
+<li class="fn"><b><a href="dtk-widget-danchorsbase.html#fill-prop">fill</a></b> : QWidget*</li>
+<li class="fn"><b><a href="dtk-widget-danchorsbase.html#horizontalCenterOffset-prop">horizontalCenterOffset</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-danchorsbase.html#leftMargin-prop">leftMargin</a></b> : int</li>
+</ul></td><td class="topAlign"><ul>
+<li class="fn"><b><a href="dtk-widget-danchorsbase.html#margins-prop">margins</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-danchorsbase.html#rightMargin-prop">rightMargin</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-danchorsbase.html#target-prop">target</a></b> : QWidget* const</li>
+<li class="fn"><b><a href="dtk-widget-danchorsbase.html#topMargin-prop">topMargin</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-danchorsbase.html#verticalCenterOffset-prop">verticalCenterOffset</a></b> : int</li>
+</ul>
+</td></tr>
+</table></div>
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#DAnchorsBase">DAnchorsBase</a></b>(QWidget *<i>w</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#dtor.DAnchorsBase">~DAnchorsBase</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#alignWhenCentered-prop">alignWhenCentered</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#bottomMargin-prop">bottomMargin</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWidget *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#centerIn-prop">centerIn</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#enabled-prop">enabled</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Dtk::Widget::DEnhancedWidget *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#enhancedWidget">enhancedWidget</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Dtk::Widget::DAnchorsBase::AnchorError </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#errorCode">errorCode</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#errorString">errorString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWidget *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#fill-prop">fill</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#horizontalCenterOffset-prop">horizontalCenterOffset</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#isBinding">isBinding</a></b>(const Dtk::Widget::DAnchorInfo *<i>info</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#leftMargin-prop">leftMargin</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#margins-prop">margins</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#rightMargin-prop">rightMargin</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWidget *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#target-prop">target</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#topMargin-prop">topMargin</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#verticalCenterOffset-prop">verticalCenterOffset</a></b>() const</td></tr>
+</table></div>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#moveBottom">moveBottom</a></b>(int <i>arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#moveCenter">moveCenter</a></b>(const QPoint &amp;<i>arg</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#moveHorizontalCenter">moveHorizontalCenter</a></b>(int <i>arg</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#moveLeft">moveLeft</a></b>(int <i>arg</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#moveRight">moveRight</a></b>(int <i>arg</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#moveTop">moveTop</a></b>(int <i>arg</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#moveVerticalCenter">moveVerticalCenter</a></b>(int <i>arg</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#setAnchor-1">setAnchor</a></b>(const int &amp;<i>p</i>, QWidget *<i>target</i>, const int &amp;<i>point</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#alignWhenCentered-prop">setAlignWhenCentered</a></b>(bool <i>alignWhenCentered</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#bottomMargin-prop">setBottomMargin</a></b>(int <i>bottomMargin</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#setCenterIn-1">setCenterIn</a></b>(Dtk::Widget::DAnchorsBase *<i>centerIn</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#centerIn-prop">setCenterIn</a></b>(QWidget *<i>centerIn</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#enabled-prop">setEnabled</a></b>(bool <i>enabled</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#setFill-1">setFill</a></b>(Dtk::Widget::DAnchorsBase *<i>fill</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#fill-prop">setFill</a></b>(QWidget *<i>fill</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#horizontalCenterOffset-prop">setHorizontalCenterOffset</a></b>(int <i>horizontalCenterOffset</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#leftMargin-prop">setLeftMargin</a></b>(int <i>leftMargin</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#margins-prop">setMargins</a></b>(int <i>margins</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#rightMargin-prop">setRightMargin</a></b>(int <i>rightMargin</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#topMargin-prop">setTopMargin</a></b>(int <i>topMargin</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#verticalCenterOffset-prop">setVerticalCenterOffset</a></b>(int <i>verticalCenterOffset</i>)</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#alignWhenCentered-prop">alignWhenCenteredChanged</a></b>(bool <i>alignWhenCentered</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#bottomChanged">bottomChanged</a></b>(const Dtk::Widget::DAnchorInfo *<i>bottom</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#bottomMarginChanged">bottomMarginChanged</a></b>(int <i>bottomMargin</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#centerInChanged">centerInChanged</a></b>(QWidget *<i>centerIn</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#enabledChanged">enabledChanged</a></b>(bool <i>enabled</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#fillChanged">fillChanged</a></b>(QWidget *<i>fill</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#horizontalCenterChanged">horizontalCenterChanged</a></b>(const Dtk::Widget::DAnchorInfo *<i>horizontalCenter</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#horizontalCenterOffsetChanged">horizontalCenterOffsetChanged</a></b>(int <i>horizontalCenterOffset</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#leftChanged">leftChanged</a></b>(const Dtk::Widget::DAnchorInfo *<i>left</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#leftMarginChanged">leftMarginChanged</a></b>(int <i>leftMargin</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#marginsChanged">marginsChanged</a></b>(int <i>margins</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#rightChanged">rightChanged</a></b>(const Dtk::Widget::DAnchorInfo *<i>right</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#rightMarginChanged">rightMarginChanged</a></b>(int <i>rightMargin</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#topChanged">topChanged</a></b>(const Dtk::Widget::DAnchorInfo *<i>top</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#topMarginChanged">topMarginChanged</a></b>(int <i>topMargin</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#verticalCenterChanged">verticalCenterChanged</a></b>(const Dtk::Widget::DAnchorInfo *<i>verticalCenter</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#verticalCenterOffsetChanged">verticalCenterOffsetChanged</a></b>(int <i>verticalCenterOffset</i>)</td></tr>
+</table></div>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#clearAnchors">clearAnchors</a></b>(const QWidget *<i>w</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Dtk::Widget::DAnchorsBase *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-danchorsbase.html#getAnchorBaseByWidget">getAnchorBaseByWidget</a></b>(const QWidget *<i>w</i>)</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$DAnchorsBase-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>除了比较传统的布局方式之外，DtkWidget 还提供了一种使用锚定概念布局控件的方法（ 类似于 QQuickItem 中的 anchors 属性），可以认为每个控件具有一组6个不可见的“锚 线”：left，horizontalCenter，right，top，verticalCenter和bottom，如图所示：</p>
-<p class="centerAlign"><img src="images/edges_anchors.png" alt="" /></p><p>使用 <a href="dtk-widget-danchors.html">DAnchors</a> 可以让 QWidget 基于这些“锚线”来确定相互间的关系，如：</p>
+<p class="centerAlign"><img src="images/edges_anchors.png" alt="" /></p><p>使用 <a href="dtk-widget-danchors.html">DAnchors</a> 可以让 <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> 基于这些“锚线”来确定相互间的关系，如：</p>
 <pre class="cpp">
- DAnchors<span class="operator">&lt;</span><span class="type">QLabel</span><span class="operator">&gt;</span> rect1(<span class="keyword">new</span> <span class="type">QLabel</span>(<span class="string">&quot;rect1&quot;</span>));
- DAnchors<span class="operator">&lt;</span><span class="type">QLabel</span><span class="operator">&gt;</span> rect2(<span class="keyword">new</span> <span class="type">QLabel</span>(<span class="string">&quot;rect2&quot;</span>));
+ DAnchors<span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span><span class="operator">&gt;</span> rect1(<span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span>(<span class="string">&quot;rect1&quot;</span>));
+ DAnchors<span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span><span class="operator">&gt;</span> rect2(<span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span>(<span class="string">&quot;rect2&quot;</span>));
 
  rect2<span class="operator">.</span>setLeft(rect1<span class="operator">.</span>right());
 </pre>
 <p>这样 rect2 的左边界就会和 rect1 的右边界对齐：</p>
 <p class="centerAlign"><img src="images/edge1.png" alt="" /></p><p>另外还可以同时设置多个“锚线”：</p>
 <pre class="cpp">
- DAnchors<span class="operator">&lt;</span><span class="type">QLabel</span><span class="operator">&gt;</span> rect1(<span class="keyword">new</span> <span class="type">QLabel</span>(<span class="string">&quot;rect1&quot;</span>));
- DAnchors<span class="operator">&lt;</span><span class="type">QLabel</span><span class="operator">&gt;</span> rect2(<span class="keyword">new</span> <span class="type">QLabel</span>(<span class="string">&quot;rect2&quot;</span>));
+ DAnchors<span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span><span class="operator">&gt;</span> rect1(<span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span>(<span class="string">&quot;rect1&quot;</span>));
+ DAnchors<span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span><span class="operator">&gt;</span> rect2(<span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span>(<span class="string">&quot;rect2&quot;</span>));
 
  rect2<span class="operator">.</span>setTop(rect1<span class="operator">.</span>bottom());
  rect2<span class="operator">.</span>setLeft(rect1<span class="operator">.</span>right());
@@ -94,62 +183,353 @@
 <p class="centerAlign"><img src="images/edge3.png" alt="" /></p><p>锚定布局同时在多个控件中使用，控件之间只需要满足以下条件： <i>控件之间为兄弟关系，或被锚定控件为父控件</i> <i>锚定关系不能循环绑定</i></p>
 <a name="margin-offset"></a>
 <h3 id="margin-offset">margin_offset 锚定的间隔和偏移</h3>
-<p>锚定系统允许设置“锚线”之间的间距，和“锚线”一一对应，每个控件都有一组4个 margin： leftMargin, rightMargin, topMargin 和 bottomMargin 以及两个 offset： horizontalCenterOffset 和 verticalCenterOffset。</p>
+<p>锚定系统允许设置“锚线”之间的间距，和“锚线”一一对应，每个控件都有一组4个 margin： <a href="dtk-widget-danchorsbase.html#leftMargin-prop">leftMargin</a>, <a href="dtk-widget-danchorsbase.html#rightMargin-prop">rightMargin</a>, <a href="dtk-widget-danchorsbase.html#topMargin-prop">topMargin</a> 和 <a href="dtk-widget-danchorsbase.html#bottomMargin-prop">bottomMargin</a> 以及两个 offset： <a href="dtk-widget-danchorsbase.html#horizontalCenterOffset-prop">horizontalCenterOffset</a> 和 <a href="dtk-widget-danchorsbase.html#verticalCenterOffset-prop">verticalCenterOffset</a>。</p>
 <p class="centerAlign"><img src="images/margins_anchors.png" alt="" /></p><p>下面是左margin的例子：</p>
 <pre class="cpp">
- DAnchors<span class="operator">&lt;</span><span class="type">QLabel</span><span class="operator">&gt;</span> rect1(<span class="keyword">new</span> <span class="type">QLabel</span>(<span class="string">&quot;rect1&quot;</span>));
- DAnchors<span class="operator">&lt;</span><span class="type">QLabel</span><span class="operator">&gt;</span> rect2(<span class="keyword">new</span> <span class="type">QLabel</span>(<span class="string">&quot;rect2&quot;</span>));
+ DAnchors<span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span><span class="operator">&gt;</span> rect1(<span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span>(<span class="string">&quot;rect1&quot;</span>));
+ DAnchors<span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span><span class="operator">&gt;</span> rect2(<span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span>(<span class="string">&quot;rect2&quot;</span>));
 
  rect2<span class="operator">.</span>setLeftMargin(<span class="number">5</span>);
  rect2<span class="operator">.</span>setLeft(rect1<span class="operator">.</span>right());
 </pre>
 <p>rect2 的左边界相距 rect1 的右边界5个像素：</p>
 <p class="centerAlign"><img src="images/edge2.png" alt="" /></p><p><b>Note: </b>margin 仅仅是对设置的锚点生效，并不是让控件本身增加了边距，如果设置了 margin，但并没有设置相应的锚点，对控件本身而已是没有任何影响的。margin 的值可以 为负数，通过值的正负来决定margin的方向（内 margin 还是外 margin）</p>
-<p>除了基于“锚线”来设置锚定外，另外还有 <a href="dtk-widget-danchorsbase.html#setCenterIn-1">setCenterIn</a> 和 <a href="dtk-widget-danchorsbase.html#setFill-1">setFill</a> 这两个比较特殊的 的实现。</p>
+<p>除了基于“锚线”来设置锚定外，另外还有 <a href="dtk-widget-danchorsbase.html#centerIn-prop">setCenterIn</a> 和 <a href="dtk-widget-danchorsbase.html#fill-prop">setFill</a> 这两个比较特殊的 的实现。</p>
 <a name="loop-anchor"></a>
 <h3 id="loop-anchor">loop_anchor 判断循环锚定的方式</h3>
 <p>假设 DAnchorsBase a1, a2; a1.setRight(a2.left()); 则判断 a1 和 a2 之间 会不会存在循环绑定的逻辑为: 尝试更改 a1 右边界的值，更新后如果 a2 左边界的值产出了变化，则认为会导致循环绑 定，否则认为不存在</p>
 </div>
 <!-- @@@DAnchorsBase -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$AnchorError$$$NoError$$$Conflict$$$TargetInvalid$$$PointInvalid$$$LoopBind -->
+<h3 class="fn" id="AnchorError-enum"><a name="AnchorError-enum"></a>enum DAnchorsBase::<span class="name">AnchorError</span></h3>
+<p>DAnchorsBase::AnchorError 设置锚定信息的过程中可能出现的错误类型</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DAnchorsBase::NoError</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">设置锚定的过程中没有任何错误发生</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DAnchorsBase::Conflict</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">表示设置的锚定关系跟已有关系存在冲突，如 fill 和 <a href="dtk-widget-danchorsbase.html#centerIn-prop">centerIn</a> 不能同时设置</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DAnchorsBase::TargetInvalid</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">表示设置锚定关系时的目标控件无效</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DAnchorsBase::PointInvalid</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">表示设置锚定关系时的“锚线”信息错误，如把 <a href="http://doc.qt.io/qt-5/qt.html#AnchorPoint-enum">Qt::AnchorLeft</a> 设置到了 <a href="http://doc.qt.io/qt-5/qt.html#AnchorPoint-enum">Qt::AnchorTop</a> 上</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DAnchorsBase::LoopBind</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">表示设置的锚定关系和已有关系形成了循环绑定</td></tr>
+</table></div>
+<!-- @@@AnchorError -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$bottomMargin-prop$$$bottomMargin$$$setBottomMarginint$$$bottomMarginChangedint -->
+<h3 class="fn" id="bottomMargin-prop"><a name="bottomMargin-prop"></a><span class="name">bottomMargin</span> : <span class="type">int</span></h3>
+<p>下“锚线”的边距，优先级高于 margins</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>bottomMargin</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setBottomMargin</b></span>(int <i>bottomMargin</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-danchorsbase.html#bottomMarginChanged">bottomMarginChanged</a></b></span>(int <i>bottomMargin</i>)</td></tr>
+</table></div>
+<!-- @@@bottomMargin -->
+<!-- $$$centerIn-prop$$$centerIn$$$setCenterInQWidget*$$$setCenterInDtk::Widget::DAnchorsBase*$$$centerInChangedQWidget* -->
+<h3 class="fn" id="centerIn-prop"><a name="centerIn-prop"></a><span class="name">centerIn</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span>*</h3>
+<p>target 控件的居中目标对象</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QWidget *</td><td class="memItemRight bottomAlign"><span class="name"><b>centerIn</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>setCenterIn</b></span>(QWidget *<i>centerIn</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-danchorsbase.html#setCenterIn-1">setCenterIn</a></b></span>(Dtk::Widget::DAnchorsBase *<i>centerIn</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-danchorsbase.html#centerInChanged">centerInChanged</a></b></span>(QWidget *<i>centerIn</i>)</td></tr>
+</table></div>
+<!-- @@@centerIn -->
+<!-- $$$enabled-prop$$$enabled$$$setEnabledbool$$$enabledChangedbool -->
+<h3 class="fn" id="enabled-prop"><a name="enabled-prop"></a><span class="name">enabled</span> : <span class="type">bool</span></h3>
+<p>控制锚定功能是否开启，为 false 时仅仅表示不会根据控件各种属性的变化来 来更新它的位置，但锚定关系并没有被解除</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>enabled</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setEnabled</b></span>(bool <i>enabled</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-danchorsbase.html#enabledChanged">enabledChanged</a></b></span>(bool <i>enabled</i>)</td></tr>
+</table></div>
+<!-- @@@enabled -->
+<!-- $$$fill-prop$$$fill$$$setFillQWidget*$$$setFillDtk::Widget::DAnchorsBase*$$$fillChangedQWidget* -->
+<h3 class="fn" id="fill-prop"><a name="fill-prop"></a><span class="name">fill</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span>*</h3>
+<p>target 控件的填充目标对象</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QWidget *</td><td class="memItemRight bottomAlign"><span class="name"><b>fill</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>setFill</b></span>(QWidget *<i>fill</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-danchorsbase.html#setFill-1">setFill</a></b></span>(Dtk::Widget::DAnchorsBase *<i>fill</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-danchorsbase.html#fillChanged">fillChanged</a></b></span>(QWidget *<i>fill</i>)</td></tr>
+</table></div>
+<!-- @@@fill -->
+<!-- $$$horizontalCenterOffset-prop$$$horizontalCenterOffset$$$setHorizontalCenterOffsetint$$$horizontalCenterOffsetChangedint -->
+<h3 class="fn" id="horizontalCenterOffset-prop"><a name="horizontalCenterOffset-prop"></a><span class="name">horizontalCenterOffset</span> : <span class="type">int</span></h3>
+<p>水平“锚线”的偏移量</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>horizontalCenterOffset</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setHorizontalCenterOffset</b></span>(int <i>horizontalCenterOffset</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-danchorsbase.html#horizontalCenterOffsetChanged">horizontalCenterOffsetChanged</a></b></span>(int <i>horizontalCenterOffset</i>)</td></tr>
+</table></div>
+<!-- @@@horizontalCenterOffset -->
+<!-- $$$leftMargin-prop$$$leftMargin$$$setLeftMarginint$$$leftMarginChangedint -->
+<h3 class="fn" id="leftMargin-prop"><a name="leftMargin-prop"></a><span class="name">leftMargin</span> : <span class="type">int</span></h3>
+<p>左“锚线”的边距，优先级高于 margins</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>leftMargin</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setLeftMargin</b></span>(int <i>leftMargin</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-danchorsbase.html#leftMarginChanged">leftMarginChanged</a></b></span>(int <i>leftMargin</i>)</td></tr>
+</table></div>
+<!-- @@@leftMargin -->
+<!-- $$$margins-prop$$$margins$$$setMarginsint$$$marginsChangedint -->
+<h3 class="fn" id="margins-prop"><a name="margins-prop"></a><span class="name">margins</span> : <span class="type">int</span></h3>
+<p>上下左右四条“锚线”的边距，此值的优先级低于每条“锚线”特定的 margin 值</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>margins</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setMargins</b></span>(int <i>margins</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-danchorsbase.html#marginsChanged">marginsChanged</a></b></span>(int <i>margins</i>)</td></tr>
+</table></div>
+<!-- @@@margins -->
+<!-- $$$rightMargin-prop$$$rightMargin$$$setRightMarginint$$$rightMarginChangedint -->
+<h3 class="fn" id="rightMargin-prop"><a name="rightMargin-prop"></a><span class="name">rightMargin</span> : <span class="type">int</span></h3>
+<p>右“锚线”的边距，优先级高于 margins</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>rightMargin</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setRightMargin</b></span>(int <i>rightMargin</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-danchorsbase.html#rightMarginChanged">rightMarginChanged</a></b></span>(int <i>rightMargin</i>)</td></tr>
+</table></div>
+<!-- @@@rightMargin -->
+<!-- $$$target-prop$$$target -->
+<h3 class="fn" id="target-prop"><a name="target-prop"></a><span class="name">target</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span>* const</h3>
+<p>绑定了锚定功能的控件对象</p>
+<p><b>Note: </b>只读</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QWidget *</td><td class="memItemRight bottomAlign"><span class="name"><b>target</b></span>() const</td></tr>
+</table></div>
+<!-- @@@target -->
+<!-- $$$topMargin-prop$$$topMargin$$$setTopMarginint$$$topMarginChangedint -->
+<h3 class="fn" id="topMargin-prop"><a name="topMargin-prop"></a><span class="name">topMargin</span> : <span class="type">int</span></h3>
+<p>上“锚线”的边距，优先级高于 margins</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>topMargin</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setTopMargin</b></span>(int <i>topMargin</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-danchorsbase.html#topMarginChanged">topMarginChanged</a></b></span>(int <i>topMargin</i>)</td></tr>
+</table></div>
+<!-- @@@topMargin -->
+<!-- $$$verticalCenterOffset-prop$$$verticalCenterOffset$$$setVerticalCenterOffsetint$$$verticalCenterOffsetChangedint -->
+<h3 class="fn" id="verticalCenterOffset-prop"><a name="verticalCenterOffset-prop"></a><span class="name">verticalCenterOffset</span> : <span class="type">int</span></h3>
+<p>竖直“锚线”的偏移量</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>verticalCenterOffset</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setVerticalCenterOffset</b></span>(int <i>verticalCenterOffset</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-danchorsbase.html#verticalCenterOffsetChanged">verticalCenterOffsetChanged</a></b></span>(int <i>verticalCenterOffset</i>)</td></tr>
+</table></div>
+<!-- @@@verticalCenterOffset -->
+</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
+<!-- $$$DAnchorsBase[overload1]$$$DAnchorsBaseQWidget* -->
+<h3 class="fn" id="DAnchorsBase"><a name="DAnchorsBase"></a>DAnchorsBase::<span class="name">DAnchorsBase</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>w</i>)</h3>
+<p>构造 DAnchorsBase 对象，传入的 w 对象会和一个新的 DAnchorsBase 对象 绑定到一起 <i>w</i> 需要使用锚定关系的控件</p>
+<p><b>Note: </b>对 w 设置的锚定关系不会随着本次构造的 DAnchorsBase 对象的销毁而消失。 此构造函数可能会隐式的构造一个新 DAnchorsBase 对象用于真正的功能实现，函数执行 时会先检查当前是否已经有和 w 对象绑定的 DAnchorsBase 对象，如果没有则会创建一 个新的 DAnchorsBase 对象与之绑定，否则使用已有的对象。隐式创建的 DAnchorsBase 对象会在对应的 <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> 对象被销毁时自动销毁。</p>
+<p><b>See also </b><a href="dtk-widget-danchorsbase.html#target-prop">target</a>(), <a href="dtk-widget-danchorsbase.html#clearAnchors">clearAnchors</a>(), and <a href="dtk-widget-danchorsbase.html#getAnchorBaseByWidget">getAnchorBaseByWidget</a>().</p>
+<!-- @@@DAnchorsBase -->
+<!-- $$$bottomChanged[overload1]$$$bottomChangedconstDtk::Widget::DAnchorInfo* -->
+<h3 class="fn" id="bottomChanged"><a name="bottomChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">bottomChanged</span>(const <span class="type"><a href="dtk-widget-danchorinfo.html">Dtk::Widget::DAnchorInfo</a></span> *<i>bottom</i>)</h3>
+<p>信号会在 <i>bottom</i> 属性的值改变时被发送</p>
+<!-- @@@bottomChanged -->
+<!-- $$$bottomMarginChanged -->
+<h3 class="fn" id="bottomMarginChanged"><a name="bottomMarginChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">bottomMarginChanged</span>(<span class="type">int</span> <i>bottomMargin</i>)</h3>
+<p>信号会在 <i>bottomMargin</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-danchorsbase.html#bottomMargin-prop">bottomMargin</a>. </p>
+<!-- @@@bottomMarginChanged -->
+<!-- $$$centerInChanged -->
+<h3 class="fn" id="centerInChanged"><a name="centerInChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">centerInChanged</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>centerIn</i>)</h3>
+<p>信号会在 <i>centerIn</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-danchorsbase.html#centerIn-prop">centerIn</a>. </p>
+<!-- @@@centerInChanged -->
+<!-- $$$enabledChanged -->
+<h3 class="fn" id="enabledChanged"><a name="enabledChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">enabledChanged</span>(<span class="type">bool</span> <i>enabled</i>)</h3>
+<p>信号会在 <i>enabled</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-danchorsbase.html#enabled-prop">enabled</a>. </p>
+<!-- @@@enabledChanged -->
+<!-- $$$fillChanged -->
+<h3 class="fn" id="fillChanged"><a name="fillChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">fillChanged</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>fill</i>)</h3>
+<p>信号会在 <i>fill</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-danchorsbase.html#fill-prop">fill</a>. </p>
+<!-- @@@fillChanged -->
+<!-- $$$horizontalCenterChanged[overload1]$$$horizontalCenterChangedconstDtk::Widget::DAnchorInfo* -->
+<h3 class="fn" id="horizontalCenterChanged"><a name="horizontalCenterChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">horizontalCenterChanged</span>(const <span class="type"><a href="dtk-widget-danchorinfo.html">Dtk::Widget::DAnchorInfo</a></span> *<i>horizontalCenter</i>)</h3>
+<p>信号会在 <i>horizontalCenter</i> 属性的值改变时被发送</p>
+<!-- @@@horizontalCenterChanged -->
+<!-- $$$horizontalCenterOffsetChanged -->
+<h3 class="fn" id="horizontalCenterOffsetChanged"><a name="horizontalCenterOffsetChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">horizontalCenterOffsetChanged</span>(<span class="type">int</span> <i>horizontalCenterOffset</i>)</h3>
+<p>信号会在 <i>horizontalCenterOffset</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-danchorsbase.html#horizontalCenterOffset-prop">horizontalCenterOffset</a>. </p>
+<!-- @@@horizontalCenterOffsetChanged -->
+<!-- $$$leftChanged[overload1]$$$leftChangedconstDtk::Widget::DAnchorInfo* -->
+<h3 class="fn" id="leftChanged"><a name="leftChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">leftChanged</span>(const <span class="type"><a href="dtk-widget-danchorinfo.html">Dtk::Widget::DAnchorInfo</a></span> *<i>left</i>)</h3>
+<p>信号会在 <i>left</i> 属性的值改变时被发送</p>
+<!-- @@@leftChanged -->
+<!-- $$$leftMarginChanged -->
+<h3 class="fn" id="leftMarginChanged"><a name="leftMarginChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">leftMarginChanged</span>(<span class="type">int</span> <i>leftMargin</i>)</h3>
+<p>信号会在 <i>leftMargin</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-danchorsbase.html#leftMargin-prop">leftMargin</a>. </p>
+<!-- @@@leftMarginChanged -->
+<!-- $$$marginsChanged -->
+<h3 class="fn" id="marginsChanged"><a name="marginsChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">marginsChanged</span>(<span class="type">int</span> <i>margins</i>)</h3>
+<p>信号会在 <i>margins</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-danchorsbase.html#margins-prop">margins</a>. </p>
+<!-- @@@marginsChanged -->
 <!-- $$$moveBottom[overload1]$$$moveBottomint -->
-<h3 class="fn" id="moveBottom"><a name="moveBottom"></a><span class="type">void</span> DAnchorsBase::<span class="name">moveBottom</span>(<span class="type">int</span> <i>arg</i>)</h3>
+<h3 class="fn" id="moveBottom"><a name="moveBottom"></a><code>[slot] </code><span class="type">void</span> DAnchorsBase::<span class="name">moveBottom</span>(<span class="type">int</span> <i>arg</i>)</h3>
 <p>移动 target 控件的下边界到 arg 这个位置 <i>arg</i> 要移动到的位置</p>
 <!-- @@@moveBottom -->
+<!-- $$$moveCenter[overload1]$$$moveCenterconstQPoint& -->
+<h3 class="fn" id="moveCenter"><a name="moveCenter"></a><code>[slot] </code><span class="type">void</span> DAnchorsBase::<span class="name">moveCenter</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qpoint.html">QPoint</a></span> &amp;<i>arg</i>)</h3>
+<p>移动 target 控件的上边界到 arg 这个位置 <i>arg</i> 要移动到的位置</p>
+<!-- @@@moveCenter -->
 <!-- $$$moveHorizontalCenter[overload1]$$$moveHorizontalCenterint -->
-<h3 class="fn" id="moveHorizontalCenter"><a name="moveHorizontalCenter"></a><span class="type">void</span> DAnchorsBase::<span class="name">moveHorizontalCenter</span>(<span class="type">int</span> <i>arg</i>)</h3>
+<h3 class="fn" id="moveHorizontalCenter"><a name="moveHorizontalCenter"></a><code>[slot] </code><span class="type">void</span> DAnchorsBase::<span class="name">moveHorizontalCenter</span>(<span class="type">int</span> <i>arg</i>)</h3>
 <p>移动 target 控件的水平中线到 arg 这个位置 <i>arg</i> 要移动到的位置</p>
 <!-- @@@moveHorizontalCenter -->
 <!-- $$$moveLeft[overload1]$$$moveLeftint -->
-<h3 class="fn" id="moveLeft"><a name="moveLeft"></a><span class="type">void</span> DAnchorsBase::<span class="name">moveLeft</span>(<span class="type">int</span> <i>arg</i>)</h3>
+<h3 class="fn" id="moveLeft"><a name="moveLeft"></a><code>[slot] </code><span class="type">void</span> DAnchorsBase::<span class="name">moveLeft</span>(<span class="type">int</span> <i>arg</i>)</h3>
 <p>移动 target 控件的左边界到 arg 这个位置 <i>arg</i> 要移动到的位置</p>
 <!-- @@@moveLeft -->
 <!-- $$$moveRight[overload1]$$$moveRightint -->
-<h3 class="fn" id="moveRight"><a name="moveRight"></a><span class="type">void</span> DAnchorsBase::<span class="name">moveRight</span>(<span class="type">int</span> <i>arg</i>)</h3>
+<h3 class="fn" id="moveRight"><a name="moveRight"></a><code>[slot] </code><span class="type">void</span> DAnchorsBase::<span class="name">moveRight</span>(<span class="type">int</span> <i>arg</i>)</h3>
 <p>移动 target 控件的右边界到 arg 这个位置 <i>arg</i> 要移动到的位置</p>
 <!-- @@@moveRight -->
 <!-- $$$moveTop[overload1]$$$moveTopint -->
-<h3 class="fn" id="moveTop"><a name="moveTop"></a><span class="type">void</span> DAnchorsBase::<span class="name">moveTop</span>(<span class="type">int</span> <i>arg</i>)</h3>
+<h3 class="fn" id="moveTop"><a name="moveTop"></a><code>[slot] </code><span class="type">void</span> DAnchorsBase::<span class="name">moveTop</span>(<span class="type">int</span> <i>arg</i>)</h3>
 <p>移动 target 控件的上边界到 arg 这个位置 <i>arg</i> 要移动到的位置</p>
 <!-- @@@moveTop -->
 <!-- $$$moveVerticalCenter[overload1]$$$moveVerticalCenterint -->
-<h3 class="fn" id="moveVerticalCenter"><a name="moveVerticalCenter"></a><span class="type">void</span> DAnchorsBase::<span class="name">moveVerticalCenter</span>(<span class="type">int</span> <i>arg</i>)</h3>
+<h3 class="fn" id="moveVerticalCenter"><a name="moveVerticalCenter"></a><code>[slot] </code><span class="type">void</span> DAnchorsBase::<span class="name">moveVerticalCenter</span>(<span class="type">int</span> <i>arg</i>)</h3>
 <p>移动 target 控件的竖直中线到 arg 这个位置 <i>arg</i> 要移动到的位置</p>
 <!-- @@@moveVerticalCenter -->
-<!-- $$$setAnchor$$$setAnchorconstint&QWidget*constint& -->
-<h3 class="fn" id="setAnchor-1"><a name="setAnchor-1"></a><span class="type">bool</span> DAnchorsBase::<span class="name">setAnchor</span>(const <span class="type">int</span> &amp;<i>p</i>, <span class="type">QWidget</span> *<i>target</i>, const <span class="type">int</span> &amp;<i>point</i>)</h3>
-<p>为 DAnchorsBase::target 对象设置锚定规则</p>
-<p><b>Note: </b>可能会为目标控件隐式创建其对应的 <a href="dtk-widget-danchorsbase.html">DAnchorsBase</a> 对象 <i>p</i> 为当前控件的哪个锚线/锚点设置锚定规则 <i>target</i> 锚定的目标控件 <i>point</i> 锚定的目标锚线/锚点 Returns 如果设置成功，则返回 true，否则返回 false</p>
-<!-- @@@setAnchor -->
-<!-- $$$setCenterIn$$$setCenterInDtk::Widget::DAnchorsBase* -->
-<h3 class="fn" id="setCenterIn-1"><a name="setCenterIn-1"></a><span class="type">bool</span> DAnchorsBase::<span class="name">setCenterIn</span>(<span class="type"><a href="dtk-widget-danchorsbase.html">Dtk::Widget::DAnchorsBase</a></span> *<i>centerIn</i>)</h3>
-<p>将 centerIn 中的target()作为参数调用其它重载函数 <i>centerIn</i> Returns</p>
+<!-- $$$rightChanged[overload1]$$$rightChangedconstDtk::Widget::DAnchorInfo* -->
+<h3 class="fn" id="rightChanged"><a name="rightChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">rightChanged</span>(const <span class="type"><a href="dtk-widget-danchorinfo.html">Dtk::Widget::DAnchorInfo</a></span> *<i>right</i>)</h3>
+<p>信号会在 <i>right</i> 属性的值改变时被发送</p>
+<!-- @@@rightChanged -->
+<!-- $$$rightMarginChanged -->
+<h3 class="fn" id="rightMarginChanged"><a name="rightMarginChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">rightMarginChanged</span>(<span class="type">int</span> <i>rightMargin</i>)</h3>
+<p>信号会在 <i>rightMargin</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-danchorsbase.html#rightMargin-prop">rightMargin</a>. </p>
+<!-- @@@rightMarginChanged -->
+<!-- $$$setCenterIn -->
+<h3 class="fn" id="setCenterIn-1"><a name="setCenterIn-1"></a><code>[slot] </code><span class="type">bool</span> DAnchorsBase::<span class="name">setCenterIn</span>(<span class="type"><a href="dtk-widget-danchorsbase.html">Dtk::Widget::DAnchorsBase</a></span> *<i>centerIn</i>)</h3>
+<p>将 <a href="dtk-widget-danchorsbase.html#centerIn-prop">centerIn</a> 中的<a href="dtk-widget-danchorsbase.html#target-prop">target</a>()作为参数调用其它重载函数 <i>centerIn</i> Returns</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-danchorsbase.html#centerIn-prop">centerIn</a>. </p>
 <!-- @@@setCenterIn -->
-<!-- $$$setFill$$$setFillDtk::Widget::DAnchorsBase* -->
-<h3 class="fn" id="setFill-1"><a name="setFill-1"></a><span class="type">bool</span> DAnchorsBase::<span class="name">setFill</span>(<span class="type"><a href="dtk-widget-danchorsbase.html">Dtk::Widget::DAnchorsBase</a></span> *<i>fill</i>)</h3>
-<p>将 fill 中的target()作为参数调用其它重载函数 <i>fill</i> Returns</p>
+<!-- $$$setFill -->
+<h3 class="fn" id="setFill-1"><a name="setFill-1"></a><code>[slot] </code><span class="type">bool</span> DAnchorsBase::<span class="name">setFill</span>(<span class="type"><a href="dtk-widget-danchorsbase.html">Dtk::Widget::DAnchorsBase</a></span> *<i>fill</i>)</h3>
+<p>将 fill 中的<a href="dtk-widget-danchorsbase.html#target-prop">target</a>()作为参数调用其它重载函数 <i>fill</i> Returns</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-danchorsbase.html#fill-prop">fill</a>. </p>
 <!-- @@@setFill -->
+<!-- $$$topChanged[overload1]$$$topChangedconstDtk::Widget::DAnchorInfo* -->
+<h3 class="fn" id="topChanged"><a name="topChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">topChanged</span>(const <span class="type"><a href="dtk-widget-danchorinfo.html">Dtk::Widget::DAnchorInfo</a></span> *<i>top</i>)</h3>
+<p>信号会在 <i>top</i> 属性的值改变时被发送</p>
+<!-- @@@topChanged -->
+<!-- $$$topMarginChanged -->
+<h3 class="fn" id="topMarginChanged"><a name="topMarginChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">topMarginChanged</span>(<span class="type">int</span> <i>topMargin</i>)</h3>
+<p>信号会在 <i>topMargin</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-danchorsbase.html#topMargin-prop">topMargin</a>. </p>
+<!-- @@@topMarginChanged -->
+<!-- $$$verticalCenterChanged[overload1]$$$verticalCenterChangedconstDtk::Widget::DAnchorInfo* -->
+<h3 class="fn" id="verticalCenterChanged"><a name="verticalCenterChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">verticalCenterChanged</span>(const <span class="type"><a href="dtk-widget-danchorinfo.html">Dtk::Widget::DAnchorInfo</a></span> *<i>verticalCenter</i>)</h3>
+<p>信号会在 <i>verticalCenter</i> 属性的值改变时被发送</p>
+<!-- @@@verticalCenterChanged -->
+<!-- $$$verticalCenterOffsetChanged -->
+<h3 class="fn" id="verticalCenterOffsetChanged"><a name="verticalCenterOffsetChanged"></a><code>[signal] </code><span class="type">void</span> DAnchorsBase::<span class="name">verticalCenterOffsetChanged</span>(<span class="type">int</span> <i>verticalCenterOffset</i>)</h3>
+<p>信号会在 <i>verticalCenterOffset</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-danchorsbase.html#verticalCenterOffset-prop">verticalCenterOffset</a>. </p>
+<!-- @@@verticalCenterOffsetChanged -->
+<!-- $$$~DAnchorsBase[overload1]$$$~DAnchorsBase -->
+<h3 class="fn" id="dtor.DAnchorsBase"><a name="dtor.DAnchorsBase"></a>DAnchorsBase::<span class="name">~DAnchorsBase</span>()</h3>
+<p>在析构时会判断此 <a href="dtk-widget-danchorsbase.html">DAnchorsBase</a> 对象是否和 target 存在绑定关系，如果是 则从映射表中移除绑定</p>
+<p><b>Warning:</b> DAnchorsBasePrivate 对象可能是在多个 <a href="dtk-widget-danchorsbase.html">DAnchorsBase</a> 对象之间显式 共享的，所以在销毁 <a href="dtk-widget-danchorsbase.html">DAnchorsBase</a> 后，对应的 DAnchorsBasePrivate 对象不一定 会被销毁</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qexplicitlyshareddatapointer.html">QExplicitlySharedDataPointer</a>.</p>
+<!-- @@@~DAnchorsBase -->
+<!-- $$$clearAnchors[overload1]$$$clearAnchorsconstQWidget* -->
+<h3 class="fn" id="clearAnchors"><a name="clearAnchors"></a><code>[static] </code><span class="type">void</span> DAnchorsBase::<span class="name">clearAnchors</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>w</i>)</h3>
+<p>清除和控件 w 相关的所有锚定关系，包括锚定w或者被w锚定的任何关联。会直接 销毁 w 对应的 <a href="dtk-widget-danchorsbase.html">DAnchorsBase</a> 对象 <i>w</i></p>
+<!-- @@@clearAnchors -->
+<!-- $$$enhancedWidget[overload1]$$$enhancedWidget -->
+<h3 class="fn" id="enhancedWidget"><a name="enhancedWidget"></a><span class="type"><a href="dtk-widget-denhancedwidget.html">Dtk::Widget::DEnhancedWidget</a></span> *DAnchorsBase::<span class="name">enhancedWidget</span>() const</h3>
+<p>返回 target 控件的扩展对象。此对象为 <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> 对象额外提供了和控件大小、 位置相关的变化信号 Returns</p>
+<p><b>See also </b><a href="dtk-widget-denhancedwidget.html">Dtk::Widget::DEnhancedWidget</a>.</p>
+<!-- @@@enhancedWidget -->
+<!-- $$$errorCode[overload1]$$$errorCode -->
+<h3 class="fn" id="errorCode"><a name="errorCode"></a><span class="type"><a href="dtk-widget-danchorsbase.html#AnchorError-enum">Dtk::Widget::DAnchorsBase::AnchorError</a></span> DAnchorsBase::<span class="name">errorCode</span>() const</h3>
+<p>锚定过程中产生的错误，在一个新的锚定函数被调用之前会清空此错误状态，每次 调用锚定函数后，可以通过此函数的返回值来判断锚定设置是否成功 Returns</p>
+<p><b>See also </b><a href="dtk-widget-danchorsbase.html#errorString">errorString</a>().</p>
+<!-- @@@errorCode -->
+<!-- $$$errorString[overload1]$$$errorString -->
+<h3 class="fn" id="errorString"><a name="errorString"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DAnchorsBase::<span class="name">errorString</span>() const</h3>
+<p>对 <a href="dtk-widget-danchorsbase.html#errorCode">errorCode</a> 的文本描述信息 Returns</p>
+<p><b>See also </b><a href="dtk-widget-danchorsbase.html#errorCode">errorCode</a>.</p>
+<!-- @@@errorString -->
+<!-- $$$getAnchorBaseByWidget[overload1]$$$getAnchorBaseByWidgetconstQWidget* -->
+<h3 class="fn" id="getAnchorBaseByWidget"><a name="getAnchorBaseByWidget"></a><code>[static] </code><span class="type"><a href="dtk-widget-danchorsbase.html">Dtk::Widget::DAnchorsBase</a></span> *DAnchorsBase::<span class="name">getAnchorBaseByWidget</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>w</i>)</h3>
+<p>返回与 w 绑定的 <a href="dtk-widget-danchorsbase.html">DAnchorsBase</a> 对象 <i>w</i> Returns 如果 w 没有对应的锚定对象，则返回空</p>
+<!-- @@@getAnchorBaseByWidget -->
+<!-- $$$isBinding[overload1]$$$isBindingconstDtk::Widget::DAnchorInfo* -->
+<h3 class="fn" id="isBinding"><a name="isBinding"></a><span class="type">bool</span> DAnchorsBase::<span class="name">isBinding</span>(const <span class="type"><a href="dtk-widget-danchorinfo.html">Dtk::Widget::DAnchorInfo</a></span> *<i>info</i>) const</h3>
+<p>如果此 info 设置了锚定对象，则返回 true ，否则返回 false</p>
+<pre class="cpp">
+ DAnchors<span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span><span class="operator">&gt;</span> w1;
+ DAnchors<span class="operator">&lt;</span><span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span><span class="operator">&gt;</span> w2;
+
+ w1<span class="operator">.</span>setLeft(w2<span class="operator">.</span>right());
+
+ <a href="http://doc.qt.io/qt-5/qtglobal.html#qDebug">qDebug</a>() <span class="operator">&lt;</span><span class="operator">&lt;</span> w1<span class="operator">.</span>isBinding(w1<span class="operator">.</span>left()) <span class="operator">&lt;</span><span class="operator">&lt;</span> w2<span class="operator">.</span>isBinding(w2<span class="operator">.</span>right());
+</pre>
+<p>打印内容为：ture false <i>info</i> Returns</p>
+<!-- @@@isBinding -->
 </div>
         </div>
        </div>

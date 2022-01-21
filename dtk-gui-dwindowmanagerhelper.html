@@ -39,6 +39,12 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -51,7 +57,65 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DWindowManagerHelper&gt;</span>
 </td></tr></table></div><ul>
+<li><a href="dtk-gui-dwindowmanagerhelper-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#MotifFunction-enum">MotifFunction</a></b> { FUNC_RESIZE, FUNC_MOVE, FUNC_MINIMIZE, FUNC_MAXIMIZE, FUNC_CLOSE, FUNC_ALL }</td></tr>
+</table></div>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasBlurWindow-prop">hasBlurWindow</a></b> : const bool</li>
+<li class="fn"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasComposite-prop">hasComposite</a></b> : const bool</li>
+<li class="fn"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasNoTitlebar-prop">hasNoTitlebar</a></b> : const bool</li>
+<li class="fn"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasWallpaperEffect-prop">hasWallpaperEffect</a></b> : const bool</li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;quint32&gt; </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#allWindowIdList">allWindowIdList</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;quint32&gt; </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#currentWorkspaceWindowIdList">currentWorkspaceWindowIdList</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QList&lt;Dtk::Gui::DForeignWindow *&gt; </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#currentWorkspaceWindows">currentWorkspaceWindows</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasBlurWindow">hasBlurWindow</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasComposite">hasComposite</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasNoTitlebar">hasNoTitlebar</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasWallpaperEffect">hasWallpaperEffect</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> quint32 </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#windowFromPoint">windowFromPoint</a></b>(const QPoint &amp;<i>p</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#windowManagerName">windowManagerName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#windowManagerNameString">windowManagerNameString</a></b>() const</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasBlurWindowChanged">hasBlurWindowChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasCompositeChanged">hasCompositeChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasNoTitlebarChanged">hasNoTitlebarChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasWallpaperEffectChanged">hasWallpaperEffectChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#windowListChanged">windowListChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#windowManagerChanged">windowManagerChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#windowMotifWMHintsChanged">windowMotifWMHintsChanged</a></b>(quint32 <i>winId</i>)</td></tr>
+</table></div>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#getMotifDecorations">getMotifDecorations</a></b>(<i>const QWindow *</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#getMotifFunctions">getMotifFunctions</a></b>(<i>const QWindow *</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Dtk::Gui::DWindowManagerHelper *</td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#instance">instance</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#popupSystemWindowMenu">popupSystemWindowMenu</a></b>(const QWindow *<i>window</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#setMotifDecorations">setMotifDecorations</a></b>(const QWindow *<i>window</i>, int <i>hints</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#setMotifDecorations-1">setMotifDecorations</a></b>(<i>const QWindow *</i>, <i>int</i>, <i>bool</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#setMotifFunctions">setMotifFunctions</a></b>(const QWindow *<i>window</i>, int <i>hints</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#setMotifFunctions-1">setMotifFunctions</a></b>(<i>const QWindow *</i>, <i>int</i>, <i>bool</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#setWmClassName">setWmClassName</a></b>(const QByteArray &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#setWmWindowTypes">setWmWindowTypes</a></b>(QWindow *<i>window</i>, int <i>types</i>)</td></tr>
+</table></div>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowmanagerhelper.html#DWindowManagerHelper">DWindowManagerHelper</a></b>(QObject *<i>parent</i> = 0)</td></tr>
+</table></div>
 <a name="details"></a>
 <!-- $$$DWindowManagerHelper-description -->
 <div class="descr">
@@ -60,6 +124,254 @@
 </div>
 <p><b>See also </b><a href="https://github.com/linuxdeepin/qt5dxcb-plugin/">dxcb插件</a>, Dtk::Widget::DApplication::loadDXcbPlugin, Dtk::Widget::DApplication::isDXcbPlatform, and <a href="dtk-widget-dplatformwindowhandle.html">Dtk::Widget::DPlatformWindowHandle</a>.</p>
 <!-- @@@DWindowManagerHelper -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$MotifFunction$$$FUNC_RESIZE$$$FUNC_MOVE$$$FUNC_MINIMIZE$$$FUNC_MAXIMIZE$$$FUNC_CLOSE$$$FUNC_ALL -->
+<h3 class="fn" id="MotifFunction-enum"><a name="MotifFunction-enum"></a>enum DWindowManagerHelper::<span class="name">MotifFunction</span></h3>
+<p>MotifFunction::MotifFunction 窗口管理器对窗口所能控制的行为</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Gui::DWindowManagerHelper::FUNC_RESIZE</code></td><td class="topAlign tblval"><code>(1L &lt;&lt; 1)</code></td><td class="topAlign">控制窗口大小。如果存在此标志，则窗口管理器可以改变窗口大小（如使用鼠标拖拽窗口边缘）， 否则无法通过外部行为调整窗口大小。<pre class="cpp">
+ DMainWindow w;
+
+ w<span class="operator">.</span>resize(<span class="number">400</span><span class="operator">,</span> <span class="number">200</span>);
+ w<span class="operator">.</span>show();
+ DWindowManagerHelper<span class="operator">::</span>setMotifFunctions(w<span class="operator">.</span>windowHandle()<span class="operator">,</span> DWindowManagerHelper<span class="operator">::</span>FUNC_RESIZE<span class="operator">,</span> <span class="keyword">false</span>);
+</pre>
+</td></tr>
+</table></div>
+<p class="centerAlign"><img src="images/disable_resize_function.gif" alt="" /></p><p><b>Note: </b>普通窗口默认存在此标志，对于 <a href="http://doc.qt.io/qt-5/qt.html#WindowType-enum">Qt::Popup</a> 和 <a href="http://doc.qt.io/qt-5/qt.html#WindowType-enum">Qt::BypassWindowManagerHint</a> 类型的窗口，不受此标志位影响</p>
+<p><b>Note: </b>设置此标志后也会影响窗口标题栏对应功能入口的状态</p>
+<p><b>Note: </b>对于使用系统标题栏的窗口，此功能和具体窗口管理器实现相关，deepin-wm 中设置 此标志无效。</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="even"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Gui::DWindowManagerHelper::FUNC_MOVE</code></td><td class="topAlign tblval"><code>(1L &lt;&lt; 2)</code></td><td class="topAlign">控制窗口位置。如果存在此标志，则窗口管理器可以移动窗口（如使用鼠标拖动标题栏），否则 无法通过外部行为移动窗口位置。<pre class="cpp">
+ DWindowManagerHelper<span class="operator">::</span>setMotifFunctions(w<span class="operator">.</span>windowHandle()<span class="operator">,</span> DWindowManagerHelper<span class="operator">::</span>FUNC_MOVE<span class="operator">,</span> <span class="keyword">false</span>);
+</pre>
+</td></tr>
+</table></div>
+<p class="centerAlign"><img src="images/disable_move_function.gif" alt="" /></p><div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Gui::DWindowManagerHelper::FUNC_MINIMIZE</code></td><td class="topAlign tblval"><code>(1L &lt;&lt; 3)</code></td><td class="topAlign">最小化窗口。如果存在此标志，则窗口可以被最小化（如点击标题栏的最小化按钮），否则无法 通过外部行为最小化窗口。<pre class="cpp">
+ DWindowManagerHelper<span class="operator">::</span>setMotifFunctions(w<span class="operator">.</span>windowHandle()<span class="operator">,</span> DWindowManagerHelper<span class="operator">::</span>FUNC_MINIMIZE<span class="operator">,</span> <span class="keyword">false</span>);
+</pre>
+</td></tr>
+</table></div>
+<p><b>Note: </b>设置此标志后也会影响窗口标题栏对应功能入口的状态</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="even"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Gui::DWindowManagerHelper::FUNC_MAXIMIZE</code></td><td class="topAlign tblval"><code>(1L &lt;&lt; 4)</code></td><td class="topAlign">最大化窗口。如果存在此标志，则窗口可以被最大化（如点击标题栏的最大化按钮），否则无法 通过外部行为最大化窗口。<pre class="cpp">
+ DWindowManagerHelper<span class="operator">::</span>setMotifFunctions(w<span class="operator">.</span>windowHandle()<span class="operator">,</span> DWindowManagerHelper<span class="operator">::</span>FUNC_MAXIMIZE<span class="operator">,</span> <span class="keyword">false</span>);
+</pre>
+</td></tr>
+</table></div>
+<p><b>Note: </b>设置此标志后也会影响窗口标题栏对应功能入口的状态</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Gui::DWindowManagerHelper::FUNC_CLOSE</code></td><td class="topAlign tblval"><code>(1L &lt;&lt; 5)</code></td><td class="topAlign">关闭窗口。如果存在此标志，则窗口可以被关闭（如点击标题栏的关闭按钮或使用Alt+F4快捷键）， 否则无法通过外部行为关闭窗口。<pre class="cpp">
+ DWindowManagerHelper<span class="operator">::</span>setMotifFunctions(w<span class="operator">.</span>windowHandle()<span class="operator">,</span> DWindowManagerHelper<span class="operator">::</span>FUNC_CLOSE<span class="operator">,</span> <span class="keyword">false</span>);
+</pre>
+</td></tr>
+</table></div>
+<p><b>Note: </b>设置此标志后也会影响窗口标题栏对应功能入口的状态</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="even"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Gui::DWindowManagerHelper::FUNC_ALL</code></td><td class="topAlign tblval"><code>FUNC_RESIZE | FUNC_MOVE | FUNC_MINIMIZE | FUNC_MAXIMIZE | FUNC_CLOSE</code></td><td class="topAlign">所有功能性行为</td></tr>
+</table></div>
+<p><b>See also </b>Dtk::Gui::DPlatformHandle::enableDXcbForWindow and Dtk::Gui::DPlatformHandle::isEnabledDXcb.</p>
+<!-- @@@MotifFunction -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$hasBlurWindow-prop$$$hasBlurWindow$$$hasBlurWindowChanged -->
+<h3 class="fn" id="hasBlurWindow-prop"><a name="hasBlurWindow-prop"></a><span class="name">hasBlurWindow</span> : const <span class="type">bool</span></h3>
+<p>窗口管理器是否支持窗口背景模糊特效</p>
+<p><b>Note: </b>在 dxcb 插件中目前只支持 deepin-wm 和 kwin 这两种窗管的模糊特效</p>
+<p><b>Note: </b>只读</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasBlurWindow">hasBlurWindow</a></b></span>() const</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasBlurWindowChanged">hasBlurWindowChanged</a></b></span>()</td></tr>
+</table></div>
+<!-- @@@hasBlurWindow -->
+<!-- $$$hasComposite-prop$$$hasComposite$$$hasCompositeChanged -->
+<h3 class="fn" id="hasComposite-prop"><a name="hasComposite-prop"></a><span class="name">hasComposite</span> : const <span class="type">bool</span></h3>
+<p>窗口管理器是否支持混成效果。如果不支持混成，则表示所有窗口的背景都不能透明， 随之而来也不会有窗口阴影等效果，不规则窗口的边缘也会存在锯齿。</p>
+<p><b>Note: </b>只读</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasComposite">hasComposite</a></b></span>() const</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasCompositeChanged">hasCompositeChanged</a></b></span>()</td></tr>
+</table></div>
+<!-- @@@hasComposite -->
+<!-- $$$hasNoTitlebar-prop$$$hasNoTitlebar$$$hasNoTitlebarChanged -->
+<h3 class="fn" id="hasNoTitlebar-prop"><a name="hasNoTitlebar-prop"></a><span class="name">hasNoTitlebar</span> : const <span class="type">bool</span></h3>
+<p>窗口管理器是否支持隐藏窗口标题栏。如果支持，则 DPlatformWindowHandle::enableDXcbForWindow 会优先使用此方法支持自定义窗口标题栏。</p>
+<p><b>Note: </b>只读</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasNoTitlebar">hasNoTitlebar</a></b></span>() const</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasNoTitlebarChanged">hasNoTitlebarChanged</a></b></span>()</td></tr>
+</table></div>
+<p><b>See also </b>Dtk::Gui::DPlatformHandle::setEnabledNoTitlebarForWindow.</p>
+<!-- @@@hasNoTitlebar -->
+<!-- $$$hasWallpaperEffect-prop$$$hasWallpaperEffect$$$hasWallpaperEffectChanged -->
+<h3 class="fn" id="hasWallpaperEffect-prop"><a name="hasWallpaperEffect-prop"></a><span class="name">hasWallpaperEffect</span> : const <span class="type">bool</span></h3>
+<p>窗口管理器是否支持窗口背景特效绘制。如果支持，则 绘制背景到透明窗口 会使用此方法开启特效窗口壁纸背景绘制。</p>
+<p><b>Note: </b>只读</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasWallpaperEffect">hasWallpaperEffect</a></b></span>() const</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-gui-dwindowmanagerhelper.html#hasWallpaperEffectChanged">hasWallpaperEffectChanged</a></b></span>()</td></tr>
+</table></div>
+<p><b>See also </b><a href="dtk-gui-dwindowmanagerhelper.html#hasWallpaperEffectChanged">hasWallpaperEffectChanged</a>().</p>
+<!-- @@@hasWallpaperEffect -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DWindowManagerHelper[overload1]$$$DWindowManagerHelperQObject* -->
+<h3 class="fn" id="DWindowManagerHelper"><a name="DWindowManagerHelper"></a><code>[protected] </code>DWindowManagerHelper::<span class="name">DWindowManagerHelper</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qobject.html">QObject</a></span> *<i>parent</i> = 0)</h3>
+<p><a href="dtk-gui-dwindowmanagerhelper.html">DWindowManagerHelper::DWindowManagerHelper</a> 不允许直接实例化此对象 <i>parent</i></p>
+<p><b>See also </b><a href="dtk-gui-dwindowmanagerhelper.html#instance">DWindowManagerHelper::instance</a>.</p>
+<!-- @@@DWindowManagerHelper -->
+<!-- $$$hasBlurWindowChanged -->
+<h3 class="fn" id="hasBlurWindowChanged"><a name="hasBlurWindowChanged"></a><code>[signal] </code><span class="type">void</span> DWindowManagerHelper::<span class="name">hasBlurWindowChanged</span>()</h3>
+<p>信号会在 <a href="dtk-gui-dwindowmanagerhelper.html#hasBlurWindow">hasBlurWindow</a> 属性的值改变时被发送.</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-gui-dwindowmanagerhelper.html#hasBlurWindow">hasBlurWindow</a>. </p>
+<!-- @@@hasBlurWindowChanged -->
+<!-- $$$hasCompositeChanged -->
+<h3 class="fn" id="hasCompositeChanged"><a name="hasCompositeChanged"></a><code>[signal] </code><span class="type">void</span> DWindowManagerHelper::<span class="name">hasCompositeChanged</span>()</h3>
+<p>信号会在 <a href="dtk-gui-dwindowmanagerhelper.html#hasComposite">hasComposite</a> 属性的值改变时被发送.</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-gui-dwindowmanagerhelper.html#hasComposite">hasComposite</a>. </p>
+<!-- @@@hasCompositeChanged -->
+<!-- $$$hasNoTitlebarChanged -->
+<h3 class="fn" id="hasNoTitlebarChanged"><a name="hasNoTitlebarChanged"></a><code>[signal] </code><span class="type">void</span> DWindowManagerHelper::<span class="name">hasNoTitlebarChanged</span>()</h3>
+<p>信号会在 <a href="dtk-gui-dwindowmanagerhelper.html#hasNoTitlebar">hasNoTitlebar</a> 属性的值改变时被发送.</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-gui-dwindowmanagerhelper.html#hasNoTitlebar">hasNoTitlebar</a>. </p>
+<!-- @@@hasNoTitlebarChanged -->
+<!-- $$$hasWallpaperEffectChanged -->
+<h3 class="fn" id="hasWallpaperEffectChanged"><a name="hasWallpaperEffectChanged"></a><code>[signal] </code><span class="type">void</span> DWindowManagerHelper::<span class="name">hasWallpaperEffectChanged</span>()</h3>
+<p>信号会在 <a href="dtk-gui-dwindowmanagerhelper.html#hasWallpaperEffect">hasWallpaperEffect</a> 属性的值改变时被发送.</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-gui-dwindowmanagerhelper.html#hasWallpaperEffect">hasWallpaperEffect</a>. </p>
+<!-- @@@hasWallpaperEffectChanged -->
+<!-- $$$windowListChanged[overload1]$$$windowListChanged -->
+<h3 class="fn" id="windowListChanged"><a name="windowListChanged"></a><code>[signal] </code><span class="type">void</span> DWindowManagerHelper::<span class="name">windowListChanged</span>()</h3>
+<p>信号会在当前环境本地窗口列表变化时被发送。包含打开新窗口、关闭窗口、改变窗口的 层叠顺序.</p>
+<!-- @@@windowListChanged -->
+<!-- $$$windowManagerChanged[overload1]$$$windowManagerChanged -->
+<h3 class="fn" id="windowManagerChanged"><a name="windowManagerChanged"></a><code>[signal] </code><span class="type">void</span> DWindowManagerHelper::<span class="name">windowManagerChanged</span>()</h3>
+<p>信号会在当前环境窗口管理器变化时被发送.</p>
+<!-- @@@windowManagerChanged -->
+<!-- $$$windowMotifWMHintsChanged[overload1]$$$windowMotifWMHintsChangedquint32 -->
+<h3 class="fn" id="windowMotifWMHintsChanged"><a name="windowMotifWMHintsChanged"></a><code>[signal] </code><span class="type">void</span> DWindowManagerHelper::<span class="name">windowMotifWMHintsChanged</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#quint32-typedef">quint32</a></span> <i>winId</i>)</h3>
+<p>信号会在窗口功能或修饰标志改变时被发送.</p>
+<p><i>winId</i> 窗口id</p>
+<p><b>Note: </b>只对当前应用程序中的窗口有效</p>
+<!-- @@@windowMotifWMHintsChanged -->
+<!-- $$$allWindowIdList[overload1]$$$allWindowIdList -->
+<h3 class="fn" id="allWindowIdList"><a name="allWindowIdList"></a><span class="type"><a href="http://doc.qt.io/qt-5/qvector.html">QVector</a></span>&lt;<span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#quint32-typedef">quint32</a></span>&gt; DWindowManagerHelper::<span class="name">allWindowIdList</span>() const</h3>
+<p>DWindowManagerHelper::allWindowIdList Returns 返回当前环境所有本地窗口的窗口id列表</p>
+<p><b>Note: </b>顺序和窗口层叠顺序相关，显示越靠下层的窗口在列表中顺序越靠前</p>
+<p><b>See also </b><a href="dtk-gui-dwindowmanagerhelper.html#currentWorkspaceWindowIdList">DWindowManagerHelper::currentWorkspaceWindowIdList</a>.</p>
+<!-- @@@allWindowIdList -->
+<!-- $$$currentWorkspaceWindowIdList[overload1]$$$currentWorkspaceWindowIdList -->
+<h3 class="fn" id="currentWorkspaceWindowIdList"><a name="currentWorkspaceWindowIdList"></a><span class="type"><a href="http://doc.qt.io/qt-5/qvector.html">QVector</a></span>&lt;<span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#quint32-typedef">quint32</a></span>&gt; DWindowManagerHelper::<span class="name">currentWorkspaceWindowIdList</span>() const</h3>
+<p>DWindowManagerHelper::currentWorkspaceWindowIdList Returns 返回当前工作区所有本地窗口的窗口id列表</p>
+<p><b>Note: </b>顺序和窗口层叠顺序相关，显示越靠下层的窗口在列表中顺序越靠前</p>
+<p><b>See also </b><a href="dtk-gui-dwindowmanagerhelper.html#allWindowIdList">DWindowManagerHelper::allWindowIdList</a>.</p>
+<!-- @@@currentWorkspaceWindowIdList -->
+<!-- $$$currentWorkspaceWindows[overload1]$$$currentWorkspaceWindows -->
+<h3 class="fn" id="currentWorkspaceWindows"><a name="currentWorkspaceWindows"></a><span class="type"><a href="http://doc.qt.io/qt-5/qlist.html">QList</a></span>&lt;<span class="type"><a href="dtk-gui-dforeignwindow.html">Dtk::Gui::DForeignWindow</a></span> *&gt; DWindowManagerHelper::<span class="name">currentWorkspaceWindows</span>() const</h3>
+<p><a href="dtk-gui-dwindowmanagerhelper.html#currentWorkspaceWindowIdList">DWindowManagerHelper::currentWorkspaceWindowIdList</a> Returns 返回当前工作区所有本地窗口对象列表。和 <a href="dtk-gui-dwindowmanagerhelper.html#currentWorkspaceWindowIdList">currentWorkspaceWindowIdList</a> 类似，只不过自动通过窗口id创建了 <a href="dtk-gui-dforeignwindow.html">DForeignWindow</a> 对象</p>
+<p><b>Note: </b>顺序和窗口层叠顺序相关，显示越靠下层的窗口在列表中顺序越靠前</p>
+<p><b>Note: </b>列表中对象的生命周期由 <a href="dtk-gui-dforeignwindow.html">DForeignWindow</a> 负责</p>
+<p><b>Warning:</b> 此列表中不包含由当前应用创建的窗口</p>
+<p><b>See also </b><a href="dtk-gui-dwindowmanagerhelper.html#currentWorkspaceWindowIdList">DWindowManagerHelper::currentWorkspaceWindowIdList</a> and <a href="dtk-gui-dforeignwindow.html#fromWinId">DForeignWindow::fromWinId</a>.</p>
+<!-- @@@currentWorkspaceWindows -->
+<!-- $$$getMotifDecorations[overload1]$$$getMotifDecorationsconstQWindow* -->
+<h3 class="fn" id="getMotifDecorations"><a name="getMotifDecorations"></a><code>[static] </code><span class="type">int</span> DWindowManagerHelper::<span class="name">getMotifDecorations</span>(<i>const QWindow *</i>)</h3>
+<p><a href="dtk-gui-dwindowmanagerhelper.html#getMotifFunctions">DWindowManagerHelper::getMotifFunctions</a> <i>window</i> Returns 返回窗口当前的修饰标志</p>
+<!-- @@@getMotifDecorations -->
+<!-- $$$getMotifFunctions[overload1]$$$getMotifFunctionsconstQWindow* -->
+<h3 class="fn" id="getMotifFunctions"><a name="getMotifFunctions"></a><code>[static] </code><span class="type">int</span> DWindowManagerHelper::<span class="name">getMotifFunctions</span>(<i>const QWindow *</i>)</h3>
+<p>DWindowManagerHelper::getMotifFunctions <i>window</i> Returns 返回窗口当前的功能标志</p>
+<!-- @@@getMotifFunctions -->
+<!-- $$$hasBlurWindow -->
+<h3 class="fn" id="hasBlurWindow"><a name="hasBlurWindow"></a><span class="type">bool</span> DWindowManagerHelper::<span class="name">hasBlurWindow</span>() const</h3>
+<p>DWindowManagerHelper::hasBlurWindow Returns 如果当前窗口管理器支持窗口背景模糊特效则返回 true，否则返回 false</p>
+<p><b>Note: </b>Getter function for property hasBlurWindow. </p>
+<!-- @@@hasBlurWindow -->
+<!-- $$$hasComposite -->
+<h3 class="fn" id="hasComposite"><a name="hasComposite"></a><span class="type">bool</span> DWindowManagerHelper::<span class="name">hasComposite</span>() const</h3>
+<p>DWindowManagerHelper::hasComposite Returns 如果当前窗口管理器支持混成则返回 true，否则返回 false</p>
+<p><b>Note: </b>Getter function for property hasComposite. </p>
+<!-- @@@hasComposite -->
+<!-- $$$hasNoTitlebar -->
+<h3 class="fn" id="hasNoTitlebar"><a name="hasNoTitlebar"></a><span class="type">bool</span> DWindowManagerHelper::<span class="name">hasNoTitlebar</span>() const</h3>
+<p>DWindowManagerHelper::hasNoTitlebar Returns 如果窗口管理器当前支持设置隐藏窗口标题栏则返回 true，否则返回 false</p>
+<p><b>Note: </b>Getter function for property hasNoTitlebar. </p>
+<!-- @@@hasNoTitlebar -->
+<!-- $$$hasWallpaperEffect -->
+<h3 class="fn" id="hasWallpaperEffect"><a name="hasWallpaperEffect"></a><span class="type">bool</span> DWindowManagerHelper::<span class="name">hasWallpaperEffect</span>() const</h3>
+<p>DWindowManagerHelper::hasWallpaperEffect Returns 如果窗口管理器当前支持背景图片特效绘制返回 true，否则返回 false</p>
+<p><b>Note: </b>Getter function for property hasWallpaperEffect. </p>
+<!-- @@@hasWallpaperEffect -->
+<!-- $$$instance[overload1]$$$instance -->
+<h3 class="fn" id="instance"><a name="instance"></a><code>[static] </code><span class="type"><a href="dtk-gui-dwindowmanagerhelper.html">Dtk::Gui::DWindowManagerHelper</a></span> *DWindowManagerHelper::<span class="name">instance</span>()</h3>
+<p>DWindowManagerHelper::instance <a href="dtk-gui-dwindowmanagerhelper.html">DWindowManagerHelper</a> 的单例对象，使用 <a href="http://doc.qt.io/qt-5/qglobalstatic.html#Q_GLOBAL_STATIC">Q_GLOBAL_STATIC</a> 定义，在第一次调用时实例化。 Returns</p>
+<!-- @@@instance -->
+<!-- $$$popupSystemWindowMenu[overload1]$$$popupSystemWindowMenuconstQWindow* -->
+<h3 class="fn" id="popupSystemWindowMenu"><a name="popupSystemWindowMenu"></a><code>[static] </code><span class="type">void</span> DWindowManagerHelper::<span class="name">popupSystemWindowMenu</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qwindow.html">QWindow</a></span> *<i>window</i>)</h3>
+<p>DWindowManagerHelper::popupSystemWindowMenu 显示窗口管理器对窗口的菜单，和有边框的窗口在标题栏上点击鼠标右键弹出的菜单内容一致。 在 DMainWindow 的标题栏上点击鼠标右键会调用此函数打开系统菜单：</p>
+<p class="centerAlign"><img src="images/window_system_menu.gif" alt="" /></p><p><i>window</i></p>
+<!-- @@@popupSystemWindowMenu -->
+<!-- $$$setMotifDecorations[overload1]$$$setMotifDecorationsconstQWindow*int -->
+<h3 class="fn" id="setMotifDecorations"><a name="setMotifDecorations"></a><code>[static] </code><span class="type">void</span> DWindowManagerHelper::<span class="name">setMotifDecorations</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qwindow.html">QWindow</a></span> *<i>window</i>, <span class="type">int</span> <i>hints</i>)</h3>
+<p>DWindowManagerHelper::setMotifDecorations 设置窗口的修饰性标志，会覆盖之前的设置 <i>window</i> <i>hints</i></p>
+<!-- @@@setMotifDecorations -->
+<!-- $$$setMotifDecorations$$$setMotifDecorationsconstQWindow*intbool -->
+<h3 class="fn" id="setMotifDecorations-1"><a name="setMotifDecorations-1"></a><code>[static] </code><span class="type">int</span> DWindowManagerHelper::<span class="name">setMotifDecorations</span>(<i>const QWindow *</i>, <i>int</i>, <i>bool</i>)</h3>
+<p><a href="dtk-gui-dwindowmanagerhelper.html#setMotifFunctions">DWindowManagerHelper::setMotifFunctions</a> 设置窗口某些标志位的开启状态，不影响其它标志位 <i>window</i> <i>hints</i> 要设置的标志位 <i>on</i> 如果值为 true 则开启标志，否则关闭 Returns 返回设置后的窗口标志</p>
+<!-- @@@setMotifDecorations -->
+<!-- $$$setMotifFunctions[overload1]$$$setMotifFunctionsconstQWindow*int -->
+<h3 class="fn" id="setMotifFunctions"><a name="setMotifFunctions"></a><code>[static] </code><span class="type">void</span> DWindowManagerHelper::<span class="name">setMotifFunctions</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qwindow.html">QWindow</a></span> *<i>window</i>, <span class="type">int</span> <i>hints</i>)</h3>
+<p>DWindowManagerHelper::setMotifFunctions 设置窗口的功能性标志，会覆盖之前的设置 <i>window</i> <i>hints</i></p>
+<!-- @@@setMotifFunctions -->
+<!-- $$$setMotifFunctions$$$setMotifFunctionsconstQWindow*intbool -->
+<h3 class="fn" id="setMotifFunctions-1"><a name="setMotifFunctions-1"></a><code>[static] </code><span class="type">int</span> DWindowManagerHelper::<span class="name">setMotifFunctions</span>(<i>const QWindow *</i>, <i>int</i>, <i>bool</i>)</h3>
+<p><a href="dtk-gui-dwindowmanagerhelper.html#setMotifFunctions">DWindowManagerHelper::setMotifFunctions</a> 设置窗口某些标志位的开启状态，不影响其它标志位 <i>window</i> <i>hints</i> 要设置的标志位 <i>on</i> 如果值为 true 则开启标志，否则关闭 Returns 返回设置后的窗口标志</p>
+<!-- @@@setMotifFunctions -->
+<!-- $$$setWmClassName[overload1]$$$setWmClassNameconstQByteArray& -->
+<h3 class="fn" id="setWmClassName"><a name="setWmClassName"></a><code>[static] </code><span class="type">void</span> DWindowManagerHelper::<span class="name">setWmClassName</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qbytearray.html">QByteArray</a></span> &amp;<i>name</i>)</h3>
+<p>DWindowManagerHelper::setWmClassName 设置x11环境上默认使用的wm class name，主要是在窗口创建时用于设置WM_CLASS窗口属性 <i>name</i></p>
+<p><b>Note: </b>如果值为空，Qt将在下次使用此值时根据程序名称再次初始化此值</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qcoreapplication.html#applicationName-prop">QCoreApplication::applicationName</a>.</p>
+<!-- @@@setWmClassName -->
+<!-- $$$setWmWindowTypes[overload1]$$$setWmWindowTypesQWindow*int -->
+<h3 class="fn" id="setWmWindowTypes"><a name="setWmWindowTypes"></a><code>[static] </code><span class="type">void</span> DWindowManagerHelper::<span class="name">setWmWindowTypes</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwindow.html">QWindow</a></span> *<i>window</i>, <span class="type">int</span> <i>types</i>)</h3>
+<p>DWindowManagerHelper::setWmWindowTypes 直接设置窗口管理器层级提供的窗口类型，如DesktopType和DockType类型也被 桌面环境需要，但是Qt自身并没有提供对应的设置接口 <i>window</i> <i>types</i></p>
+<!-- @@@setWmWindowTypes -->
+<!-- $$$windowFromPoint[overload1]$$$windowFromPointconstQPoint& -->
+<h3 class="fn" id="windowFromPoint"><a name="windowFromPoint"></a><span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#quint32-typedef">quint32</a></span> DWindowManagerHelper::<span class="name">windowFromPoint</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qpoint.html">QPoint</a></span> &amp;<i>p</i>)</h3>
+<p>DWindowManagerHelper::windowFromPoint Returns 返回 <i>p</i> 位置的窗口 Id，如果出错返回 0</p>
+<p><b>Note: </b>可以通过 <a href="dtk-gui-dforeignwindow.html#fromWinId">DForeignWindow::fromWinId</a> 创建窗口对象</p>
+<!-- @@@windowFromPoint -->
+<!-- $$$windowManagerName[overload1]$$$windowManagerName -->
+<h3 class="fn" id="windowManagerName"><a name="windowManagerName"></a><span class="type">int</span> DWindowManagerHelper::<span class="name">windowManagerName</span>() const</h3>
+<p>DWindowManagerHelper::windowManagerName Returns 返回当前窗口管理器类型</p>
+<p><b>See also </b><a href="dtk-gui-dwindowmanagerhelper.html#windowManagerNameString">DWindowManagerHelper::windowManagerNameString</a>.</p>
+<!-- @@@windowManagerName -->
+<!-- $$$windowManagerNameString[overload1]$$$windowManagerNameString -->
+<h3 class="fn" id="windowManagerNameString"><a name="windowManagerNameString"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DWindowManagerHelper::<span class="name">windowManagerNameString</span>() const</h3>
+<p>DWindowManagerHelper::windowManagerNameString Returns 返回窗口管理器名称。在X11平台上，此值为窗口管理器对应窗口的 _NET_WM_NAME 的值 <a href="https://specifications.freedesktop.org/wm-spec/1.3/ar01s03.html">_NET_SUPPORTING_WM_CHECK</a> <a href="https://specifications.freedesktop.org/wm-spec/1.3/ar01s05.html">_NET_WM_NAME</a></p>
+<!-- @@@windowManagerNameString -->
+</div>
         </div>
        </div>
    </div>

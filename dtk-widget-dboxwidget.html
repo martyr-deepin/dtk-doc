@@ -39,6 +39,10 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -46,23 +50,87 @@
 <h1 class="title">DBoxWidget Class</h1>
 <span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DBoxWidget</span>
 <!-- $$$DBoxWidget-brief -->
-<p>The DBoxWidget class provides widget born with QBoxLayout set. <a href="#details">More...</a></p>
+<p>The DBoxWidget class provides widget born with <a href="http://doc.qt.io/qt-5/qboxlayout.html">QBoxLayout</a> set. <a href="#details">More...</a></p>
 <!-- @@@DBoxWidget -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DBoxWidget&gt;</span>
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="dtk-widget-dhboxwidget.html">Dtk::Widget::DHBoxWidget</a> and <a href="dtk-widget-dvboxwidget.html">Dtk::Widget::DVBoxWidget</a></p>
 </td></tr></table></div><ul>
+<li><a href="dtk-widget-dboxwidget-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><a href="dtk-widget-dboxwidget.html#direction-prop">direction</a></b> : QBoxLayout::Direction</li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dboxwidget.html#DBoxWidget">DBoxWidget</a></b>(int <i>direction</i>, QWidget *<i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dboxwidget.html#addWidget">addWidget</a></b>(QWidget *<i>widget</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dboxwidget.html#direction-prop">direction</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dboxwidget.html#layout">layout</a></b>() const</td></tr>
+</table></div>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dboxwidget.html#direction-prop">setDirection</a></b>(int <i>direction</i>)</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dboxwidget.html#direction-prop">directionChanged</a></b>(int <i>direction</i>)</td></tr>
+</table></div>
 <a name="details"></a>
 <!-- $$$DBoxWidget-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>在Qt编程中，使用QBoxLayout设置控件是很常见的，DBoxWidget提供了方便的封装，会根据需要的大小自动 设置DBoxWidget的宽高。</p>
-<p>Since an widget with QBoxLayout set is very common use case in Qt programming, yet very tedious, DBoxWidget is built to ease that pain.</p>
+<p>在Qt编程中，使用<a href="http://doc.qt.io/qt-5/qboxlayout.html">QBoxLayout</a>设置控件是很常见的，DBoxWidget提供了方便的封装，会根据需要的大小自动 设置DBoxWidget的宽高。</p>
+<p>Since an widget with <a href="http://doc.qt.io/qt-5/qboxlayout.html">QBoxLayout</a> set is very common use case in Qt programming, yet very tedious, DBoxWidget is built to ease that pain.</p>
 <p>Also, DBoxWidget will calculate the size it needs automatically, so you don't need to set width for <a href="dtk-widget-dhboxwidget.html">DHBoxWidget</a> or height for DVBoxLayout.</p>
 </div>
 <p><b>See also </b><a href="dtk-widget-dhboxwidget.html">DHBoxWidget</a> and <a href="dtk-widget-dvboxwidget.html">DVBoxWidget</a>.</p>
 <!-- @@@DBoxWidget -->
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$direction-prop$$$direction$$$setDirectionint$$$directionChangedint -->
+<h3 class="fn" id="direction-prop"><a name="direction-prop"></a><span class="name">direction</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qboxlayout.html#Direction-enum">QBoxLayout::Direction</a></span></h3>
+<p>这个属性返回当前<a href="http://doc.qt.io/qt-5/qboxlayout.html">QBoxLayout</a>使用的方向</p>
+<p>This property holds the direction of the internal <a href="http://doc.qt.io/qt-5/qboxlayout.html">QBoxLayout</a>.</p>
+<p>Returns <a href="http://doc.qt.io/qt-5/qboxlayout.html#Direction-enum">QBoxLayout::Direction</a> 当前的方向</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>direction</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setDirection</b></span>(int <i>direction</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>directionChanged</b></span>(int <i>direction</i>)</td></tr>
+</table></div>
+<!-- @@@direction -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DBoxWidget[overload1]$$$DBoxWidgetintQWidget* -->
+<h3 class="fn" id="DBoxWidget"><a name="DBoxWidget"></a>DBoxWidget::<span class="name">DBoxWidget</span>(<span class="type">int</span> <i>direction</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>parent</i> = 0)</h3>
+<p>DBoxWidget的构造函数.</p>
+<p><a href="dtk-widget-dboxwidget.html">DBoxWidget::DBoxWidget</a> constructs an instance of DBoxWidget.</p>
+<p><i>direction</i> 是设置内部<a href="http://doc.qt.io/qt-5/qboxlayout.html">QBoxLayout</a>使用的方向 <i>parent</i> 传递给<a href="http://doc.qt.io/qt-5/qframe.html">QFrame</a>的构造函数 <i>direction</i> is the direction used by the internal <a href="http://doc.qt.io/qt-5/qboxlayout.html">QBoxLayout</a>. <i>parent</i> is passed to <a href="http://doc.qt.io/qt-5/qframe.html">QFrame</a> constructor.</p>
+<!-- @@@DBoxWidget -->
+<!-- $$$addWidget[overload1]$$$addWidgetQWidget* -->
+<h3 class="fn" id="addWidget"><a name="addWidget"></a><span class="type">void</span> DBoxWidget::<span class="name">addWidget</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>widget</i>)</h3>
+<p>调用<a href="http://doc.qt.io/qt-5/qboxlayout.html">QBoxLayout</a>的addWidget方法将<a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a>添加到布局中</p>
+<p>DBoxWidget::addWidget adds widget to the internal layout.</p>
+<p><i>widget</i> 要添加的<a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a>对象 <i>widget</i> is the widget to be added.</p>
+<!-- @@@addWidget -->
+<!-- $$$layout[overload1]$$$layout -->
+<h3 class="fn" id="layout"><a name="layout"></a><span class="type">int</span> *DBoxWidget::<span class="name">layout</span>() const</h3>
+<p>这个属性会返回当前使用的布局对象</p>
+<p>This property holds the internal layout object.</p>
+<p>This property can be used to get the internal layout, so you can set some extra properties on the layout to match the custom needs.</p>
+<p>Returns <a href="http://doc.qt.io/qt-5/qboxlayout.html">QBoxLayout</a>*</p>
+<!-- @@@layout -->
+</div>
         </div>
        </div>
    </div>

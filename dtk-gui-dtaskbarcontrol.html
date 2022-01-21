@@ -39,6 +39,7 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -51,14 +52,56 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DTaskbarControl&gt;</span>
 </td></tr></table></div><ul>
+<li><a href="dtk-gui-dtaskbarcontrol-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dtaskbarcontrol.html#counter">counter</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dtaskbarcontrol.html#counterVisible">counterVisible</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dtaskbarcontrol.html#setCounter">setCounter</a></b>(bool <i>counterVisible</i>, int <i>counter</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dtaskbarcontrol.html#setCounterVisible">setCounterVisible</a></b>(bool <i>counterVisible</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dtaskbarcontrol.html#setProgress">setProgress</a></b>(bool <i>progressVisible</i>, double <i>progress</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dtaskbarcontrol.html#setUrgency">setUrgency</a></b>(bool <i>val</i>)</td></tr>
+</table></div>
 <a name="details"></a>
 <!-- $$$DTaskbarControl-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>如果想隐藏或者不使用进度条和任务数的显示，可以使用setProgress,setCounter 传递false隐藏相关显示.</p>
+<p>如果想隐藏或者不使用进度条和任务数的显示，可以使用<a href="dtk-gui-dtaskbarcontrol.html#setProgress">setProgress</a>,<a href="dtk-gui-dtaskbarcontrol.html#setCounter">setCounter</a> 传递false隐藏相关显示.</p>
 </div>
 <!-- @@@DTaskbarControl -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$counter[overload1]$$$counter -->
+<h3 class="fn" id="counter"><a name="counter"></a><span class="type">int</span> DTaskbarControl::<span class="name">counter</span>() const</h3>
+<p>brief DTaskbarControl::counter 获取当前任务数 return 任务数量</p>
+<p><b>See also </b><a href="dtk-gui-dtaskbarcontrol.html#setCounter">setCounter</a>().</p>
+<!-- @@@counter -->
+<!-- $$$counterVisible[overload1]$$$counterVisible -->
+<h3 class="fn" id="counterVisible"><a name="counterVisible"></a><span class="type">bool</span> DTaskbarControl::<span class="name">counterVisible</span>() const</h3>
+<p>DTaskbarControl::counterVisible 返回任务数是否可见 Returns true可见 false不可见</p>
+<p><b>See also </b><a href="dtk-gui-dtaskbarcontrol.html#setCounterVisible">setCounterVisible</a>().</p>
+<!-- @@@counterVisible -->
+<!-- $$$setCounter[overload1]$$$setCounterboolint -->
+<h3 class="fn" id="setCounter"><a name="setCounter"></a><span class="type">void</span> DTaskbarControl::<span class="name">setCounter</span>(<span class="type">bool</span> <i>counterVisible</i>, <span class="type">int</span> <i>counter</i>)</h3>
+<p>DTaskbarControl::setCounter 设置当前任务数量 <i>counterVisible</i> true任务数可见 false任务数不可见 <i>counter</i></p>
+<p><b>See also </b><a href="dtk-gui-dtaskbarcontrol.html#counter">counter</a>().</p>
+<!-- @@@setCounter -->
+<!-- $$$setCounterVisible[overload1]$$$setCounterVisiblebool -->
+<h3 class="fn" id="setCounterVisible"><a name="setCounterVisible"></a><span class="type">void</span> DTaskbarControl::<span class="name">setCounterVisible</span>(<span class="type">bool</span> <i>counterVisible</i>)</h3>
+<p>DTaskbarControl::setCounterVisible 设置任务数是否可见 <i>counterVisible</i> true可见 false不可见 如果需要隐藏,建议设置counter的值为0并且设置为false，只设置false，有可能会显示</p>
+<p><b>See also </b><a href="dtk-gui-dtaskbarcontrol.html#counterVisible">counterVisible</a>().</p>
+<!-- @@@setCounterVisible -->
+<!-- $$$setProgress[overload1]$$$setProgressbooldouble -->
+<h3 class="fn" id="setProgress"><a name="setProgress"></a><span class="type">void</span> DTaskbarControl::<span class="name">setProgress</span>(<span class="type">bool</span> <i>progressVisible</i>, <span class="type">double</span> <i>progress</i>)</h3>
+<p>DTaskbarControl::setProgress 设置当前进度和进度条是否可见 <i>progressVisible</i> true可见 false不可见 <i>progress</i> 当前进度值 0-1(换算成百分比)</p>
+<!-- @@@setProgress -->
+<!-- $$$setUrgency[overload1]$$$setUrgencybool -->
+<h3 class="fn" id="setUrgency"><a name="setUrgency"></a><span class="type">void</span> DTaskbarControl::<span class="name">setUrgency</span>(<span class="type">bool</span> <i>val</i>)</h3>
+<p>DTaskbarControl::setUrgency 设置任务的紧急程度 <i>val</i> true 任务紧急 false普通任务</p>
+<!-- @@@setUrgency -->
+</div>
         </div>
        </div>
    </div>

@@ -39,6 +39,7 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -51,7 +52,20 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DButtonBoxButton&gt;</span>
 </td></tr></table></div><ul>
+<li><a href="dtk-widget-dbuttonboxbutton-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonboxbutton.html#DButtonBoxButton-2">DButtonBoxButton</a></b>(int <i>iconType</i> = -1, const QString &amp;<i>text</i> = QString(), QWidget *<i>parent</i> = nullptr)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonboxbutton.html#DButtonBoxButton-1">DButtonBoxButton</a></b>(const QIcon &amp;<i>icon</i>, const QString &amp;<i>text</i> = QString(), QWidget *<i>parent</i> = nullptr)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonboxbutton.html#DButtonBoxButton">DButtonBoxButton</a></b>(const QString &amp;<i>text</i>, QWidget *<i>parent</i> = nullptr)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonboxbutton.html#iconSize">iconSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonboxbutton.html#minimumSizeHint">minimumSizeHint</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonboxbutton.html#setIcon">setIcon</a></b>(const QIcon &amp;<i>icon</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonboxbutton.html#setIcon-1">setIcon</a></b>(int <i>iconType</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonboxbutton.html#sizeHint">sizeHint</a></b>() const</td></tr>
+</table></div>
 <a name="details"></a>
 <!-- $$$DButtonBoxButton-description -->
 <div class="descr">
@@ -59,10 +73,56 @@
 <p>DButtonBoxButton 提供了设置图标的按钮的函数</p>
 <p><b>Note: </b>代码示例</p>
 <p><b>Note: </b>DButtonBoxButton *btn1 = new DButtonBoxButton(&quot;btn1&quot;);</p>
-<p><b>Note: </b>btn1-&gt;setIcon(QStyle::StandardPixmap::SP_ArrowUp);</p>
+<p><b>Note: </b>btn1-&gt;<a href="dtk-widget-dbuttonboxbutton.html#setIcon">setIcon</a>(QStyle::StandardPixmap::SP_ArrowUp);</p>
 <p class="centerAlign"><img src="images/DButtonBoxButton.png" alt="" /></p></div>
 <p><b>See also </b><a href="dtk-widget-dbuttonbox.html">Dtk::Widget::DButtonBox</a>.</p>
 <!-- @@@DButtonBoxButton -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DButtonBoxButton$$$DButtonBoxButtonintconstQString&QWidget* -->
+<h3 class="fn" id="DButtonBoxButton-2"><a name="DButtonBoxButton-2"></a>DButtonBoxButton::<span class="name">DButtonBoxButton</span>(<span class="type">int</span> <i>iconType</i> = -1, const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>text</i> = QString(), <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>parent</i> = nullptr)</h3>
+<p>DButtonBoxButton 构造函数.</p>
+<p><i>iconType</i> 标准图标 <i>text</i> 参数被发送到 DButtonBoxButton 构造函数 <i>parent</i> 参数被发送到 DButtonBoxButton 构造函数</p>
+<!-- @@@DButtonBoxButton -->
+<!-- $$$DButtonBoxButton$$$DButtonBoxButtonconstQIcon&constQString&QWidget* -->
+<h3 class="fn" id="DButtonBoxButton-1"><a name="DButtonBoxButton-1"></a>DButtonBoxButton::<span class="name">DButtonBoxButton</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qicon.html">QIcon</a></span> &amp;<i>icon</i>, const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>text</i> = QString(), <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>parent</i> = nullptr)</h3>
+<p>DButtonBoxButton构造函数.</p>
+<p><i>icon</i> 图标 <i>text</i> 参数被发送到 DButtonBoxButton 构造函数 <i>parent</i> 参数被发送到 DButtonBoxButton 构造函数</p>
+<!-- @@@DButtonBoxButton -->
+<!-- $$$DButtonBoxButton[overload1]$$$DButtonBoxButtonconstQString&QWidget* -->
+<h3 class="fn" id="DButtonBoxButton"><a name="DButtonBoxButton"></a>DButtonBoxButton::<span class="name">DButtonBoxButton</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>text</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>parent</i> = nullptr)</h3>
+<p>DButtonBoxButton 构造函数.</p>
+<p><i>text</i> 按钮名称 <i>parent</i> 参数被发送到 <a href="http://doc.qt.io/qt-5/qabstractbutton.html">QAbstractButton</a> 构造函数</p>
+<!-- @@@DButtonBoxButton -->
+<!-- $$$iconSize[overload1]$$$iconSize -->
+<h3 class="fn" id="iconSize"><a name="iconSize"></a><span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span> DButtonBoxButton::<span class="name">iconSize</span>() const</h3>
+<p>返回图标大小.</p>
+<p>Returns 返回图标大小.</p>
+<!-- @@@iconSize -->
+<!-- $$$minimumSizeHint[overload1]$$$minimumSizeHint -->
+<h3 class="fn" id="minimumSizeHint"><a name="minimumSizeHint"></a><span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span> DButtonBoxButton::<span class="name">minimumSizeHint</span>() const</h3>
+<p>DButtonBoxButton::minimumSizeHint.</p>
+<p>Returns 按钮的最小大小策略.</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qwidget.html#minimumSizeHint-prop">QAbstractButton::minimumSizeHint</a>().</p>
+<!-- @@@minimumSizeHint -->
+<!-- $$$setIcon[overload1]$$$setIconconstQIcon& -->
+<h3 class="fn" id="setIcon"><a name="setIcon"></a><span class="type">void</span> DButtonBoxButton::<span class="name">setIcon</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qicon.html">QIcon</a></span> &amp;<i>icon</i>)</h3>
+<p>设置按钮图标.</p>
+<p><i>icon</i> 图标</p>
+<!-- @@@setIcon -->
+<!-- $$$setIcon$$$setIconint -->
+<h3 class="fn" id="setIcon-1"><a name="setIcon-1"></a><span class="type">void</span> DButtonBoxButton::<span class="name">setIcon</span>(<span class="type">int</span> <i>iconType</i>)</h3>
+<p>设置按钮图标. <p>This is an overloaded function.</p>
+</p>
+<p><i>iconType</i> 标准图标</p>
+<!-- @@@setIcon -->
+<!-- $$$sizeHint[overload1]$$$sizeHint -->
+<h3 class="fn" id="sizeHint"><a name="sizeHint"></a><span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span> DButtonBoxButton::<span class="name">sizeHint</span>() const</h3>
+<p>DButtonBoxButton::sizeHint.</p>
+<p>Returns 按钮的推荐大小.</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qwidget.html#sizeHint-prop">QAbstractButton::sizeHint</a>().</p>
+<!-- @@@sizeHint -->
+</div>
         </div>
        </div>
    </div>

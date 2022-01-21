@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- qsettingbackend.cpp -->
+  <title>QSettingBackend Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>QSettingBackend</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">QSettingBackend Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-core.html">Core</a>::QSettingBackend</span>
+<!-- $$$QSettingBackend-brief -->
+<p>Storage DSetttings to an <a href="http://doc.qt.io/qt-5/qsettings.html">QSettings</a>. <a href="#details">More...</a></p>
+<!-- @@@QSettingBackend -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;QSettingBackend&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="dtk-core-qsettingbackend-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-qsettingbackend.html#QSettingBackend">QSettingBackend</a></b>(const QString &amp;<i>filepath</i>, QObject *<i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QVariant </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-qsettingbackend.html#getOption">getOption</a></b>(const QString &amp;<i>key</i>) const override</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QStringList </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-qsettingbackend.html#keys">keys</a></b>() const override</td></tr>
+</table></div>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-qsettingbackend.html#doSetOption">doSetOption</a></b>(const QString &amp;<i>key</i>, const QVariant &amp;<i>value</i>) override</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-qsettingbackend.html#doSync">doSync</a></b>() override</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$QSettingBackend-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+</div>
+<!-- @@@QSettingBackend -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QSettingBackend[overload1]$$$QSettingBackendconstQString&QObject* -->
+<h3 class="fn" id="QSettingBackend"><a name="QSettingBackend"></a>QSettingBackend::<span class="name">QSettingBackend</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>filepath</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qobject.html">QObject</a></span> *<i>parent</i> = 0)</h3>
+<p>Save data to filepath with <a href="http://doc.qt.io/qt-5/qsettings.html#Format-enum">QSettings::NativeFormat</a> format. <i>filepath</i> is path to storage data. <i>parent</i></p>
+<!-- @@@QSettingBackend -->
+<!-- $$$doSetOption[overload1]$$$doSetOptionconstQString&constQVariant& -->
+<h3 class="fn" id="doSetOption"><a name="doSetOption"></a><code>[override virtual protected slot] </code><span class="type">void</span> QSettingBackend::<span class="name">doSetOption</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>key</i>, const <span class="type"><a href="http://doc.qt.io/qt-5/qvariant.html">QVariant</a></span> &amp;<i>value</i>)</h3>
+<p>Set value of key to <a href="http://doc.qt.io/qt-5/qsettings.html">QSettings</a> <i>key</i> <i>value</i></p>
+<!-- @@@doSetOption -->
+<!-- $$$doSync[overload1]$$$doSync -->
+<h3 class="fn" id="doSync"><a name="doSync"></a><code>[override virtual protected slot] </code><span class="type">void</span> QSettingBackend::<span class="name">doSync</span>()</h3>
+<p>Trigger DSettings to save option value to <a href="http://doc.qt.io/qt-5/qsettings.html">QSettings</a></p>
+<!-- @@@doSync -->
+<!-- $$$getOption[overload1]$$$getOptionconstQString& -->
+<h3 class="fn" id="getOption"><a name="getOption"></a><code>[override virtual] </code><span class="type"><a href="http://doc.qt.io/qt-5/qvariant.html">QVariant</a></span> QSettingBackend::<span class="name">getOption</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>key</i>) const</h3>
+<p>Get value of key from <a href="http://doc.qt.io/qt-5/qsettings.html">QSettings</a> <i>key</i> Returns</p>
+<!-- @@@getOption -->
+<!-- $$$keys[overload1]$$$keys -->
+<h3 class="fn" id="keys"><a name="keys"></a><code>[override virtual] </code><span class="type"><a href="http://doc.qt.io/qt-5/qstringlist.html">QStringList</a></span> QSettingBackend::<span class="name">keys</span>() const</h3>
+<p>List all keys of <a href="http://doc.qt.io/qt-5/qsettings.html">QSettings</a> Returns</p>
+<!-- @@@keys -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

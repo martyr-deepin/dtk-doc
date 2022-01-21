@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- ddesktopentry.cpp -->
+  <title>DDesktopEntry Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DDesktopEntry</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DDesktopEntry Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-core.html">Core</a>::DDesktopEntry</span>
+<!-- $$$DDesktopEntry-brief -->
+<p>Handling desktop entry files. <a href="#details">More...</a></p>
+<!-- @@@DDesktopEntry -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DDesktopEntry&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="dtk-core-ddesktopentry-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QStringList </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#allGroups">allGroups</a></b>(bool <i>sorted</i> = false) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#comment">comment</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#contains">contains</a></b>(const QString &amp;<i>key</i>, const QString &amp;<i>section</i> = ...) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#ddeDisplayName">ddeDisplayName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#genericName">genericName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QStringList </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#keys">keys</a></b>(const QString &amp;<i>section</i> = ...) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#localizedValue">localizedValue</a></b>(const QString &amp;<i>key</i>, const QString &amp;<i>localeKey</i> = ..., const QString &amp;<i>section</i> = ..., const QString &amp;<i>defaultValue</i> = QString()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#localizedValue-1">localizedValue</a></b>(const QString &amp;<i>key</i>, const QLocale &amp;<i>locale</i>, const QString &amp;<i>section</i> = ..., const QString &amp;<i>defaultValue</i> = QString()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#name">name</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#rawValue">rawValue</a></b>(const QString &amp;<i>key</i>, const QString &amp;<i>section</i> = ..., const QString &amp;<i>defaultValue</i> = QString()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#save">save</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Dtk::Core::DDesktopEntry::Status </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#status">status</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QStringList </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#stringListValue">stringListValue</a></b>(const QString &amp;<i>key</i>, const QString &amp;<i>section</i> = ...) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddesktopentry.html#stringValue">stringValue</a></b>(const QString &amp;<i>key</i>, const QString &amp;<i>section</i> = ..., const QString &amp;<i>defaultValue</i> = QString()) const</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DDesktopEntry-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>DDesktopEntry provide method for handling XDG desktop entry read and write. The interface of this class is similar to <a href="http://doc.qt.io/qt-5/qsettings.html">QSettings</a>.</p>
+<p>For more details about the spec itself, please refer to: https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html</p>
+</div>
+<!-- @@@DDesktopEntry -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$allGroups[overload1]$$$allGroupsbool -->
+<h3 class="fn" id="allGroups"><a name="allGroups"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstringlist.html">QStringList</a></span> DDesktopEntry::<span class="name">allGroups</span>(<span class="type">bool</span> <i>sorted</i> = false) const</h3>
+<p>Get a list of all section groups inside the desktop entry.</p>
+<p>If <i>sorted</i> is set to true, the returned result will keep the order as-is when reading the entry file.</p>
+<p>Returns all available section groups.</p>
+<!-- @@@allGroups -->
+<!-- $$$comment[overload1]$$$comment -->
+<h3 class="fn" id="comment"><a name="comment"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DDesktopEntry::<span class="name">comment</span>() const</h3>
+<p>Returns the localized string value of the &quot;Comment&quot; key under &quot;Desktop Entry&quot; section.</p>
+<p>It's equivalent to calling <a href="dtk-core-ddesktopentry.html#localizedValue">localizedValue</a>(&quot;Comment&quot;).</p>
+<p>Returns Returns the localized string value of the &quot;Comment&quot; key under &quot;Desktop Entry&quot; section.</p>
+<p><b>See also </b><a href="dtk-core-ddesktopentry.html#localizedValue">localizedValue</a>().</p>
+<!-- @@@comment -->
+<!-- $$$contains[overload1]$$$containsconstQString&constQString& -->
+<h3 class="fn" id="contains"><a name="contains"></a><span class="type">bool</span> DDesktopEntry::<span class="name">contains</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>key</i>, const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>section</i> = ...) const</h3>
+<p>Check if the desktop entry file have the given <i>section</i> contains the given <i>key</i></p>
+<p>Returns true if the desktop entry contains the <i>key</i> in <i>section</i>; otherwise returns false.</p>
+<!-- @@@contains -->
+<!-- $$$ddeDisplayName[overload1]$$$ddeDisplayName -->
+<h3 class="fn" id="ddeDisplayName"><a name="ddeDisplayName"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DDesktopEntry::<span class="name">ddeDisplayName</span>() const</h3>
+<p>Display name specially for DDE applications.</p>
+<p>This will check &quot;X-Deepin-Vendor&quot; and will return the localized string value of &quot;GenericName&quot; if &quot;X-Deepin-Vendor&quot; is &quot;deepin&quot;, or it will return the localized string value of &quot;Name&quot;.</p>
+<p>Returns Returns the display name specially for DDE applications.</p>
+<p><b>See also </b><a href="dtk-core-ddesktopentry.html#localizedValue">localizedValue</a>(), <a href="dtk-core-ddesktopentry.html#name">name</a>(), and <a href="dtk-core-ddesktopentry.html#genericName">genericName</a>().</p>
+<!-- @@@ddeDisplayName -->
+<!-- $$$genericName[overload1]$$$genericName -->
+<h3 class="fn" id="genericName"><a name="genericName"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DDesktopEntry::<span class="name">genericName</span>() const</h3>
+<p>Returns the localized string value of the &quot;GenericName&quot; key under &quot;Desktop Entry&quot; section.</p>
+<p>It's equivalent to calling <a href="dtk-core-ddesktopentry.html#localizedValue">localizedValue</a>(&quot;GenericName&quot;). It will NOT fallback to &quot;Name&quot; if &quot;GenericName&quot; is not existed.</p>
+<p>Returns Returns the localized string value of the &quot;GenericName&quot; key under &quot;Desktop Entry&quot; section.</p>
+<p><b>See also </b><a href="dtk-core-ddesktopentry.html#localizedValue">localizedValue</a>(), <a href="dtk-core-ddesktopentry.html#name">name</a>(), and <a href="dtk-core-ddesktopentry.html#ddeDisplayName">ddeDisplayName</a>().</p>
+<!-- @@@genericName -->
+<!-- $$$keys[overload1]$$$keysconstQString& -->
+<h3 class="fn" id="keys"><a name="keys"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstringlist.html">QStringList</a></span> DDesktopEntry::<span class="name">keys</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>section</i> = ...) const</h3>
+<p>Get a list of all section keys inside the given <i>section</i>.</p>
+<p>Returns all available section keys.</p>
+<!-- @@@keys -->
+<!-- $$$localizedValue[overload1]$$$localizedValueconstQString&constQString&constQString&constQString& -->
+<h3 class="fn" id="localizedValue"><a name="localizedValue"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DDesktopEntry::<span class="name">localizedValue</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>key</i>, const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>localeKey</i> = ..., const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>section</i> = ..., const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>defaultValue</i> = QString()) const</h3>
+<p>Returns the localized string value associated with the given <i>key</i> and <i>localeKey</i> in <i>section</i>.</p>
+<p>If the given <i>localeKey</i> can't be found, it will fallback to &quot;C&quot;, if still cannot found, will fallback to the key without localeKey.</p>
+<p>If the entry contains no item with the key, the function returns a constructed <i>defaultValue</i>.</p>
+<p>Returns Returns the localized string value associated with the given <i>key</i> and <i>localeKey</i> in <i>section</i>.</p>
+<p><b>See also </b><a href="dtk-core-ddesktopentry.html#rawValue">rawValue</a>(), <a href="dtk-core-ddesktopentry.html#stringValue">stringValue</a>(), and <a href="dtk-core-ddesktopentry.html#stringListValue">stringListValue</a>().</p>
+<!-- @@@localizedValue -->
+<!-- $$$localizedValue$$$localizedValueconstQString&constQLocale&constQString&constQString& -->
+<h3 class="fn" id="localizedValue-1"><a name="localizedValue-1"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DDesktopEntry::<span class="name">localizedValue</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>key</i>, const <span class="type"><a href="http://doc.qt.io/qt-5/qlocale.html">QLocale</a></span> &amp;<i>locale</i>, const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>section</i> = ..., const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>defaultValue</i> = QString()) const</h3>
+<p>Returns the localized string value associated with the given <i>key</i> and <i>locale</i> in <i>section</i>.</p>
+<p>If the given <i>locale</i> can't be found, it will fallback to &quot;C&quot;, if still cannot found, will fallback to the key without a locale key.</p>
+<p>If the entry contains no item with the key, the function returns a default-constructed value.</p>
+<p>Returns Returns the localized string value associated with the given <i>key</i> and <i>locale</i> in <i>section</i>.</p>
+<p><b>See also </b><a href="dtk-core-ddesktopentry.html#rawValue">rawValue</a>(), <a href="dtk-core-ddesktopentry.html#stringValue">stringValue</a>(), and <a href="dtk-core-ddesktopentry.html#stringListValue">stringListValue</a>().</p>
+<!-- @@@localizedValue -->
+<!-- $$$name[overload1]$$$name -->
+<h3 class="fn" id="name"><a name="name"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DDesktopEntry::<span class="name">name</span>() const</h3>
+<p>Returns the localized string value of the &quot;Name&quot; key under &quot;Desktop Entry&quot; section.</p>
+<p>It's equivalent to calling <a href="dtk-core-ddesktopentry.html#localizedValue">localizedValue</a>(&quot;Name&quot;).</p>
+<p>Returns Returns the localized string value of the &quot;Name&quot; key under &quot;Desktop Entry&quot; section.</p>
+<p><b>See also </b><a href="dtk-core-ddesktopentry.html#localizedValue">localizedValue</a>(), <a href="dtk-core-ddesktopentry.html#genericName">genericName</a>(), and <a href="dtk-core-ddesktopentry.html#ddeDisplayName">ddeDisplayName</a>().</p>
+<!-- @@@name -->
+<!-- $$$rawValue[overload1]$$$rawValueconstQString&constQString&constQString& -->
+<h3 class="fn" id="rawValue"><a name="rawValue"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DDesktopEntry::<span class="name">rawValue</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>key</i>, const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>section</i> = ..., const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>defaultValue</i> = QString()) const</h3>
+<p>Returns the raw string value associated with the given <i>key</i> in <i>section</i>.</p>
+<p>If the entry contains no item with the key, the function returns a constructed <i>defaultValue</i>.</p>
+<p>Returns Returns the raw string value associated with the given <i>key</i> in <i>section</i>.</p>
+<p><b>See also </b><a href="dtk-core-ddesktopentry.html#stringValue">stringValue</a>(), <a href="dtk-core-ddesktopentry.html#localizedValue">localizedValue</a>(), and <a href="dtk-core-ddesktopentry.html#stringListValue">stringListValue</a>().</p>
+<!-- @@@rawValue -->
+<!-- $$$save[overload1]$$$save -->
+<h3 class="fn" id="save"><a name="save"></a><span class="type">bool</span> DDesktopEntry::<span class="name">save</span>() const</h3>
+<p>Write back data to the desktop entry file. Returns true if write success; otherwise returns false.</p>
+<!-- @@@save -->
+<!-- $$$status[overload1]$$$status -->
+<h3 class="fn" id="status"><a name="status"></a><span class="type">Dtk::Core::DDesktopEntry::Status</span> DDesktopEntry::<span class="name">status</span>() const</h3>
+<p>Get data parse status</p>
+<p>Returns Returns a status code indicating the first error that was met by <a href="dtk-core-ddesktopentry.html">DDesktopEntry</a>, or <a href="http://doc.qt.io/qt-5/qsettings.html#Status-enum">QSettings::NoError</a> if no error occurred.</p>
+<p>Be aware that <a href="dtk-core-ddesktopentry.html">DDesktopEntry</a> delays performing some operations.</p>
+<!-- @@@status -->
+<!-- $$$stringListValue[overload1]$$$stringListValueconstQString&constQString& -->
+<h3 class="fn" id="stringListValue"><a name="stringListValue"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstringlist.html">QStringList</a></span> DDesktopEntry::<span class="name">stringListValue</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>key</i>, const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>section</i> = ...) const</h3>
+<p>Returns a list of strings associated with the given <i>key</i> in the given <i>section</i>.</p>
+<p>If the entry contains no item with the key, the function returns a empty string list.</p>
+<p>Returns Returns a list of strings associated with the given <i>key</i> in the given <i>section</i>.</p>
+<p><b>See also </b><a href="dtk-core-ddesktopentry.html#rawValue">rawValue</a>(), <a href="dtk-core-ddesktopentry.html#stringValue">stringValue</a>(), and <a href="dtk-core-ddesktopentry.html#localizedValue">localizedValue</a>().</p>
+<!-- @@@stringListValue -->
+<!-- $$$stringValue[overload1]$$$stringValueconstQString&constQString&constQString& -->
+<h3 class="fn" id="stringValue"><a name="stringValue"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DDesktopEntry::<span class="name">stringValue</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>key</i>, const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>section</i> = ..., const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>defaultValue</i> = QString()) const</h3>
+<p>Returns the unescaped string value associated with the given <i>key</i> in <i>section</i>.</p>
+<p>If the entry contains no item with the key, the function returns a constructed <i>defaultValue</i>.</p>
+<p>Returns Returns the unescaped string value associated with the given <i>key</i> in <i>section</i>.</p>
+<p><b>See also </b><a href="dtk-core-ddesktopentry.html#rawValue">rawValue</a>(), <a href="dtk-core-ddesktopentry.html#localizedValue">localizedValue</a>(), and <a href="dtk-core-ddesktopentry.html#stringListValue">stringListValue</a>().</p>
+<!-- @@@stringValue -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

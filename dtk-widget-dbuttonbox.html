@@ -39,6 +39,7 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -46,12 +47,27 @@
 <h1 class="title">DButtonBox Class</h1>
 <span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DButtonBox</span>
 <!-- $$$DButtonBox-brief -->
-<p>DButtonBox 类似于 QButtonGroup 的类. <a href="#details">More...</a></p>
+<p>DButtonBox 类似于 <a href="http://doc.qt.io/qt-5/qbuttongroup.html">QButtonGroup</a> 的类. <a href="#details">More...</a></p>
 <!-- @@@DButtonBox -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DButtonBox&gt;</span>
 </td></tr></table></div><ul>
+<li><a href="dtk-widget-dbuttonbox-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonbox.html#DButtonBox">DButtonBox</a></b>(QWidget *<i>parent</i> = nullptr)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAbstractButton *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonbox.html#button">button</a></b>(int <i>id</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QList&lt;QAbstractButton *&gt; </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonbox.html#buttonList">buttonList</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAbstractButton *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonbox.html#checkedButton">checkedButton</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonbox.html#checkedId">checkedId</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonbox.html#id">id</a></b>(QAbstractButton *<i>button</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Qt::Orientation </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonbox.html#orientation">orientation</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonbox.html#setButtonList">setButtonList</a></b>(const QList&lt;Dtk::Widget::DButtonBoxButton *&gt; &amp;<i>list</i>, bool <i>checkable</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonbox.html#setId">setId</a></b>(QAbstractButton *<i>button</i>, int <i>id</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dbuttonbox.html#setOrientation">setOrientation</a></b>(Qt::Orientation <i>orientation</i>)</td></tr>
+</table></div>
 <a name="details"></a>
 <!-- $$$DButtonBox-description -->
 <div class="descr">
@@ -61,12 +77,73 @@
  DButtonBox box;
  DButtonBoxButton <span class="operator">*</span>btn1 <span class="operator">=</span> <span class="keyword">new</span> DButtonBoxButton(<span class="string">&quot;btn1&quot;</span>);
  DButtonBoxButton <span class="operator">*</span>btn2 <span class="operator">=</span> <span class="keyword">new</span> DButtonBoxButton(<span class="string">&quot;btn2&quot;</span>);
- btn1<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QStyle</span><span class="operator">::</span>StandardPixmap<span class="operator">::</span>SP_ArrowUp);
+ btn1<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type"><a href="http://doc.qt.io/qt-5/qstyle.html">QStyle</a></span><span class="operator">::</span>StandardPixmap<span class="operator">::</span>SP_ArrowUp);
  box<span class="operator">.</span>setButtonList({btn1<span class="operator">,</span> btn2}<span class="operator">,</span> <span class="keyword">true</span>);
 </pre>
 <p class="centerAlign"><img src="images/DButtonBox.png" alt="" /></p></div>
 <p><b>See also </b><a href="dtk-widget-dbuttonboxbutton.html">Dtk::Widget::DButtonBoxButton</a>.</p>
 <!-- @@@DButtonBox -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DButtonBox[overload1]$$$DButtonBoxQWidget* -->
+<h3 class="fn" id="DButtonBox"><a name="DButtonBox"></a>DButtonBox::<span class="name">DButtonBox</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>parent</i> = nullptr)</h3>
+<p><a href="dtk-widget-dbuttonbox.html">DButtonBox::DButtonBox</a> 构造函数.</p>
+<p><i>parent</i> 参数被发送到 <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> 构造函数</p>
+<!-- @@@DButtonBox -->
+<!-- $$$button[overload1]$$$buttonint -->
+<h3 class="fn" id="button"><a name="button"></a><span class="type"><a href="http://doc.qt.io/qt-5/qabstractbutton.html">QAbstractButton</a></span> *DButtonBox::<span class="name">button</span>(<span class="type">int</span> <i>id</i>) const</h3>
+<p>DButtonBox::button</p>
+<p><i>id</i> 按钮的ID，与 <a href="dtk-widget-dbuttonbox.html#setId">DButtonBox::setId</a> 设置的参数一致. Returns 返回对应<i>id</i> 的按钮，不存在返回 nullptr .</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qbuttongroup.html#button">QButtonGroup::button</a>().</p>
+<!-- @@@button -->
+<!-- $$$buttonList[overload1]$$$buttonList -->
+<h3 class="fn" id="buttonList"><a name="buttonList"></a><span class="type"><a href="http://doc.qt.io/qt-5/qlist.html">QList</a></span>&lt;<span class="type"><a href="http://doc.qt.io/qt-5/qabstractbutton.html">QAbstractButton</a></span> *&gt; DButtonBox::<span class="name">buttonList</span>() const</h3>
+<p>DButtonBox::buttonList.</p>
+<p>Returns 返回按钮列表.</p>
+<p><b>See also </b><a href="dtk-widget-dbuttonbox.html#setButtonList">setButtonList</a>() and <a href="http://doc.qt.io/qt-5/qbuttongroup.html#buttons">QButtonGroup::buttons</a>().</p>
+<!-- @@@buttonList -->
+<!-- $$$checkedButton[overload1]$$$checkedButton -->
+<h3 class="fn" id="checkedButton"><a name="checkedButton"></a><span class="type"><a href="http://doc.qt.io/qt-5/qabstractbutton.html">QAbstractButton</a></span> *DButtonBox::<span class="name">checkedButton</span>() const</h3>
+<p>DButtonBox::checkedButton.</p>
+<p>Returns 返回 checked 状态的按钮.</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qbuttongroup.html#checkedButton">QButtonGroup::checkedButton</a>().</p>
+<!-- @@@checkedButton -->
+<!-- $$$checkedId[overload1]$$$checkedId -->
+<h3 class="fn" id="checkedId"><a name="checkedId"></a><span class="type">int</span> DButtonBox::<span class="name">checkedId</span>() const</h3>
+<p>返回已选中按钮 id .</p>
+<p>Returns 返回已选中按钮 id .</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qbuttongroup.html">QButtonGroup</a>.</p>
+<!-- @@@checkedId -->
+<!-- $$$id[overload1]$$$idQAbstractButton* -->
+<h3 class="fn" id="id"><a name="id"></a><span class="type">int</span> DButtonBox::<span class="name">id</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qabstractbutton.html">QAbstractButton</a></span> *<i>button</i>) const</h3>
+<p>返回按钮 id .</p>
+<p><i>button</i> 对应的按钮.</p>
+<p><b>See also </b><a href="dtk-widget-dbuttonbox.html#setId">setId</a>() and <a href="http://doc.qt.io/qt-5/qbuttongroup.html#id">QButtonGroup::id</a>().</p>
+<!-- @@@id -->
+<!-- $$$orientation[overload1]$$$orientation -->
+<h3 class="fn" id="orientation"><a name="orientation"></a><span class="type"><a href="http://doc.qt.io/qt-5/qt.html#Orientation-enum">Qt::Orientation</a></span> DButtonBox::<span class="name">orientation</span>() const</h3>
+<p>DButtonBox::orientation 返回布局方向.</p>
+<p><b>See also </b><a href="dtk-widget-dbuttonbox.html#setOrientation">setOrientation</a>() and <a href="http://doc.qt.io/qt-5/qt.html#Orientation-enum">Qt::Orientation</a>.</p>
+<!-- @@@orientation -->
+<!-- $$$setButtonList[overload1]$$$setButtonListconstQList<Dtk::Widget::DButtonBoxButton*>&bool -->
+<h3 class="fn" id="setButtonList"><a name="setButtonList"></a><span class="type">void</span> DButtonBox::<span class="name">setButtonList</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html">QList</a></span>&lt;<span class="type"><a href="dtk-widget-dbuttonboxbutton.html">Dtk::Widget::DButtonBoxButton</a></span> *&gt; &amp;<i>list</i>, <span class="type">bool</span> <i>checkable</i>)</h3>
+<p>DButtonBox::setButtonList将按钮进添加到组中.</p>
+<p><i>list</i> 存储按钮的 <a href="http://doc.qt.io/qt-5/qlist.html">QList</a> 列表 <i>checkable</i> 按钮是否可选中</p>
+<p><b>See also </b><a href="dtk-widget-dbuttonbox.html#buttonList">buttonList</a>().</p>
+<!-- @@@setButtonList -->
+<!-- $$$setId[overload1]$$$setIdQAbstractButton*int -->
+<h3 class="fn" id="setId"><a name="setId"></a><span class="type">void</span> DButtonBox::<span class="name">setId</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qabstractbutton.html">QAbstractButton</a></span> *<i>button</i>, <span class="type">int</span> <i>id</i>)</h3>
+<p>设置按钮 id .</p>
+<p><i>button</i> 用于设置 <i>id</i> 的按钮。</p>
+<p><b>See also </b><a href="dtk-widget-dbuttonbox.html#id">id</a>() and <a href="http://doc.qt.io/qt-5/qbuttongroup.html#setId">QButtonGroup::setId</a>().</p>
+<!-- @@@setId -->
+<!-- $$$setOrientation[overload1]$$$setOrientationQt::Orientation -->
+<h3 class="fn" id="setOrientation"><a name="setOrientation"></a><span class="type">void</span> DButtonBox::<span class="name">setOrientation</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qt.html#Orientation-enum">Qt::Orientation</a></span> <i>orientation</i>)</h3>
+<p>DButtonBox::setOrientation 设置布局方向.</p>
+<p><i>orientation</i></p>
+<p><b>See also </b><a href="dtk-widget-dbuttonbox.html#orientation">orientation</a>() and <a href="http://doc.qt.io/qt-5/qt.html#Orientation-enum">Qt::Orientation</a>.</p>
+<!-- @@@setOrientation -->
+</div>
         </div>
        </div>
    </div>

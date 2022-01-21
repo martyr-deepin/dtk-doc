@@ -45,7 +45,7 @@
 <h2>Macro Documentation</h2>
 <!-- $$$D_PRIVATE_SLOT[overload1]$$$D_PRIVATE_SLOT -->
 <h3 class="fn" id="D_PRIVATE_SLOT"><a name="D_PRIVATE_SLOT"></a><span class="name">D_PRIVATE_SLOT</span>(<i>Func</i>)</h3>
-<p>同 Q_PRIVATE_SLOT，用在继承了 QObject 的公开类中，在公开类中定一个槽函数，且函数 必须在私有类中有实现。用这个方式定义的槽函数无法被直接调用，只能用于 QObject::connect 使用 SIGNAL 和 SLOT 的方式连接信号，或者使用 QMetaObject::invokeMethod 调用。 一般来讲，这个槽函数应该只在类内部使用，外界不应该通过任何方式来调用它。</p>
+<p>同 Q_PRIVATE_SLOT，用在继承了 <a href="http://doc.qt.io/qt-5/qobject.html">QObject</a> 的公开类中，在公开类中定一个槽函数，且函数 必须在私有类中有实现。用这个方式定义的槽函数无法被直接调用，只能用于 <a href="http://doc.qt.io/qt-5/qobject.html#connect">QObject::connect</a> 使用 SIGNAL 和 SLOT 的方式连接信号，或者使用 <a href="http://doc.qt.io/qt-5/qmetaobject.html#invokeMethod">QMetaObject::invokeMethod</a> 调用。 一般来讲，这个槽函数应该只在类内部使用，外界不应该通过任何方式来调用它。</p>
 <p>例子：</p>
 <p>a.h</p>
 <pre class="cpp">
@@ -73,14 +73,14 @@
      APrivate(A <span class="operator">*</span>qq)
          : DObjectPrivate(qq)
      {
-         <span class="type">QTimer</span> <span class="operator">*</span>timer <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QTimer</span>();
-         <span class="type">QObject</span><span class="operator">::</span>connect(timer<span class="operator">,</span> SIGNAL(timeout())<span class="operator">,</span> qq<span class="operator">,</span> SLOT(_q_testSlot()));
+         <span class="type"><a href="http://doc.qt.io/qt-5/qtimer.html">QTimer</a></span> <span class="operator">*</span>timer <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qtimer.html">QTimer</a></span>();
+         <span class="type"><a href="http://doc.qt.io/qt-5/qobject.html">QObject</a></span><span class="operator">::</span>connect(timer<span class="operator">,</span> SIGNAL(timeout())<span class="operator">,</span> qq<span class="operator">,</span> SLOT(_q_testSlot()));
          timer<span class="operator">-</span><span class="operator">&gt;</span>start(<span class="number">1000</span>);
      }
 
      <span class="type">void</span> _q_testSlot() <span class="keyword">const</span>
      {
-         qDebug() <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;slot&quot;</span>;
+         <a href="http://doc.qt.io/qt-5/qtglobal.html#qDebug">qDebug</a>() <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;slot&quot;</span>;
      }
  };
 

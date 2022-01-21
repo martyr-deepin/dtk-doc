@@ -82,7 +82,7 @@
 <!-- $$$DPlatformHandle-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>实质性的功能皆在dxcb插件中实现，此插件目前只 支持X11平台，在其它平台上使用这个类不会有任何效果。关于dxcb：它介于Qt应用和Qt xcb平台 插件之间，通过覆写xcb插件中某些对象的虚函数来改变它的一些行为，本质上来讲是Qt xcb插件的 扩展，在X11平台上为DTK应用提供了一些改变窗口效果的功能（比如自定义窗口的边框）、其它和平 台密切相关的实现（比如修复Qt应用在X11平台的一些bug），不能脱离Qt xcb插件独立运行。dxcb 通过重载 QPlatformNativeInterface 提供接口，DPlatformHandle 中使用 QGuiApplication::platformFunction 调用这些接口。Application、dxcb、qt xcb 之间 的关系：</p>
+<p>实质性的功能皆在dxcb插件中实现，此插件目前只 支持X11平台，在其它平台上使用这个类不会有任何效果。关于dxcb：它介于Qt应用和Qt xcb平台 插件之间，通过覆写xcb插件中某些对象的虚函数来改变它的一些行为，本质上来讲是Qt xcb插件的 扩展，在X11平台上为DTK应用提供了一些改变窗口效果的功能（比如自定义窗口的边框）、其它和平 台密切相关的实现（比如修复Qt应用在X11平台的一些bug），不能脱离Qt xcb插件独立运行。dxcb 通过重载 QPlatformNativeInterface 提供接口，DPlatformHandle 中使用 <a href="http://doc.qt.io/qt-5/qguiapplication.html#platformFunction">QGuiApplication::platformFunction</a> 调用这些接口。Application、dxcb、qt xcb 之间 的关系：</p>
   <pre style="font-family: FreeMono, Consolas, Menlo, 'Noto Mono', 'Courier New', Courier, monospace;line-height: 100%;">
         ┏━━━━━━━━━━━━━━━━┓
         ┃   Application  ┃
@@ -98,9 +98,9 @@
   </pre>
   <p><a href="http://doc.qt.io/qt-5/qpa.html">QPA</a> <a href="https://github.com/linuxdeepin/qt5dxcb-plugin/">dxcb插件</a></p>
 <p><b>Warning:</b> 使用此工具前要确保应用加载了dxcb插件</p>
-<p><b>Warning:</b> 因为 QGuiApplication::platformFunction 是在 Qt 5.4&#x2e;0 版本引入的新接口， 所以 DPlatformHandle 不支持 Qt 5.4&#x2e;0 以下版本。</p>
+<p><b>Warning:</b> 因为 <a href="http://doc.qt.io/qt-5/qguiapplication.html#platformFunction">QGuiApplication::platformFunction</a> 是在 Qt 5.4&#x2e;0 版本引入的新接口， 所以 DPlatformHandle 不支持 Qt 5.4&#x2e;0 以下版本。</p>
 </div>
-<p><b>See also </b>Dtk::Gui::DPlatformHandle::isDXcbPlatform, QGuiApplication::platformNativeInterface, Dtk::Widget::DMainWindow, and <a href="dtk-gui-dwindowmanagerhelper.html">DWindowManagerHelper</a>.</p>
+<p><b>See also </b>Dtk::Gui::DPlatformHandle::isDXcbPlatform, <a href="http://doc.qt.io/qt-5/qguiapplication.html#platformNativeInterface">QGuiApplication::platformNativeInterface</a>, Dtk::Widget::DMainWindow, and <a href="dtk-gui-dwindowmanagerhelper.html">DWindowManagerHelper</a>.</p>
 <!-- @@@DPlatformHandle -->
 <div class="func">
 <h2>Member Function Documentation</h2>

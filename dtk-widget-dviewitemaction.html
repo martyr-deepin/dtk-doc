@@ -57,7 +57,7 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
-<p>setActionList(Qt::BottomEdge, *list) 的 BottomEdge 为水平方向的枚举值时候: LeftEdge, RightEdge, 其对应 alignment 枚举数值只有如下的有效：</p>
+<p>setActionList(<a href="http://doc.qt.io/qt-5/qt.html#Edge-enum">Qt::BottomEdge</a>, *list) 的 BottomEdge 为水平方向的枚举值时候: LeftEdge, RightEdge, 其对应 alignment 枚举数值只有如下的有效：</p>
 <p>其参数 alignment 为如下值时候(才有效):</p>
 <ul>
 <li>AlignTop</li>
@@ -66,12 +66,12 @@
 </ul>
 <p>此处举一个小例子, 可以自行修改相关参数, 查看结果, 理解参数:</p>
 <pre class="cpp">
- <span class="type">QMainWindow</span> <span class="operator">*</span>wid <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QMainWindow</span>();
+ <span class="type"><a href="http://doc.qt.io/qt-5/qmainwindow.html">QMainWindow</a></span> <span class="operator">*</span>wid <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qmainwindow.html">QMainWindow</a></span>();
  wid<span class="operator">-</span><span class="operator">&gt;</span>resize(<span class="number">800</span><span class="operator">,</span> <span class="number">600</span>);
 
  <span class="comment">//视图和模型</span>
  DListView <span class="operator">*</span>view <span class="operator">=</span> <span class="keyword">new</span> DListView(wid);
- <span class="type">QStandardItemModel</span> <span class="operator">*</span>model <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QStandardItemModel</span>(view);
+ <span class="type"><a href="http://doc.qt.io/qt-5/qstandarditemmodel.html">QStandardItemModel</a></span> <span class="operator">*</span>model <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qstandarditemmodel.html">QStandardItemModel</a></span>(view);
  view<span class="operator">-</span><span class="operator">&gt;</span>setModel(model);
 
  <span class="comment">//标准DStandardItem item</span>
@@ -79,18 +79,18 @@
  item<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;@1:这是同一个item 的text\n@2:这是同一个item 的text\n@3:这是同一个item 的text\n@4:这是同一个item 的text\n@5:这是同一个item 的text\n@6:这是同一个item 的text&quot;</span>);
 
  <span class="comment">//DViewItemAction() 的形参: 其参数 alignment = AlignLeft 或 AlignHCenter 或  AlignRight; 设置为 AlignTop, AlignVCenter, AlignBottom 也是无效的</span>
- DViewItemAction <span class="operator">*</span>act1 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignBottom<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">50</span><span class="operator">,</span> <span class="number">50</span>));
+ DViewItemAction <span class="operator">*</span>act1 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignBottom<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">50</span><span class="operator">,</span> <span class="number">50</span>));
  act1<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act1&quot;</span>);
- act1<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
- DViewItemAction <span class="operator">*</span>act2 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignVCenter<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>());
+ act1<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type"><a href="http://doc.qt.io/qt-5/qicon.html">QIcon</a></span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ DViewItemAction <span class="operator">*</span>act2 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignVCenter<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>());
  act2<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act2&quot;</span>);
- act2<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
- DViewItemAction <span class="operator">*</span>act3 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignTop<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">100</span><span class="operator">,</span> <span class="number">50</span>));
+ act2<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type"><a href="http://doc.qt.io/qt-5/qicon.html">QIcon</a></span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ DViewItemAction <span class="operator">*</span>act3 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignTop<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">100</span><span class="operator">,</span> <span class="number">50</span>));
  act3<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act3&quot;</span>);
- act3<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
- DViewItemAction <span class="operator">*</span>act4 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignBottom<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">100</span><span class="operator">,</span> <span class="number">50</span>));
+ act3<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type"><a href="http://doc.qt.io/qt-5/qicon.html">QIcon</a></span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ DViewItemAction <span class="operator">*</span>act4 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignBottom<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">100</span><span class="operator">,</span> <span class="number">50</span>));
  act4<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act4&quot;</span>);
- act4<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ act4<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type"><a href="http://doc.qt.io/qt-5/qicon.html">QIcon</a></span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
 
  DViewItemActionList <span class="operator">*</span>list <span class="operator">=</span> <span class="keyword">new</span> DViewItemActionList();
  list<span class="operator">-</span><span class="operator">&gt;</span>append(act1);
@@ -106,7 +106,7 @@
  wid<span class="operator">-</span><span class="operator">&gt;</span>show();
 </pre>
 <p>//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
-<p>setActionList(Qt::BottomEdge, *list) 的 BottomEdge 为竖直方向的枚举值时候: TopEdge, BottomEdge, 其对应 alignment 枚举数值只有如下的有效：</p>
+<p>setActionList(<a href="http://doc.qt.io/qt-5/qt.html#Edge-enum">Qt::BottomEdge</a>, *list) 的 BottomEdge 为竖直方向的枚举值时候: TopEdge, BottomEdge, 其对应 alignment 枚举数值只有如下的有效：</p>
 <p>其参数 alignment 为如下值时候(才有效):</p>
 <ul>
 <li>AlignLeft</li>
@@ -115,12 +115,12 @@
 </ul>
 <p>此处举一个小例子, 可以自行修改相关参数, 查看结果, 理解参数:</p>
 <pre class="cpp">
- <span class="type">QMainWindow</span> <span class="operator">*</span>wid <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QMainWindow</span>();
+ <span class="type"><a href="http://doc.qt.io/qt-5/qmainwindow.html">QMainWindow</a></span> <span class="operator">*</span>wid <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qmainwindow.html">QMainWindow</a></span>();
  wid<span class="operator">-</span><span class="operator">&gt;</span>resize(<span class="number">800</span><span class="operator">,</span> <span class="number">600</span>);
 
  <span class="comment">//视图和模型</span>
  DListView <span class="operator">*</span>view <span class="operator">=</span> <span class="keyword">new</span> DListView(wid);
- <span class="type">QStandardItemModel</span> <span class="operator">*</span>model <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QStandardItemModel</span>(view);
+ <span class="type"><a href="http://doc.qt.io/qt-5/qstandarditemmodel.html">QStandardItemModel</a></span> <span class="operator">*</span>model <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qstandarditemmodel.html">QStandardItemModel</a></span>(view);
  view<span class="operator">-</span><span class="operator">&gt;</span>setModel(model);
 
  <span class="comment">//标准DStandardItem item</span>
@@ -128,18 +128,18 @@
  item<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;这是一个item 的text&quot;</span>);
 
  <span class="comment">//DViewItemAction() 的形参: 其参数 alignment = AlignLeft 或 AlignHCenter 或  AlignRight; 设置为 AlignTop, AlignVCenter, AlignBottom 也是无效的</span>
- DViewItemAction <span class="operator">*</span>act1 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignLeft<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">50</span><span class="operator">,</span> <span class="number">50</span>));
+ DViewItemAction <span class="operator">*</span>act1 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignLeft<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">50</span><span class="operator">,</span> <span class="number">50</span>));
  act1<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act1&quot;</span>);
- act1<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
- DViewItemAction <span class="operator">*</span>act2 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignRight<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>());
+ act1<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type"><a href="http://doc.qt.io/qt-5/qicon.html">QIcon</a></span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ DViewItemAction <span class="operator">*</span>act2 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignRight<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>());
  act2<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act2&quot;</span>);
- act2<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
- DViewItemAction <span class="operator">*</span>act3 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignHCenter<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">100</span><span class="operator">,</span> <span class="number">50</span>));
+ act2<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type"><a href="http://doc.qt.io/qt-5/qicon.html">QIcon</a></span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ DViewItemAction <span class="operator">*</span>act3 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignHCenter<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">100</span><span class="operator">,</span> <span class="number">50</span>));
  act3<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act3&quot;</span>);
- act3<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
- DViewItemAction <span class="operator">*</span>act4 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignLeft<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type">QSize</span>(<span class="number">100</span><span class="operator">,</span> <span class="number">50</span>));
+ act3<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type"><a href="http://doc.qt.io/qt-5/qicon.html">QIcon</a></span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ DViewItemAction <span class="operator">*</span>act4 <span class="operator">=</span> <span class="keyword">new</span> DViewItemAction(<span class="type">Qt</span><span class="operator">::</span>AlignLeft<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">15</span><span class="operator">,</span> <span class="number">15</span>)<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span>(<span class="number">100</span><span class="operator">,</span> <span class="number">50</span>));
  act4<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="string">&quot;act4&quot;</span>);
- act4<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type">QIcon</span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
+ act4<span class="operator">-</span><span class="operator">&gt;</span>setIcon(<span class="type"><a href="http://doc.qt.io/qt-5/qicon.html">QIcon</a></span>(<span class="string">&quot;/home/yuanyi/Desktop/dog.jpg&quot;</span>));
 
  DViewItemActionList <span class="operator">*</span>list <span class="operator">=</span> <span class="keyword">new</span> DViewItemActionList();
  list<span class="operator">-</span><span class="operator">&gt;</span>append(act1);

@@ -39,7 +39,10 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#properties">Properties</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -51,58 +54,149 @@
 </td></tr></table></div><ul>
 <li><a href="dtk-widget-denhancedwidget-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><a href="dtk-widget-denhancedwidget.html#enabled-prop">enabled</a></b> : bool</li>
+<li class="fn"><b><a href="dtk-widget-denhancedwidget.html#target-prop">target</a></b> : QWidget*</li>
+</ul>
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#DEnhancedWidget">DEnhancedWidget</a></b>(QWidget *<i>w</i>, QObject *<i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#enabled-prop">enabled</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWidget *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#target-prop">target</a></b>() const</td></tr>
+</table></div>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#setEnabled">setEnabled</a></b>(bool <i>enabled</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#setTarget">setTarget</a></b>(QWidget *<i>target</i>)</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#enabledChanged">enabledChanged</a></b>(bool <i>enabled</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#heightChanged">heightChanged</a></b>(int <i>height</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#setEnabled">setEnabled</a></b>(bool <i>enabled</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#positionChanged">positionChanged</a></b>(const QPoint &amp;<i>point</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#showed">showed</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#sizeChanged">sizeChanged</a></b>(const int &amp;<i>size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#sizeChanged">sizeChanged</a></b>(const QSize &amp;<i>size</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#targetChanged">targetChanged</a></b>(QWidget *<i>target</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#widthChanged">widthChanged</a></b>(int <i>width</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#xChanged">xChanged</a></b>(int <i>x</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-denhancedwidget.html#yChanged">yChanged</a></b>(int <i>y</i>)</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$DEnhancedWidget-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>QWidget 中只有少量的信号用于通知和窗口相关的属性变化，常用的如 x y width height 等属性的改变只能通过继承重写对应的事件才能知晓。DEnhancedWidget 中通过使用事件 过滤器监听目标控件的事件，收到对应事件之后转换为自身的信号发射出来，以此来实现对 QWidget 对象的信号扩展。</p>
+<p><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> 中只有少量的信号用于通知和窗口相关的属性变化，常用的如 x y width height 等属性的改变只能通过继承重写对应的事件才能知晓。DEnhancedWidget 中通过使用事件 过滤器监听目标控件的事件，收到对应事件之后转换为自身的信号发射出来，以此来实现对 <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> 对象的信号扩展。</p>
 </div>
 <!-- @@@DEnhancedWidget -->
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$enabled-prop$$$enabled$$$setEnabledbool$$$enabledChangedbool -->
+<h3 class="fn" id="enabled-prop"><a name="enabled-prop"></a><span class="name">enabled</span> : <span class="type">bool</span></h3>
+<p>值为 true 时过滤 target 控件的事件发送信号。否则卸载事件过滤器，控件属性 改变时也不会发出信号。</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>enabled</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-denhancedwidget.html#setEnabled">setEnabled</a></b></span>(bool <i>enabled</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-denhancedwidget.html#enabledChanged">enabledChanged</a></b></span>(bool <i>enabled</i>)</td></tr>
+</table></div>
+<!-- @@@enabled -->
+<!-- $$$target-prop$$$target$$$setTargetQWidget*$$$targetChangedQWidget* -->
+<h3 class="fn" id="target-prop"><a name="target-prop"></a><span class="name">target</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span>*</h3>
+<p>要监听的目标控件，每一个 <a href="dtk-widget-denhancedwidget.html">DEnhancedWidget</a> 对象只能关联到一个 <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> 对象 当 target 改变后，所有的信号和旧的 target 都不再有任何关系。</p>
+<pre class="cpp">
+ <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> <span class="operator">*</span>w1 <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span>();
+ w1<span class="operator">-</span><span class="operator">&gt;</span>show();
+ DEnhancedWidget <span class="operator">*</span>ew <span class="operator">=</span> <span class="keyword">new</span> DEnhancedWidget(w1);
+ connect(ew<span class="operator">,</span> <span class="operator">&amp;</span>DEnhancedWidget<span class="operator">::</span>xChanged<span class="operator">,</span> <span class="operator">[</span><span class="operator">]</span> (<span class="type">int</span> x) {
+    <a href="http://doc.qt.io/qt-5/qtglobal.html#qDebug">qDebug</a>() <span class="operator">&lt;</span><span class="operator">&lt;</span> x;
+ });
+ <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> <span class="operator">*</span>w2 <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span>();
+ ew<span class="operator">.</span>setTarget(w2);
+ w1<span class="operator">-</span><span class="operator">&gt;</span>move(<span class="number">100</span><span class="operator">,</span> <span class="number">100</span>);
+</pre>
+<p>移动控件 w1 时不会有任何打印</p>
+<pre class="cpp">
+ w2<span class="operator">-</span><span class="operator">&gt;</span>show();
+ w2<span class="operator">-</span><span class="operator">&gt;</span>move(<span class="number">100</span><span class="operator">,</span> <span class="number">100</span>);
+</pre>
+<p>移动控件 w2 时会有打印 虽然将 target 设置为 w2 之前就已经连接了 x 改变的信号，不过 w2 位置改变时可以收到信号</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QWidget *</td><td class="memItemRight bottomAlign"><span class="name"><b>target</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-denhancedwidget.html#setTarget">setTarget</a></b></span>(QWidget *<i>target</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-denhancedwidget.html#targetChanged">targetChanged</a></b></span>(QWidget *<i>target</i>)</td></tr>
+</table></div>
+<!-- @@@target -->
+</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$enabledChanged[overload1]$$$enabledChangedbool -->
-<h3 class="fn" id="enabledChanged"><a name="enabledChanged"></a><span class="type">void</span> DEnhancedWidget::<span class="name">enabledChanged</span>(<span class="type">bool</span> <i>enabled</i>)</h3>
-<p><i>enabled</i> 是否可用. 这个信号在属性 DEnhancedWidget::enabled <i>enabled</i> 被改变后发送</p>
+<!-- $$$DEnhancedWidget[overload1]$$$DEnhancedWidgetQWidget*QObject* -->
+<h3 class="fn" id="DEnhancedWidget"><a name="DEnhancedWidget"></a>DEnhancedWidget::<span class="name">DEnhancedWidget</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>w</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qobject.html">QObject</a></span> *<i>parent</i> = 0)</h3>
+<p><a href="dtk-widget-denhancedwidget.html">DEnhancedWidget::DEnhancedWidget</a> 构造函数.</p>
+<p><i>w</i> 初始时指定的 target 控件 <i>parent</i> 父对象，直接传递给基类</p>
+<p><b>See also </b><a href="dtk-widget-denhancedwidget.html#target-prop">DEnhancedWidget::target</a> and <a href="http://doc.qt.io/qt-5/qobject.html#parent">QObject::parent</a>.</p>
+<!-- @@@DEnhancedWidget -->
+<!-- $$$enabledChanged -->
+<h3 class="fn" id="enabledChanged"><a name="enabledChanged"></a><code>[signal] </code><span class="type">void</span> DEnhancedWidget::<span class="name">enabledChanged</span>(<span class="type">bool</span> <i>enabled</i>)</h3>
+<p><i>enabled</i> 是否可用. 这个信号在属性 <a href="dtk-widget-denhancedwidget.html#enabled-prop">DEnhancedWidget::enabled</a> <i>enabled</i> 被改变后发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-denhancedwidget.html#enabled-prop">enabled</a>. </p>
 <!-- @@@enabledChanged -->
 <!-- $$$heightChanged[overload1]$$$heightChangedint -->
-<h3 class="fn" id="heightChanged"><a name="heightChanged"></a><span class="type">void</span> DEnhancedWidget::<span class="name">heightChanged</span>(<span class="type">int</span> <i>height</i>)</h3>
+<h3 class="fn" id="heightChanged"><a name="heightChanged"></a><code>[signal] </code><span class="type">void</span> DEnhancedWidget::<span class="name">heightChanged</span>(<span class="type">int</span> <i>height</i>)</h3>
 <p><i>height</i> 改变的高度大小. 这个信号在目标控件的高度改变后被发送</p>
 <!-- @@@heightChanged -->
-<!-- $$$setEnabled[overload1]$$$setEnabledbool -->
-<h3 class="fn" id="setEnabled"><a name="setEnabled"></a><span class="type">void</span> DEnhancedWidget::<span class="name">setEnabled</span>(<span class="type">bool</span> <i>enabled</i>)</h3>
+<!-- $$$positionChanged[overload1]$$$positionChangedconstQPoint& -->
+<h3 class="fn" id="positionChanged"><a name="positionChanged"></a><code>[signal] </code><span class="type">void</span> DEnhancedWidget::<span class="name">positionChanged</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qpoint.html">QPoint</a></span> &amp;<i>point</i>)</h3>
+<p><i>point</i> 改变的位置坐标. 这个信号在目标控件的坐标改变后被发送</p>
+<!-- @@@positionChanged -->
+<!-- $$$setEnabled -->
+<h3 class="fn" id="setEnabled"><a name="setEnabled"></a><code>[slot] </code><span class="type">void</span> DEnhancedWidget::<span class="name">setEnabled</span>(<span class="type">bool</span> <i>enabled</i>)</h3>
 <p>DEnhancedWidget::setEnabled <i>enabled</i></p>
-<p><b>See also </b>DEnhancedWidget::enabled.</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-denhancedwidget.html#enabled-prop">enabled</a>. </p>
+<p><b>See also </b><a href="dtk-widget-denhancedwidget.html#enabled-prop">DEnhancedWidget::enabled</a>.</p>
 <!-- @@@setEnabled -->
+<!-- $$$setTarget -->
+<h3 class="fn" id="setTarget"><a name="setTarget"></a><code>[slot] </code><span class="type">void</span> DEnhancedWidget::<span class="name">setTarget</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>target</i>)</h3>
+<p>DEnhancedWidget::setTarget <i>target</i></p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-denhancedwidget.html#target-prop">target</a>. </p>
+<p><b>See also </b><a href="dtk-widget-denhancedwidget.html#target-prop">DEnhancedWidget::target</a>.</p>
+<!-- @@@setTarget -->
 <!-- $$$showed[overload1]$$$showed -->
-<h3 class="fn" id="showed"><a name="showed"></a><span class="type">void</span> DEnhancedWidget::<span class="name">showed</span>()</h3>
+<h3 class="fn" id="showed"><a name="showed"></a><code>[signal] </code><span class="type">void</span> DEnhancedWidget::<span class="name">showed</span>()</h3>
 <p>这个信号在目标控件显示后发送</p>
 <!-- @@@showed -->
-<!-- $$$sizeChanged[overload1]$$$sizeChangedconstint& -->
-<h3 class="fn" id="sizeChanged"><a name="sizeChanged"></a><span class="type">void</span> DEnhancedWidget::<span class="name">sizeChanged</span>(const <span class="type">int</span> &amp;<i>size</i>)</h3>
+<!-- $$$sizeChanged[overload1]$$$sizeChangedconstQSize& -->
+<h3 class="fn" id="sizeChanged"><a name="sizeChanged"></a><code>[signal] </code><span class="type">void</span> DEnhancedWidget::<span class="name">sizeChanged</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span> &amp;<i>size</i>)</h3>
 <p><i>size</i> 改变的大小. 这个信号在目标控件的大小改变后被发送</p>
 <!-- @@@sizeChanged -->
-<!-- $$$targetChanged[overload1]$$$targetChangedQWidget* -->
-<h3 class="fn" id="targetChanged"><a name="targetChanged"></a><span class="type">void</span> DEnhancedWidget::<span class="name">targetChanged</span>(<span class="type">QWidget</span> *<i>target</i>)</h3>
-<p><i>target</i> 目标控件. 这个信号在属性 DEnhancedWidget::target 被改变后发送</p>
+<!-- $$$targetChanged -->
+<h3 class="fn" id="targetChanged"><a name="targetChanged"></a><code>[signal] </code><span class="type">void</span> DEnhancedWidget::<span class="name">targetChanged</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>target</i>)</h3>
+<p><i>target</i> 目标控件. 这个信号在属性 <a href="dtk-widget-denhancedwidget.html#target-prop">DEnhancedWidget::target</a> 被改变后发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-denhancedwidget.html#target-prop">target</a>. </p>
 <!-- @@@targetChanged -->
 <!-- $$$widthChanged[overload1]$$$widthChangedint -->
-<h3 class="fn" id="widthChanged"><a name="widthChanged"></a><span class="type">void</span> DEnhancedWidget::<span class="name">widthChanged</span>(<span class="type">int</span> <i>width</i>)</h3>
+<h3 class="fn" id="widthChanged"><a name="widthChanged"></a><code>[signal] </code><span class="type">void</span> DEnhancedWidget::<span class="name">widthChanged</span>(<span class="type">int</span> <i>width</i>)</h3>
 <p><i>width</i> 改变的宽度大小. 这个信号在目标控件的宽度改变后被发送</p>
 <!-- @@@widthChanged -->
+<!-- $$$xChanged[overload1]$$$xChangedint -->
+<h3 class="fn" id="xChanged"><a name="xChanged"></a><code>[signal] </code><span class="type">void</span> DEnhancedWidget::<span class="name">xChanged</span>(<span class="type">int</span> <i>x</i>)</h3>
+<p><i>x</i> 改变的 x 轴坐标. 这个信号在目标控件的 x 坐标改变后被发送</p>
+<!-- @@@xChanged -->
 <!-- $$$yChanged[overload1]$$$yChangedint -->
-<h3 class="fn" id="yChanged"><a name="yChanged"></a><span class="type">void</span> DEnhancedWidget::<span class="name">yChanged</span>(<span class="type">int</span> <i>y</i>)</h3>
+<h3 class="fn" id="yChanged"><a name="yChanged"></a><code>[signal] </code><span class="type">void</span> DEnhancedWidget::<span class="name">yChanged</span>(<span class="type">int</span> <i>y</i>)</h3>
 <p><i>y</i> 改变的 y 轴坐标. 这个信号在目标控件的 y 坐标改变后被发送</p>
 <!-- @@@yChanged -->
 </div>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- dsimplelistview.cpp -->
+  <title>DSimpleListView Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DSimpleListView</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DSimpleListView Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DSimpleListView</span>
+<!-- $$$DSimpleListView-brief -->
+<p>DSimpleListView 是 deepin 基于 <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> 从零绘制的列表控件. <a href="#details">More...</a></p>
+<!-- @@@DSimpleListView -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DSimpleListView&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="dtk-widget-dsimplelistview-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dsimplelistview.html#addItems">addItems</a></b>(int <i>items</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dsimplelistview.html#setClipRadius">setClipRadius</a></b>(int <i>radius</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dsimplelistview.html#setColumnHideFlags">setColumnHideFlags</a></b>(QList&lt;bool&gt; <i>toggleHideFlags</i>, int <i>visibleColumnIndex</i> = -1)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dsimplelistview.html#setColumnSortingAlgorithms">setColumnSortingAlgorithms</a></b>(QList&lt;Dtk::Widget::SortAlgorithm&gt; *<i>algorithms</i>, int <i>sortColumn</i> = -1, bool <i>descendingSort</i> = false)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dsimplelistview.html#setColumnTitleInfo">setColumnTitleInfo</a></b>(QList&lt;QString&gt; <i>titles</i>, QList&lt;int&gt; <i>widths</i>, int <i>height</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dsimplelistview.html#setFrame">setFrame</a></b>(bool <i>enableFrame</i>, QColor <i>color</i> = ..., double <i>opacity</i> = 0.1)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dsimplelistview.html#setRowHeight">setRowHeight</a></b>(int <i>height</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dsimplelistview.html#setSearchAlgorithm">setSearchAlgorithm</a></b>(Dtk::Widget::SearchAlgorithm <i>algorithm</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DSimpleListView-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>开发者只要懂得怎么使用 <a href="http://doc.qt.io/qt-5/qpainter.html">QPainter</a> 进行图形绘制，开发者就可以在 DSimpleListItem 中绘制任意行内容， 包括文本、图片、任意控件甚至每行都可以画一个小电影，而代码的复杂度不会随着绘制行内容而发生变化， 所有的行内容都源于怎么使用 <a href="http://doc.qt.io/qt-5/qpainter.html">QPainter</a>.</p>
+</div>
+<!-- @@@DSimpleListView -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$addItems[overload1]$$$addItemsint -->
+<h3 class="fn" id="addItems"><a name="addItems"></a><span class="type">void</span> DSimpleListView::<span class="name">addItems</span>(<span class="type">int</span> <i>items</i>)</h3>
+<p>添加 DSimpleListItem 列表到视图中.</p>
+<p><i>items</i> 视图项列表.</p>
+<!-- @@@addItems -->
+<!-- $$$setClipRadius[overload1]$$$setClipRadiusint -->
+<h3 class="fn" id="setClipRadius"><a name="setClipRadius"></a><span class="type">void</span> DSimpleListView::<span class="name">setClipRadius</span>(<span class="type">int</span> <i>radius</i>)</h3>
+<p>设置圆角半径.</p>
+<p><i>radius</i> 圆角大小.</p>
+<!-- @@@setClipRadius -->
+<!-- $$$setColumnHideFlags[overload1]$$$setColumnHideFlagsQList<bool>int -->
+<h3 class="fn" id="setColumnHideFlags"><a name="setColumnHideFlags"></a><span class="type">void</span> DSimpleListView::<span class="name">setColumnHideFlags</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qlist.html">QList</a></span>&lt;<span class="type">bool</span>&gt; <i>toggleHideFlags</i>, <span class="type">int</span> <i>visibleColumnIndex</i> = -1)</h3>
+<p>设置列隐藏标志 <i>toggleHideFlags</i> 用于控制列的隐藏标志，用于切换显示/隐藏。 <i>visibleColumnIndex</i> 列始终可见的列索引，默认值为 -1，表示列始终不可见。</p>
+<!-- @@@setColumnHideFlags -->
+<!-- $$$setColumnSortingAlgorithms[overload1]$$$setColumnSortingAlgorithmsQList<Dtk::Widget::SortAlgorithm>*intbool -->
+<h3 class="fn" id="setColumnSortingAlgorithms"><a name="setColumnSortingAlgorithms"></a><span class="type">void</span> DSimpleListView::<span class="name">setColumnSortingAlgorithms</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qlist.html">QList</a></span>&lt;<span class="type">Dtk::Widget::SortAlgorithm</span>&gt; *<i>algorithms</i>, <span class="type">int</span> <i>sortColumn</i> = -1, <span class="type">bool</span> <i>descendingSort</i> = false)</h3>
+<p>设置列排序算法.</p>
+<p><i>algorithms</i> 列排序算法 , <i>sortColumn</i> 排序的列项 , <i>descendingSort</i> 是否为降序排序.</p>
+<!-- @@@setColumnSortingAlgorithms -->
+<!-- $$$setColumnTitleInfo[overload1]$$$setColumnTitleInfoQList<QString>QList<int>int -->
+<h3 class="fn" id="setColumnTitleInfo"><a name="setColumnTitleInfo"></a><span class="type">void</span> DSimpleListView::<span class="name">setColumnTitleInfo</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qlist.html">QList</a></span>&lt;<span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span>&gt; <i>titles</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qlist.html">QList</a></span>&lt;<span class="type">int</span>&gt; <i>widths</i>, <span class="type">int</span> <i>height</i>)</h3>
+<p>设置列标题信息</p>
+<p><i>titles</i> 标题列表， <i>widths</i> 宽度列表, <i>height</i> 高度.</p>
+<!-- @@@setColumnTitleInfo -->
+<!-- $$$setFrame[overload1]$$$setFrameboolQColordouble -->
+<h3 class="fn" id="setFrame"><a name="setFrame"></a><span class="type">void</span> DSimpleListView::<span class="name">setFrame</span>(<span class="type">bool</span> <i>enableFrame</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qcolor.html">QColor</a></span> <i>color</i> = ..., <span class="type">double</span> <i>opacity</i> = 0.1)</h3>
+<p>设置边角细节.</p>
+<p><i>enableFrame</i> 是否绘制边角 <i>color</i> 边角颜色 <i>opacity</i> 不透明度</p>
+<!-- @@@setFrame -->
+<!-- $$$setRowHeight[overload1]$$$setRowHeightint -->
+<h3 class="fn" id="setRowHeight"><a name="setRowHeight"></a><span class="type">void</span> DSimpleListView::<span class="name">setRowHeight</span>(<span class="type">int</span> <i>height</i>)</h3>
+<p>设置行高.</p>
+<p><i>height</i> 行高.</p>
+<!-- @@@setRowHeight -->
+<!-- $$$setSearchAlgorithm[overload1]$$$setSearchAlgorithmDtk::Widget::SearchAlgorithm -->
+<h3 class="fn" id="setSearchAlgorithm"><a name="setSearchAlgorithm"></a><span class="type">void</span> DSimpleListView::<span class="name">setSearchAlgorithm</span>(<span class="type">Dtk::Widget::SearchAlgorithm</span> <i>algorithm</i>)</h3>
+<p>设置搜索算法.</p>
+<p><i>algorithm</i> 搜索算法.</p>
+<!-- @@@setSearchAlgorithm -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

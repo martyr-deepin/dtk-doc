@@ -39,6 +39,11 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -51,13 +56,75 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DRegionMonitor&gt;</span>
 </td></tr></table></div><ul>
+<li><a href="dtk-gui-dregionmonitor-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dregionmonitor.html#RegisterdFlag-enum">RegisterdFlag</a></b> { Motion, Button, Key }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dregionmonitor.html#RegisterdFlag-enum">RegisterdFlags</a></b></td></tr>
+</table></div>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><a href="dtk-gui-dregionmonitor.html#registerdFlags-prop">registerdFlags</a></b> : RegisterdFlags</li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Dtk::Gui::DRegionMonitor::CoordinateType </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dregionmonitor.html#coordinateType-prop">coordinateType</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Dtk::Gui::DRegionMonitor::RegisterdFlags </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dregionmonitor.html#registerdFlags-prop">registerFlags</a></b>() const</td></tr>
+</table></div>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dregionmonitor.html#coordinateType-prop">setCoordinateType</a></b>(Dtk::Gui::DRegionMonitor::CoordinateType <i>type</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dregionmonitor.html#registerdFlags-prop">setRegisterFlags</a></b>(Dtk::Gui::DRegionMonitor::RegisterdFlags <i>flags</i>)</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dregionmonitor.html#coordinateType-prop">coordinateTypeChanged</a></b>(Dtk::Gui::DRegionMonitor::CoordinateType <i>type</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dregionmonitor.html#registerdFlags-prop">registerdFlagsChanged</a></b>(Dtk::Gui::DRegionMonitor::RegisterdFlags <i>flags</i>) const</td></tr>
+</table></div>
 <a name="details"></a>
 <!-- $$$DRegionMonitor-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 </div>
 <!-- @@@DRegionMonitor -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$RegisterdFlag$$$Motion$$$Button$$$Key -->
+<h3 class="flags" id="RegisterdFlag-enum"><a name="RegisterdFlag-enum"></a>enum DRegionMonitor::<span class="name">RegisterdFlag</span><br/>flags DRegionMonitor::<span class="name">RegisterdFlags</span></h3>
+<p>DRegionMonitor::RegisterdFlag 定义了 <a href="dtk-gui-dregionmonitor.html">DRegionMonitor</a> 监听标志。</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Gui::DRegionMonitor::Motion</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">代表监听鼠标移动。</td></tr>
+<tr><td class="topAlign"><code>Dtk::Gui::DRegionMonitor::Button</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">代表监听鼠标按键。</td></tr>
+<tr><td class="topAlign"><code>Dtk::Gui::DRegionMonitor::Key</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">代表监听键盘按键。</td></tr>
+</table></div>
+<p>The RegisterdFlags type is a typedef for <a href="http://doc.qt.io/qt-5/qflags.html">QFlags</a>&lt;RegisterdFlag&gt;. It stores an OR combination of RegisterdFlag values.</p>
+<!-- @@@RegisterdFlag -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$registerdFlags-prop$$$registerFlags$$$setRegisterFlagsDtk::Gui::DRegionMonitor::RegisterdFlags$$$registerdFlagsChangedDtk::Gui::DRegionMonitor::RegisterdFlags -->
+<h3 class="fn" id="registerdFlags-prop"><a name="registerdFlags-prop"></a><span class="name">registerdFlags</span> : <span class="type"><a href="dtk-gui-dregionmonitor.html#RegisterdFlag-enum">RegisterdFlags</a></span></h3>
+<p>监听模式属性.</p>
+<p>监听模式，需要注意 <a href="dtk-gui-dregionmonitor.html#RegisterdFlag-enum">DRegionMonitor::Motion</a> 监听鼠标移动会影响性能，默认包含，如果 需要可通过此函数去掉 <a href="dtk-gui-dregionmonitor.html#RegisterdFlag-enum">DRegionMonitor::Motion</a> .</p>
+<p>registerdFlagChanged 信号会在监听标志 registerdFlags 被改变的时候被触发.</p>
+<p><i>flags</i> 监听模式.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> Dtk::Gui::DRegionMonitor::RegisterdFlags </td><td class="memItemRight bottomAlign"><span class="name"><b>registerFlags</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setRegisterFlags</b></span>(Dtk::Gui::DRegionMonitor::RegisterdFlags <i>flags</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>registerdFlagsChanged</b></span>(Dtk::Gui::DRegionMonitor::RegisterdFlags <i>flags</i>) const</td></tr>
+</table></div>
+<!-- @@@registerdFlags -->
+</div>
         </div>
        </div>
    </div>

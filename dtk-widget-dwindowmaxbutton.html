@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- dwindowmaxbutton.cpp -->
+  <title>DWindowMaxButton Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DWindowMaxButton</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DWindowMaxButton Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DWindowMaxButton</span>
+<!-- $$$DWindowMaxButton-brief -->
+<p>The DWindowMaxButton class is used as the unified window maximize button. <a href="#details">More...</a></p>
+<!-- @@@DWindowMaxButton -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DWindowMaxButton&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> Dtk::Widget::DIconButton</td></tr></table></div><ul>
+<li><a href="dtk-widget-dwindowmaxbutton-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><a href="dtk-widget-dwindowmaxbutton.html#isMaximized-prop">isMaximized</a></b> : bool</li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dwindowmaxbutton.html#DWindowMaxButton">DWindowMaxButton</a></b>(QWidget *<i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dwindowmaxbutton.html#isMaximized-prop">isMaximized</a></b>() const</td></tr>
+</table></div>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dwindowmaxbutton.html#isMaximized-prop">setMaximized</a></b>(bool <i>isMaximized</i>)</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dwindowmaxbutton.html#maximizedChanged">maximizedChanged</a></b>(bool <i>isMaximized</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DWindowMaxButton-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>It's actually a special DImageButton which has the appearance of maximize button. 它有两种状态，一种表示窗口已经进入最大化状态，点击按钮窗口恢复为普通状态； 另一种表示窗口处于普通状态，点击按钮窗口进入最大化状态。</p>
+</div>
+<p><b>See also </b><a href="dtk-widget-dwindowmaxbutton.html#isMaximized-prop">DWindowMaxButton::isMaximized</a>().</p>
+<!-- @@@DWindowMaxButton -->
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$ -->
+<div class="fngroup">
+<h3 class="fn fngroupitem" id="isMaximized-prop"><a name="isMaximized-prop"></a><span class="name">isMaximized</span> : <span class="type">bool</span></h3><h3 class="fn fngroupitem" id="isMaximized-prop"><a name="isMaximized-prop"></a><span class="name">isMaximized</span> : <span class="type">bool</span></h3></div>
+<p><a href="dtk-widget-dwindowmaxbutton.html#isMaximized-prop">isMaximized</a> indicates whether the button state is maximized or not.</p>
+<p>It's true if it's set to maximized, otherwise false.</p>
+<p><a href="dtk-widget-dwindowmaxbutton.html#isMaximized-prop">isMaximized</a> 属性标示了这个按钮当前所处于的状态。 值为 true 表示按钮处于最大化状态，false 表示窗口处于正常状态。</p>
+<!-- @@@ -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DWindowMaxButton[overload1]$$$DWindowMaxButtonQWidget* -->
+<h3 class="fn" id="DWindowMaxButton"><a name="DWindowMaxButton"></a>DWindowMaxButton::<span class="name">DWindowMaxButton</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>parent</i> = 0)</h3>
+<p><a href="dtk-widget-dwindowmaxbutton.html">DWindowMaxButton::DWindowMaxButton</a> 是 DWindowMaxButton 的构造 函数，返回 DWindowMaxButton 对象，普通程序一般无需使用。 <i>parent</i> 为创建对象的父控件。</p>
+<!-- @@@DWindowMaxButton -->
+<!-- $$$maximizedChanged -->
+<h3 class="fn" id="maximizedChanged"><a name="maximizedChanged"></a><code>[signal] </code><span class="type">void</span> DWindowMaxButton::<span class="name">maximizedChanged</span>(<span class="type">bool</span> <i>isMaximized</i>)</h3>
+<p>isMaximizedChanged 信号在 <a href="dtk-widget-dwindowmaxbutton.html#isMaximized-prop">isMaximized</a> 属性发生变化时触发.</p>
+<p><i>isMaximized</i> 是否时最大化状态.</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-dwindowmaxbutton.html#isMaximized-prop">isMaximized</a>. </p>
+<!-- @@@maximizedChanged -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

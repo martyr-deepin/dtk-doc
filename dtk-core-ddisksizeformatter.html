@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- ddisksizeformatter.cpp -->
+  <title>DDiskSizeFormatter Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DDiskSizeFormatter</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DDiskSizeFormatter Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-core.html">Core</a>::DDiskSizeFormatter</span>
+<!-- $$$DDiskSizeFormatter-brief -->
+<p>DDiskSizeFormatter 是用来获取磁盘容量单位的类, 通过枚举值. <a href="#details">More...</a></p>
+<!-- @@@DDiskSizeFormatter -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DDiskSizeFormatter&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="dtk-core-ddisksizeformatter-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddisksizeformatter.html#DiskUnits-enum">DiskUnits</a></b> { B, K, M, G, T }</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddisksizeformatter.html#DDiskSizeFormatter">DDiskSizeFormatter</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Dtk::Core::DDiskSizeFormatter </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddisksizeformatter.html#rate">rate</a></b>(int <i>rate</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddisksizeformatter.html#unitStr">unitStr</a></b>(int <i>unitId</i>) const</td></tr>
+</table></div>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> uint </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddisksizeformatter.html#unitConvertRate">unitConvertRate</a></b>(int <i>unitId</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddisksizeformatter.html#unitMax">unitMax</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-ddisksizeformatter.html#unitMin">unitMin</a></b>() const</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DDiskSizeFormatter-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>获取不同类型磁盘容量的单位</p>
+</div>
+<!-- @@@DDiskSizeFormatter -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$DiskUnits$$$B$$$K$$$M$$$G$$$T -->
+<h3 class="fn" id="DiskUnits-enum"><a name="DiskUnits-enum"></a>enum DDiskSizeFormatter::<span class="name">DiskUnits</span></h3>
+<p>磁盘容量单位的枚举</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Core::DDiskSizeFormatter::B</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">字节</td></tr>
+<tr><td class="topAlign"><code>Dtk::Core::DDiskSizeFormatter::K</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">千字节</td></tr>
+<tr><td class="topAlign"><code>Dtk::Core::DDiskSizeFormatter::M</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">兆字节</td></tr>
+<tr><td class="topAlign"><code>Dtk::Core::DDiskSizeFormatter::G</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">吉字节</td></tr>
+<tr><td class="topAlign"><code>Dtk::Core::DDiskSizeFormatter::T</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">太字节</td></tr>
+</table></div>
+<!-- @@@DiskUnits -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DDiskSizeFormatter[overload1]$$$DDiskSizeFormatter -->
+<h3 class="fn" id="DDiskSizeFormatter"><a name="DDiskSizeFormatter"></a>DDiskSizeFormatter::<span class="name">DDiskSizeFormatter</span>()</h3>
+<p>DDiskSizeFormatter的构造函数</p>
+<!-- @@@DDiskSizeFormatter -->
+<!-- $$$rate[overload1]$$$rateint -->
+<h3 class="fn" id="rate"><a name="rate"></a><span class="type"><a href="dtk-core-ddisksizeformatter.html">Dtk::Core::DDiskSizeFormatter</a></span> DDiskSizeFormatter::<span class="name">rate</span>(<span class="type">int</span> <i>rate</i>)</h3>
+<p>设置当前的单位转换比率</p>
+<p><i>rate</i> 转换比率 Returns <a href="dtk-core-ddisksizeformatter.html">DDiskSizeFormatter</a> 返回 <a href="dtk-core-ddisksizeformatter.html">DDiskSizeFormatter</a> 对象</p>
+<!-- @@@rate -->
+<!-- $$$unitConvertRate[overload1]$$$unitConvertRateint -->
+<h3 class="fn" id="unitConvertRate"><a name="unitConvertRate"></a><code>[protected] </code><span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#uint-typedef">uint</a></span> DDiskSizeFormatter::<span class="name">unitConvertRate</span>(<span class="type">int</span> <i>unitId</i>) const</h3>
+<p>返回当前的单位转换比率</p>
+<!-- @@@unitConvertRate -->
+<!-- $$$unitMax[overload1]$$$unitMax -->
+<h3 class="fn" id="unitMax"><a name="unitMax"></a><code>[protected] </code><span class="type">int</span> DDiskSizeFormatter::<span class="name">unitMax</span>() const</h3>
+<p>返回最大磁盘容量单位的枚举</p>
+<!-- @@@unitMax -->
+<!-- $$$unitMin[overload1]$$$unitMin -->
+<h3 class="fn" id="unitMin"><a name="unitMin"></a><code>[protected] </code><span class="type">int</span> DDiskSizeFormatter::<span class="name">unitMin</span>() const</h3>
+<p>返回最小磁盘容量单位的枚举</p>
+<!-- @@@unitMin -->
+<!-- $$$unitStr[overload1]$$$unitStrint -->
+<h3 class="fn" id="unitStr"><a name="unitStr"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DDiskSizeFormatter::<span class="name">unitStr</span>(<span class="type">int</span> <i>unitId</i>) const</h3>
+<p>根据枚举返回对应单位的字符串</p>
+<p><i>unitId</i> <a href="dtk-core-ddisksizeformatter.html#DiskUnits-enum">DDiskSizeFormatter::DiskUnits</a> 的枚举值 Returns <a href="http://doc.qt.io/qt-5/qstring.html">QString</a> 对应单位的字符串</p>
+<!-- @@@unitStr -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

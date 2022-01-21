@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- LogManager.cpp -->
+  <title>DLogManager Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DLogManager</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DLogManager Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-core.html">Core</a>::DLogManager</span>
+<!-- $$$DLogManager-brief -->
+<p>DLogManager is the deepin user application log manager. <a href="#details">More...</a></p>
+<!-- @@@DLogManager -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DLogManager&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="dtk-core-dlogmanager-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-dlogmanager.html#getlogFilePath">getlogFilePath</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-dlogmanager.html#registerConsoleAppender">registerConsoleAppender</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-dlogmanager.html#registerFileAppender">registerFileAppender</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-core-dlogmanager.html#setlogFilePath">setlogFilePath</a></b>(const QString &amp;<i>logFilePath</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DLogManager-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+</div>
+<!-- @@@DLogManager -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$getlogFilePath[overload1]$$$getlogFilePath -->
+<h3 class="fn" id="getlogFilePath"><a name="getlogFilePath"></a><code>[static] </code><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DLogManager::<span class="name">getlogFilePath</span>()</h3>
+<p>Return the path file log storage.</p>
+<p>DLogManager::getlogFilePath 获取日志文件路径</p>
+<p>默认日志路径是 ~/.cache/organizationName/applicationName.log</p>
+<p>如果获取 HOME 环境变量失败将不写日志</p>
+<p><b>See also </b><a href="dtk-core-dlogmanager.html#registerFileAppender">registerFileAppender</a>.</p>
+<!-- @@@getlogFilePath -->
+<!-- $$$registerConsoleAppender[overload1]$$$registerConsoleAppender -->
+<h3 class="fn" id="registerConsoleAppender"><a name="registerConsoleAppender"></a><code>[static] </code><span class="type">void</span> DLogManager::<span class="name">registerConsoleAppender</span>()</h3>
+<p>Registers the appender to write the log records to the Console.</p>
+<p><b>See also </b><a href="dtk-core-dlogmanager.html#registerFileAppender">registerFileAppender</a>.</p>
+<!-- @@@registerConsoleAppender -->
+<!-- $$$registerFileAppender[overload1]$$$registerFileAppender -->
+<h3 class="fn" id="registerFileAppender"><a name="registerFileAppender"></a><code>[static] </code><span class="type">void</span> DLogManager::<span class="name">registerFileAppender</span>()</h3>
+<p>Registers the appender to write the log records to the file.</p>
+<p><b>See also </b><a href="dtk-core-dlogmanager.html#getlogFilePath">getlogFilePath</a> and <a href="dtk-core-dlogmanager.html#registerConsoleAppender">registerConsoleAppender</a>.</p>
+<!-- @@@registerFileAppender -->
+<!-- $$$setlogFilePath[overload1]$$$setlogFilePathconstQString& -->
+<h3 class="fn" id="setlogFilePath"><a name="setlogFilePath"></a><code>[static] </code><span class="type">void</span> DLogManager::<span class="name">setlogFilePath</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>logFilePath</i>)</h3>
+<p>DLogManager::setlogFilePath 设置日志文件路径 <i>logFilePath</i> 日志文件路径</p>
+<p>如果设置的文件路进不是文件路径将什么都不做，输出一条警告</p>
+<!-- @@@setlogFilePath -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

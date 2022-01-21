@@ -39,6 +39,7 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -51,7 +52,17 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DThumbnailProvider&gt;</span>
 </td></tr></table></div><ul>
+<li><a href="dtk-gui-dthumbnailprovider-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> qint64 </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dthumbnailprovider.html#defaultSizeLimit">defaultSizeLimit</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dthumbnailprovider.html#errorString">errorString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dthumbnailprovider.html#setDefaultSizeLimit">setDefaultSizeLimit</a></b>(qint64 <i>size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dthumbnailprovider.html#setSizeLimit">setSizeLimit</a></b>(const QMimeType &amp;<i>mimeType</i>, qint64 <i>size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> qint64 </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dthumbnailprovider.html#sizeLimit">sizeLimit</a></b>(const QMimeType &amp;<i>mimeType</i>) const</td></tr>
+</table></div>
 <a name="details"></a>
 <!-- $$$DThumbnailProvider-description -->
 <div class="descr">
@@ -59,6 +70,33 @@
 <p><b>Note: </b>缩略图创建失败 该文件格式未知，无法由程序加载。 文件格式是已知的，但是文件已被损坏，因此无法读取。 由于文件很大，缩略图的生成将花费很长时间</p>
 </div>
 <!-- @@@DThumbnailProvider -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$defaultSizeLimit[overload1]$$$defaultSizeLimit -->
+<h3 class="fn" id="defaultSizeLimit"><a name="defaultSizeLimit"></a><span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#qint64-typedef">qint64</a></span> DThumbnailProvider::<span class="name">defaultSizeLimit</span>() const</h3>
+<p>DThumbnailProvider::defaultSizeLimit返回缩略图默认大小 Returns 默认的大小</p>
+<p><b>See also </b><a href="dtk-gui-dthumbnailprovider.html#setDefaultSizeLimit">setDefaultSizeLimit</a>().</p>
+<!-- @@@defaultSizeLimit -->
+<!-- $$$errorString[overload1]$$$errorString -->
+<h3 class="fn" id="errorString"><a name="errorString"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DThumbnailProvider::<span class="name">errorString</span>() const</h3>
+<p>DThumbnailProvider::errorString返回错误信息 Returns 错误信息</p>
+<!-- @@@errorString -->
+<!-- $$$setDefaultSizeLimit[overload1]$$$setDefaultSizeLimitqint64 -->
+<h3 class="fn" id="setDefaultSizeLimit"><a name="setDefaultSizeLimit"></a><span class="type">void</span> DThumbnailProvider::<span class="name">setDefaultSizeLimit</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#qint64-typedef">qint64</a></span> <i>size</i>)</h3>
+<p>DThumbnailProvider::setDefaultSizeLimit设置缩略图的默认大小 <i>size</i> 大小</p>
+<p><b>See also </b><a href="dtk-gui-dthumbnailprovider.html#defaultSizeLimit">defaultSizeLimit</a>().</p>
+<!-- @@@setDefaultSizeLimit -->
+<!-- $$$setSizeLimit[overload1]$$$setSizeLimitconstQMimeType&qint64 -->
+<h3 class="fn" id="setSizeLimit"><a name="setSizeLimit"></a><span class="type">void</span> DThumbnailProvider::<span class="name">setSizeLimit</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qmimetype.html">QMimeType</a></span> &amp;<i>mimeType</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#qint64-typedef">qint64</a></span> <i>size</i>)</h3>
+<p>DThumbnailProvider::setSizeLimit 设置文件的大小 <i>mimeType</i> 由MIME类型字符串表示的文件或数据类型 <i>size</i> 范围</p>
+<p><b>See also </b><a href="dtk-gui-dthumbnailprovider.html#sizeLimit">sizeLimit</a>().</p>
+<!-- @@@setSizeLimit -->
+<!-- $$$sizeLimit[overload1]$$$sizeLimitconstQMimeType& -->
+<h3 class="fn" id="sizeLimit"><a name="sizeLimit"></a><span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#qint64-typedef">qint64</a></span> DThumbnailProvider::<span class="name">sizeLimit</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qmimetype.html">QMimeType</a></span> &amp;<i>mimeType</i>) const</h3>
+<p>DThumbnailProvider::sizeLimit 返回文件大小 <i>mimeType</i> 由MIME类型字符串表示的文件或数据类型 Returns</p>
+<p><b>See also </b><a href="dtk-gui-dthumbnailprovider.html#setSizeLimit">setSizeLimit</a>().</p>
+<!-- @@@sizeLimit -->
+</div>
         </div>
        </div>
    </div>

@@ -39,6 +39,7 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#protected-functions">Protected Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
@@ -47,13 +48,19 @@
 <h1 class="title">DCommandLinkButton Class</h1>
 <span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DCommandLinkButton</span>
 <!-- $$$DCommandLinkButton-brief -->
-<p>DCommandLinkButton 一个继承于 QAbstractButton 的按钮,外形和链接很像; 也可以是带有箭头的链接。常用于点击之后,跳转到另外一个窗口或者页面,比如浏览器的前进后退按钮. <a href="#details">More...</a></p>
+<p>DCommandLinkButton 一个继承于 <a href="http://doc.qt.io/qt-5/qabstractbutton.html">QAbstractButton</a> 的按钮,外形和链接很像; 也可以是带有箭头的链接。常用于点击之后,跳转到另外一个窗口或者页面,比如浏览器的前进后退按钮. <a href="#details">More...</a></p>
 <!-- @@@DCommandLinkButton -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DCommandLinkButton&gt;</span>
 </td></tr></table></div><ul>
 <li><a href="dtk-widget-dcommandlinkbutton-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dcommandlinkbutton.html#DCommandLinkButton">DCommandLinkButton</a></b>(const QString <i>text</i>, QWidget *<i>parent</i> = nullptr)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dcommandlinkbutton.html#sizeHint">sizeHint</a></b>() const</td></tr>
+</table></div>
 <a name="protected-functions"></a>
 <h2 id="protected-functions">Protected Functions</h2>
 <div class="table"><table class="alignedsummary">
@@ -68,6 +75,10 @@
 <!-- @@@DCommandLinkButton -->
 <div class="func">
 <h2>Member Function Documentation</h2>
+<!-- $$$DCommandLinkButton[overload1]$$$DCommandLinkButtonconstQStringQWidget* -->
+<h3 class="fn" id="DCommandLinkButton"><a name="DCommandLinkButton"></a>DCommandLinkButton::<span class="name">DCommandLinkButton</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> <i>text</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>parent</i> = nullptr)</h3>
+<p>构造函数 <i>text</i> 控件显示的文字 <i>parent</i> 控件的父对象</p>
+<!-- @@@DCommandLinkButton -->
 <!-- $$$initStyleOption[overload1]$$$initStyleOptionDtk::Widget::DStyleOptionButton* -->
 <h3 class="fn" id="initStyleOption"><a name="initStyleOption"></a><code>[protected] </code><span class="type">void</span> DCommandLinkButton::<span class="name">initStyleOption</span>(<span class="type"><a href="dtk-widget-dstyleoptionbutton.html">Dtk::Widget::DStyleOptionButton</a></span> *<i>option</i>) const</h3>
 <p>初始化的一个 option 的风格,和一些基本的属性 <i>option</i> 实参是一个用来初始化的(按钮控件的)风格属性</p>
@@ -76,6 +87,10 @@
 <h3 class="fn" id="paintEvent"><a name="paintEvent"></a><code>[protected] </code><span class="type">void</span> DCommandLinkButton::<span class="name">paintEvent</span>(<span class="type">int</span> *<i>e</i>)</h3>
 <p>绘画事件 <i>e</i> 此处不使用</p>
 <!-- @@@paintEvent -->
+<!-- $$$sizeHint[overload1]$$$sizeHint -->
+<h3 class="fn" id="sizeHint"><a name="sizeHint"></a><span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span> DCommandLinkButton::<span class="name">sizeHint</span>() const</h3>
+<p>获取控件的矩形大小 Returns 返回本的控件矩形大小</p>
+<!-- @@@sizeHint -->
 </div>
         </div>
        </div>

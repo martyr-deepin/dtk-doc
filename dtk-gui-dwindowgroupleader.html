@@ -57,7 +57,6 @@
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowgroupleader.html#DWindowGroupLeader">DWindowGroupLeader</a></b>(int <i>groupId</i> = 0)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowgroupleader.html#dtor.DWindowGroupLeader">~DWindowGroupLeader</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowgroupleader.html#addWindow">addWindow</a></b>(QWindow *<i>window</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dwindowgroupleader.html#clientLeaderId">clientLeaderId</a></b>() const</td></tr>
@@ -68,11 +67,11 @@
 <!-- $$$DWindowGroupLeader-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>在dxcb平台上，所有未指定组的窗口都会被分配到 <a href="dtk-gui-dwindowgroupleader.html#clientLeaderId">DWindowGroupLeader::clientLeaderId</a> 这个组，且在窗口对应的本地窗口被创建时，会对 Qt::Dialog、Qt::Sheet、Qt::Tool、 Qt::SplashScreen、Qt::ToolTip、Qt::Drawer、Qt::Popup 类型的窗口设置 WM_TRANSIENT_FOR 属性，对于此类型的窗口，如果没有手动调用 QWindow::setTransientParent ， 则会将其 WM_TRANSIENT_FOR 属性设置为所在组id，得到的效果就是：会保证此窗口显示到这个组所有其它窗口 之上。例子：</p>
+<p>在dxcb平台上，所有未指定组的窗口都会被分配到 <a href="dtk-gui-dwindowgroupleader.html#clientLeaderId">DWindowGroupLeader::clientLeaderId</a> 这个组，且在窗口对应的本地窗口被创建时，会对 <a href="http://doc.qt.io/qt-5/qt.html#WindowType-enum">Qt::Dialog</a>、<a href="http://doc.qt.io/qt-5/qt.html#WindowType-enum">Qt::Sheet</a>、<a href="http://doc.qt.io/qt-5/qt.html#WindowType-enum">Qt::Tool</a>、 <a href="http://doc.qt.io/qt-5/qt.html#WindowType-enum">Qt::SplashScreen</a>、<a href="http://doc.qt.io/qt-5/qt.html#WindowType-enum">Qt::ToolTip</a>、<a href="http://doc.qt.io/qt-5/qt.html#WindowType-enum">Qt::Drawer</a>、<a href="http://doc.qt.io/qt-5/qt.html#WindowType-enum">Qt::Popup</a> 类型的窗口设置 WM_TRANSIENT_FOR 属性，对于此类型的窗口，如果没有手动调用 QWindow::setTransientParent ， 则会将其 WM_TRANSIENT_FOR 属性设置为所在组id，得到的效果就是：会保证此窗口显示到这个组所有其它窗口 之上。例子：</p>
 <pre class="cpp">
  DWindowGroupLeader leader;
- <span class="type">QWindow</span> wa<span class="operator">,</span> wb;
- <span class="type">QWindow</span> topWindow;
+ <span class="type"><a href="http://doc.qt.io/qt-5/qwindow.html">QWindow</a></span> wa<span class="operator">,</span> wb;
+ <span class="type"><a href="http://doc.qt.io/qt-5/qwindow.html">QWindow</a></span> topWindow;
 
  leader<span class="operator">.</span>addWindow(<span class="operator">&amp;</span>wa);
  leader<span class="operator">.</span>addWindow(<span class="operator">&amp;</span>wb);
@@ -90,24 +89,19 @@
  topWindow<span class="operator">.</span>show();
 </pre>
 <p>窗口topWindow一直处于窗口wa和wb上层</p>
-<p class="centerAlign"><img src="images/wa_wb_topWindow.gif" alt="" /></p><p>如果一个组内同时存在多个未设置过 QWindow::setTransientParent 的 Qt::Dialog（其它会自动设置 WM_TRANSIENT_FOR 属性的窗口也成立）类型的窗口，这些窗口之间不会互相影响显示顺序，具体的规则和 X11 ICCCM 标准一致。 <a href="https://tronche.com/gui/x/icccm/sec-4.html#WM_TRANSIENT_FOR">https://tronche.com/gui/x/icccm/sec-4.html#WM_TRANSIENT_FOR</a></p>
+<p class="centerAlign"><img src="images/wa_wb_topWindow.gif" alt="" /></p><p>如果一个组内同时存在多个未设置过 QWindow::setTransientParent 的 <a href="http://doc.qt.io/qt-5/qt.html#WindowType-enum">Qt::Dialog</a>（其它会自动设置 WM_TRANSIENT_FOR 属性的窗口也成立）类型的窗口，这些窗口之间不会互相影响显示顺序，具体的规则和 X11 ICCCM 标准一致。 <a href="https://tronche.com/gui/x/icccm/sec-4.html#WM_TRANSIENT_FOR">https://tronche.com/gui/x/icccm/sec-4.html#WM_TRANSIENT_FOR</a></p>
 </div>
 <p><b>See also </b><a href="dtk-gui-dwindowgroupleader.html#clientLeaderId">DWindowGroupLeader::clientLeaderId</a> and Dtk::Widget::DApplication::loadDXcbPlugin.</p>
 <!-- @@@DWindowGroupLeader -->
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$DWindowGroupLeader[overload1]$$$DWindowGroupLeaderint -->
-<h3 class="fn" id="DWindowGroupLeader"><a name="DWindowGroupLeader"></a>DWindowGroupLeader::<span class="name">DWindowGroupLeader</span>(<span class="type">int</span> <i>groupId</i> = 0)</h3>
-<p><a href="dtk-gui-dwindowgroupleader.html">DWindowGroupLeader::DWindowGroupLeader</a> <i>groupId</i> 为0时会在需要时自动创建一个有效的 <a href="dtk-gui-dwindowgroupleader.html#groupLeaderId">groupLeaderId</a></p>
-<p><b>See also </b><a href="dtk-gui-dwindowgroupleader.html#groupLeaderId">DWindowGroupLeader::groupLeaderId</a>.</p>
-<!-- @@@DWindowGroupLeader -->
 <!-- $$$~DWindowGroupLeader[overload1]$$$~DWindowGroupLeader -->
 <h3 class="fn" id="dtor.DWindowGroupLeader"><a name="dtor.DWindowGroupLeader"></a>DWindowGroupLeader::<span class="name">~DWindowGroupLeader</span>()</h3>
 <p>DWindowGroupLeader::~<a href="dtk-gui-dwindowgroupleader.html">DWindowGroupLeader</a> 对象销毁时会释放由自己自动创建的 <a href="dtk-gui-dwindowgroupleader.html#groupLeaderId">groupLeaderId</a></p>
 <p><b>See also </b><a href="dtk-gui-dwindowgroupleader.html#groupLeaderId">DWindowGroupLeader::groupLeaderId</a>.</p>
 <!-- @@@~DWindowGroupLeader -->
 <!-- $$$addWindow[overload1]$$$addWindowQWindow* -->
-<h3 class="fn" id="addWindow"><a name="addWindow"></a><span class="type">void</span> DWindowGroupLeader::<span class="name">addWindow</span>(<span class="type">QWindow</span> *<i>window</i>)</h3>
+<h3 class="fn" id="addWindow"><a name="addWindow"></a><span class="type">void</span> DWindowGroupLeader::<span class="name">addWindow</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwindow.html">QWindow</a></span> *<i>window</i>)</h3>
 <p>DWindowGroupLeader::addWindow 将窗口添加到这个组 <i>window</i></p>
 <p><b>Warning:</b> 每个窗口只能有一个组，添加到新的组时，将不再受旧的组所带来的任何影响</p>
 <!-- @@@addWindow -->
@@ -117,11 +111,11 @@
 <!-- @@@clientLeaderId -->
 <!-- $$$groupLeaderId[overload1]$$$groupLeaderId -->
 <h3 class="fn" id="groupLeaderId"><a name="groupLeaderId"></a><span class="type">int</span> DWindowGroupLeader::<span class="name">groupLeaderId</span>() const</h3>
-<p>DWindowGroupLeader::groupLeaderId Returns 返回组的id，类似于 QWindow::winId</p>
+<p>DWindowGroupLeader::groupLeaderId Returns 返回组的id，类似于 <a href="http://doc.qt.io/qt-5/qwindow.html#winId">QWindow::winId</a></p>
 <p><b>Warning:</b> 如果没有一个有效的id，则会先创建一个新的组id</p>
 <!-- @@@groupLeaderId -->
 <!-- $$$removeWindow[overload1]$$$removeWindowQWindow* -->
-<h3 class="fn" id="removeWindow"><a name="removeWindow"></a><span class="type">void</span> DWindowGroupLeader::<span class="name">removeWindow</span>(<span class="type">QWindow</span> *<i>window</i>)</h3>
+<h3 class="fn" id="removeWindow"><a name="removeWindow"></a><span class="type">void</span> DWindowGroupLeader::<span class="name">removeWindow</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwindow.html">QWindow</a></span> *<i>window</i>)</h3>
 <p>DWindowGroupLeader::removeWindow 将窗口从这个组中移除 <i>window</i></p>
 <p><b>Warning:</b> 窗口被移除后将不再受此组带来的任何影响</p>
 <!-- @@@removeWindow -->

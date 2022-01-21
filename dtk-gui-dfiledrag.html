@@ -39,6 +39,8 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -46,12 +48,24 @@
 <h1 class="title">DFileDrag Class</h1>
 <span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-gui.html">Gui</a>::DFileDrag</span>
 <!-- $$$DFileDrag-brief -->
-<p>继承自QDrag，一般在文件拖拽发送方 mouseMoveEvent 中发起拖拽，设置发送数据 和 <a href="dtk-gui-dfiledragserver.html">DFileDragServer</a> 配合使用. <a href="#details">More...</a></p>
+<p>继承自<a href="http://doc.qt.io/qt-5/qdrag.html">QDrag</a>，一般在文件拖拽发送方 mouseMoveEvent 中发起拖拽，设置发送数据 和 <a href="dtk-gui-dfiledragserver.html">DFileDragServer</a> 配合使用. <a href="#details">More...</a></p>
 <!-- @@@DFileDrag -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DFileDrag&gt;</span>
 </td></tr></table></div><ul>
+<li><a href="dtk-gui-dfiledrag-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledrag.html#setMimeData">setMimeData</a></b>(QMimeData *<i>data</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QUrl </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledrag.html#targetUrl">targetUrl</a></b>()</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-gui-dfiledrag.html#targetUrlChanged">targetUrlChanged</a></b>(QUrl <i>url</i>)</td></tr>
+</table></div>
 <a name="details"></a>
 <!-- $$$DFileDrag-description -->
 <div class="descr">
@@ -59,6 +73,23 @@
 </div>
 <p><b>See also </b><a href="dtk-gui-dfiledragserver.html">Dtk::Gui::DFileDragServer</a>.</p>
 <!-- @@@DFileDrag -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$targetUrlChanged[overload1]$$$targetUrlChangedQUrl -->
+<h3 class="fn" id="targetUrlChanged"><a name="targetUrlChanged"></a><code>[signal] </code><span class="type">void</span> DFileDrag::<span class="name">targetUrlChanged</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qurl.html">QUrl</a></span> <i>url</i>)</h3>
+<p>信号会在接收方调用 setTargetUrl 时被发送. 可以用于获取被拖拽至的目标目录</p>
+<p><i>url</i> 发生改变的目标链接.</p>
+<!-- @@@targetUrlChanged -->
+<!-- $$$setMimeData[overload1]$$$setMimeDataQMimeData* -->
+<h3 class="fn" id="setMimeData"><a name="setMimeData"></a><span class="type">void</span> DFileDrag::<span class="name">setMimeData</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qmimedata.html">QMimeData</a></span> *<i>data</i>)</h3>
+<p>DFileDrag::setMimeData <i>data</i></p>
+<p>发起拖拽文件前设置发送数据接口</p>
+<!-- @@@setMimeData -->
+<!-- $$$targetUrl[overload1]$$$targetUrl -->
+<h3 class="fn" id="targetUrl"><a name="targetUrl"></a><span class="type"><a href="http://doc.qt.io/qt-5/qurl.html">QUrl</a></span> DFileDrag::<span class="name">targetUrl</span>()</h3>
+<p>DFileDrag::targetUrl Returns 返回拖拽文件接收方设置的接收路径</p>
+<!-- @@@targetUrl -->
+</div>
         </div>
        </div>
    </div>

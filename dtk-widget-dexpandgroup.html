@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- dexpandgroup.cpp -->
+  <title>DExpandGroup Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DExpandGroup</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DExpandGroup Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DExpandGroup</span>
+<!-- $$$DExpandGroup-brief -->
+<p>封装了一组 DBaseExpand 控件(当然也可以是其子类), 并保证同一时间只有一个 DBaseExpand 处于展开状态. <a href="#details">More...</a></p>
+<!-- @@@DExpandGroup -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DExpandGroup&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="dtk-widget-dexpandgroup-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dexpandgroup.html#DExpandGroup">DExpandGroup</a></b>(QObject *<i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dexpandgroup.html#addExpand">addExpand</a></b>(int *<i>expand</i>, int <i>id</i> = -1)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dexpandgroup.html#checkedExpand">checkedExpand</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dexpandgroup.html#checkedId">checkedId</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dexpandgroup.html#expand">expand</a></b>(<i>int</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dexpandgroup.html#expands">expands</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dexpandgroup.html#id">id</a></b>(int *<i>expand</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dexpandgroup.html#removeExpand">removeExpand</a></b>(int *<i>expand</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dexpandgroup.html#setId">setId</a></b>(int *<i>expand</i>, int <i>id</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DExpandGroup-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>DExpandGroup 顾名思义是用来管理一组 DBaseExpand 控件的，提供了简单的新增，获取，移除的方法，用于统一管理多个 DBaseExpand 对象的展开和收起状态, DExpandGroup 会保证在同一时间只有一个 DBaseExpand 控件处于展开状态, 也就是说如果点击展开了组里的一个控件, DExpandGroup 会将组里其他控件设置为收起状态。</p>
+<p><b>Note: </b>请注意，DExpandGroup 并不是控件, 只需要将需要管理的 DBaseExpand 添加进来即可</p>
+</div>
+<!-- @@@DExpandGroup -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DExpandGroup[overload1]$$$DExpandGroupQObject* -->
+<h3 class="fn" id="DExpandGroup"><a name="DExpandGroup"></a>DExpandGroup::<span class="name">DExpandGroup</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qobject.html">QObject</a></span> *<i>parent</i> = 0)</h3>
+<p>获取类实例</p>
+<p><i>parent</i> 作为实例的父对象</p>
+<!-- @@@DExpandGroup -->
+<!-- $$$addExpand[overload1]$$$addExpandint*int -->
+<h3 class="fn" id="addExpand"><a name="addExpand"></a><span class="type">void</span> DExpandGroup::<span class="name">addExpand</span>(<span class="type">int</span> *<i>expand</i>, <span class="type">int</span> <i>id</i> = -1)</h3>
+<p>增加一个控件</p>
+<p><i>expand</i> 要新增的控件对象 <i>id</i> 为要新增的控件对象指定id，id 应该是唯一值，如果没有给定 id ，则使用已有列表中最大的id自加1后的值</p>
+<!-- @@@addExpand -->
+<!-- $$$checkedExpand[overload1]$$$checkedExpand -->
+<h3 class="fn" id="checkedExpand"><a name="checkedExpand"></a><span class="type">int</span> *DExpandGroup::<span class="name">checkedExpand</span>() const</h3>
+<p>获取处于已展开状态的 DBaseExpand 对象</p>
+<p>Returns 已展开状态的控件, 若没有已展开的控件则返回 NULL</p>
+<!-- @@@checkedExpand -->
+<!-- $$$checkedId[overload1]$$$checkedId -->
+<h3 class="fn" id="checkedId"><a name="checkedId"></a><span class="type">int</span> DExpandGroup::<span class="name">checkedId</span>() const</h3>
+<p>返回处于已展开状态控件的 id</p>
+<p>Returns 如果当前没有处于展开状态的控件则返回 -1</p>
+<!-- @@@checkedId -->
+<!-- $$$expand[overload1]$$$expandint -->
+<h3 class="fn" id="expand"><a name="expand"></a><span class="type">int</span> *DExpandGroup::<span class="name">expand</span>(<i>int</i>) const</h3>
+<p>获取指定 id 对应的控件</p>
+<p><i>id</i> 增加控件时指定的的id</p>
+<p>Returns 根据 id 找到的控件</p>
+<!-- @@@expand -->
+<!-- $$$expands[overload1]$$$expands -->
+<h3 class="fn" id="expands"><a name="expands"></a><span class="type">int</span> DExpandGroup::<span class="name">expands</span>() const</h3>
+<p>获取所有正在管理的控件</p>
+<p>Returns 控件组成的列表</p>
+<!-- @@@expands -->
+<!-- $$$id[overload1]$$$idint* -->
+<h3 class="fn" id="id"><a name="id"></a><span class="type">int</span> DExpandGroup::<span class="name">id</span>(<span class="type">int</span> *<i>expand</i>) const</h3>
+<p>获取指定控件的 id</p>
+<p><i>expand</i> 指定控件对象</p>
+<p>Returns 指定控件对象的 id</p>
+<p><b>See also </b><a href="dtk-widget-dexpandgroup.html#setId">setId</a>().</p>
+<!-- @@@id -->
+<!-- $$$removeExpand[overload1]$$$removeExpandint* -->
+<h3 class="fn" id="removeExpand"><a name="removeExpand"></a><span class="type">void</span> DExpandGroup::<span class="name">removeExpand</span>(<span class="type">int</span> *<i>expand</i>)</h3>
+<p>移除一个控件</p>
+<p><i>expand</i> 要移除的控件对象</p>
+<!-- @@@removeExpand -->
+<!-- $$$setId[overload1]$$$setIdint*int -->
+<h3 class="fn" id="setId"><a name="setId"></a><span class="type">void</span> DExpandGroup::<span class="name">setId</span>(<span class="type">int</span> *<i>expand</i>, <span class="type">int</span> <i>id</i>)</h3>
+<p>设置指定控件的id</p>
+<p><i>expand</i> 要设置id的控件 <i>id</i> 要设置的id</p>
+<p><b>See also </b><a href="dtk-widget-dexpandgroup.html#id">id</a>().</p>
+<!-- @@@setId -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

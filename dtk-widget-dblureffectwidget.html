@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- dblureffectwidget.cpp -->
+  <title>DBlurEffectWidget Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DBlurEffectWidget</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DBlurEffectWidget Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DBlurEffectWidget</span>
+<!-- $$$DBlurEffectWidget-brief -->
+<p>用于实现主窗口或控件背景的实时模糊效果. <a href="#details">More...</a></p>
+<!-- @@@DBlurEffectWidget -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DBlurEffectWidget&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="dtk-widget-dblureffectwidget-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">BlendMode</a></b> { InWindowBlend, BehindWindowBlend, InWidgetBlend }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#BlurMode-enum">BlurMode</a></b> { GaussianBlur }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#MaskColorType-enum">MaskColorType</a></b> { DarkColor, LightColor, AutoColor, CustomColor }</td></tr>
+</table></div>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<div class="table"><table class="propsummary">
+<tr><td class="topAlign"><ul>
+<li class="fn"><b><a href="dtk-widget-dblureffectwidget.html#blendMode-prop">blendMode</a></b> : BlendMode</li>
+<li class="fn"><b><a href="dtk-widget-dblureffectwidget.html#blurEnabled-prop">blurEnabled</a></b> : bool</li>
+<li class="fn"><b><a href="dtk-widget-dblureffectwidget.html#blurRectXRadius-prop">blurRectXRadius</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-dblureffectwidget.html#blurRectYRadius-prop">blurRectYRadius</a></b> : int</li>
+<li class="fn"><b><a href="dtk-widget-dblureffectwidget.html#full-prop">full</a></b> : bool</li>
+</ul></td><td class="topAlign"><ul>
+<li class="fn"><b><a href="dtk-widget-dblureffectwidget.html#maskAlpha-prop">maskAlpha</a></b> : quint8</li>
+<li class="fn"><b><a href="dtk-widget-dblureffectwidget.html#maskColor-prop">maskColor</a></b> : QColor</li>
+<li class="fn"><b><a href="dtk-widget-dblureffectwidget.html#mode-prop">mode</a></b> : BlurMode</li>
+<li class="fn"><b><a href="dtk-widget-dblureffectwidget.html#radius-prop">radius</a></b> : int</li>
+</ul>
+</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#DBlurEffectWidget">DBlurEffectWidget</a></b>(QWidget *<i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Dtk::Widget::DBlurEffectWidget::BlendMode </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#blendMode">blendMode</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#blurEnabled">blurEnabled</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#blurRectXRadius">blurRectXRadius</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#blurRectYRadius">blurRectYRadius</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#isFull">isFull</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> quint8 </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#maskAlpha-prop">maskAlpha</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QColor </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#maskColor">maskColor</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Dtk::Widget::DBlurEffectWidget::BlurMode </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#mode">mode</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#radius">radius</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#setMaskPath">setMaskPath</a></b>(const int &amp;<i>path</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#setSourceImage">setSourceImage</a></b>(const QImage &amp;<i>image</i>, bool <i>autoScale</i> = true)</td></tr>
+</table></div>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#setBlendMode">setBlendMode</a></b>(Dtk::Widget::DBlurEffectWidget::BlendMode <i>blendMode</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#setBlurEnabled">setBlurEnabled</a></b>(bool <i>blurEnabled</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#setBlurRectXRadius">setBlurRectXRadius</a></b>(int <i>blurRectXRadius</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#setBlurRectYRadius">setBlurRectYRadius</a></b>(int <i>blurRectYRadius</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#setFull">setFull</a></b>(bool <i>full</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#setMaskAlpha">setMaskAlpha</a></b>(quint8 <i>alpha</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#setMaskColor-1">setMaskColor</a></b>(Dtk::Widget::DBlurEffectWidget::MaskColorType <i>type</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#setMaskColor">setMaskColor</a></b>(QColor <i>maskColor</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#setMode">setMode</a></b>(Dtk::Widget::DBlurEffectWidget::BlurMode <i>mode</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#setRadius">setRadius</a></b>(int <i>radius</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#updateBlurSourceImage">updateBlurSourceImage</a></b>(const QRegion &amp;<i>ren</i>)</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#blendModeChanged">blendModeChanged</a></b>(Dtk::Widget::DBlurEffectWidget::BlendMode <i>blendMode</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#blurEnabled-prop">blurEnabledChanged</a></b>(bool <i>blurEnabled</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#blurRectXRadiusChanged">blurRectXRadiusChanged</a></b>(int <i>blurRectXRadius</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#blurRectYRadiusChanged">blurRectYRadiusChanged</a></b>(int <i>blurRectYRadius</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#full-prop">fullChanged</a></b>(bool <i>full</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#maskAlphaChanged">maskAlphaChanged</a></b>(quint8 <i>alpha</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#maskColorChanged">maskColorChanged</a></b>(QColor <i>maskColor</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#modeChanged">modeChanged</a></b>(Dtk::Widget::DBlurEffectWidget::BlurMode <i>mode</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dblureffectwidget.html#radiusChanged">radiusChanged</a></b>(int <i>radius</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DBlurEffectWidget-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>分为主窗口模糊 <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::BehindWindowBlend</a> 和控件模糊 <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::InWindowBlend</a> <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::InWindowBlend</a> 这两种不同的模式，主窗口模糊效果依赖于窗口管理器的实现，目前仅支持 deepin-wm 和 kwin， 可以使用DWindowManagerHelper::hasBlurWindow 判断当前运行环境中的窗口管理器是否支持 模糊特效，使用 DPlatformWindowHandle::setWindowBlurAreaByWM 设置主窗口背景的模糊 区域。如果在一个主窗口内同时使用了多个 DBlurEffectWidget 控件，则在更新主窗口模糊区域 时会自动将所有控件的区域合并到 <a href="http://doc.qt.io/qt-5/qvector.html">QVector</a>&lt;WMBlurArea&gt; 或者 <a href="http://doc.qt.io/qt-5/qlist.html">QList</a>&lt;<a href="http://doc.qt.io/qt-5/qpainterpath.html">QPainterPath</a>&gt; （如果有任意一个控件设置了 <a href="dtk-widget-dblureffectwidget.html#radius">DBlurEffectWidget::radius</a> 属性）中统一设置。 控件模糊效果的原理和 <a href="dtk-widget-dclipeffectwidget.html">DClipEffectWidget</a> 类似，在控件绘制时先使用 <a href="http://doc.qt.io/qt-5/qplatformbackingstore.html#toImage">QPlatformBackingStore::toImage</a>() 获取主窗口上控件对应区域内已经绘制的内容，此时获取的内容为此控件下层控件所绘制的内容，将 获得的 <a href="http://doc.qt.io/qt-5/qimage.html">QImage</a> 对象使用软件算法进行模糊处理，然后再将模糊之后的图像绘制到控件上。由于实现 原理限制，不适用于主窗口为OpenGL绘制模式的窗口（如：<a href="http://doc.qt.io/qt-5/qopenglwindow.html">QOpenGLWindow</a> ），且控件下面使用 OpenGL绘制的内容也生成模糊的效果（如 <a href="http://doc.qt.io/qt-5/qopenglwidget.html">QOpenGLWidget</a> ）</p>
+<p>DBlurEffectWidget is <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> that has blurry background. With different blend mode set, DBlurEffectWidget can do in-window-blend, which means the the widget is blended with the widgets between the top level window and the widget itself, and behind-window-blend, which means the widget is blended with the scene behind the window (with the help of WM).</p>
+<p>The effect has optional styles can choose from: <a href="dtk-widget-dblureffectwidget.html#MaskColorType-enum">DBlurEffectWidget::DarkColor</a>, <a href="dtk-widget-dblureffectwidget.html#MaskColorType-enum">DBlurEffectWidget::LightColor</a>, and <a href="dtk-widget-dblureffectwidget.html#MaskColorType-enum">DBlurEffectWidget::CustomColor</a>. Usually the first two are sufficient, you can also choose <a href="dtk-widget-dblureffectwidget.html#MaskColorType-enum">CustomColor</a> and set the color you want by setting <a href="dtk-widget-dblureffectwidget.html#maskColor">DBlurEffectWidget::maskColor</a>.</p>
+<p><b>Note: </b>DBlurEffectWidget with <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">BehindWindowBlend</a> mode will become opaque if WM supports no X11 composite protocol.</p>
+</div>
+<!-- @@@DBlurEffectWidget -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$BlendMode$$$InWindowBlend$$$BehindWindowBlend$$$InWidgetBlend -->
+<h3 class="fn" id="BlendMode-enum"><a name="BlendMode-enum"></a>enum DBlurEffectWidget::<span class="name">BlendMode</span></h3>
+<p>DBlurEffectWidget::BlendMode 模糊模式</p>
+<p class="centerAlign"><img src="images/blur-effect.png" alt="" /></p><div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DBlurEffectWidget::InWindowBlend</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">以窗口内部控件作为模糊背景</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DBlurEffectWidget::BehindWindowBlend</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">以外部的其它窗口作为模糊背景</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DBlurEffectWidget::InWidgetBlend</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">同 DBlurEffectWidget::InWindowBlend，区别是不会自动更新用于模糊的源图片 可手动调用 <a href="dtk-widget-dblureffectwidget.html#updateBlurSourceImage">DBlurEffectWidget::updateBlurSourceImage</a> 更新，以此来实现自行控制模糊 源图片的更新时机</td></tr>
+</table></div>
+<!-- @@@BlendMode -->
+<!-- $$$BlurMode$$$GaussianBlur -->
+<h3 class="fn" id="BlurMode-enum"><a name="BlurMode-enum"></a>enum DBlurEffectWidget::<span class="name">BlurMode</span></h3>
+<p>DBlurEffectWidget::BlurMode 模糊算法</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DBlurEffectWidget::GaussianBlur</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="https://zh.wikipedia.org/wiki/高斯模糊">高斯模糊算法</a></td></tr>
+</table></div>
+<!-- @@@BlurMode -->
+<!-- $$$MaskColorType$$$DarkColor$$$LightColor$$$AutoColor$$$CustomColor -->
+<h3 class="fn" id="MaskColorType-enum"><a name="MaskColorType-enum"></a>enum DBlurEffectWidget::<span class="name">MaskColorType</span></h3>
+<p>DBlurEffectWidget::MaskColorType 内置的几种颜色模式。分为三种情况： <i>A：模式为</i> <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::InWindowBlend</a> 或当前窗口管理器支持混成且支持窗口背景模糊 <i>B：模式为</i> <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::BehindWindowBlend</a> 或 <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::InWindowBlend</a> 窗口管理器不支持混成 <i>C：模式为</i> <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::BehindWindowBlend</a> 或 <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::InWindowBlend</a> 窗口管理器不支持模糊</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DBlurEffectWidget::DarkColor</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">深色，三种情况下的值分别为：</td></tr>
+</table></div>
+<p><i>A：color{black,#000000}（alpha通道值为非定值）</i> <i>B：color{#373F47,#373F47}</i> <i>C：color{rgba(0,0,0,0.8),#CC000000}</i></p>
+<div class="table"><table class="valuelist"><tr valign="top" class="even"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DBlurEffectWidget::LightColor</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">浅色，三种情况下的值分别为： <i>A：color{#FFFFFF,#FFFFFF}（alpha通道值为非定值）</i> <i>B：color{#FCFCFC,#FCFCFC}</i> <i>C：color{rgba(255,255,255,0.8),#CCFFFFFF}</i></td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DBlurEffectWidget::AutoColor</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">自动颜色，以当前应用的主题的背景色作为叠加色（alpha通道值为非定值）</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DBlurEffectWidget::CustomColor</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">自定义颜色，使用 <a href="dtk-widget-dblureffectwidget.html#setMaskColor">DBlurEffectWidget::setMaskColor</a> 设置的颜色</td></tr>
+</table></div>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#maskAlpha-prop">DBlurEffectWidget::maskAlpha</a>.</p>
+<!-- @@@MaskColorType -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$blendMode-prop$$$blendMode$$$setBlendModeDtk::Widget::DBlurEffectWidget::BlendMode$$$blendModeChangedDtk::Widget::DBlurEffectWidget::BlendMode -->
+<h3 class="fn" id="blendMode-prop"><a name="blendMode-prop"></a><span class="name">blendMode</span> : <span class="type"><a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">BlendMode</a></span></h3>
+<p>模糊的应用场景，默认会根据有没有父控件自动判断使用哪种模式</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Note: </b>父对象为空时设置模式为 <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::InWindowBlend</a> 没有意义</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> Dtk::Widget::DBlurEffectWidget::BlendMode </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#blendMode">blendMode</a></b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#setBlendMode">setBlendMode</a></b></span>(Dtk::Widget::DBlurEffectWidget::BlendMode <i>blendMode</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#blendModeChanged">blendModeChanged</a></b></span>(Dtk::Widget::DBlurEffectWidget::BlendMode <i>blendMode</i>)</td></tr>
+</table></div>
+<!-- @@@blendMode -->
+<!-- $$$blurEnabled-prop$$$blurEnabled$$$setBlurEnabledbool$$$blurEnabledChangedbool -->
+<h3 class="fn" id="blurEnabled-prop"><a name="blurEnabled-prop"></a><span class="name">blurEnabled</span> : <span class="type">bool</span></h3>
+<p>如果值为 true 则此控件的模糊设置生效，否则不生效</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#blurEnabled">blurEnabled</a></b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#setBlurEnabled">setBlurEnabled</a></b></span>(bool <i>blurEnabled</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>blurEnabledChanged</b></span>(bool <i>blurEnabled</i>)</td></tr>
+</table></div>
+<!-- @@@blurEnabled -->
+<!-- $$$blurRectXRadius-prop$$$blurRectXRadius$$$setBlurRectXRadiusint$$$blurRectXRadiusChangedint -->
+<h3 class="fn" id="blurRectXRadius-prop"><a name="blurRectXRadius-prop"></a><span class="name">blurRectXRadius</span> : <span class="type">int</span></h3>
+<p>模糊区域在x轴方向上的圆角半径，默认值为0</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#blurRectXRadius">blurRectXRadius</a></b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#setBlurRectXRadius">setBlurRectXRadius</a></b></span>(int <i>blurRectXRadius</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#blurRectXRadiusChanged">blurRectXRadiusChanged</a></b></span>(int <i>blurRectXRadius</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#blurRectYRadius">DBlurEffectWidget::blurRectYRadius</a>, <a href="dtk-widget-dblureffectwidget.html#setMaskPath">DBlurEffectWidget::setMaskPath</a>, and <a href="http://doc.qt.io/qt-5/qpainterpath.html#addRoundedRect">QPainterPath::addRoundedRect</a>.</p>
+<!-- @@@blurRectXRadius -->
+<!-- $$$blurRectYRadius-prop$$$blurRectYRadius$$$setBlurRectYRadiusint$$$blurRectYRadiusChangedint -->
+<h3 class="fn" id="blurRectYRadius-prop"><a name="blurRectYRadius-prop"></a><span class="name">blurRectYRadius</span> : <span class="type">int</span></h3>
+<p>模糊区域在y轴方向上的圆角半径，默认值为0</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#blurRectYRadius">blurRectYRadius</a></b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#setBlurRectYRadius">setBlurRectYRadius</a></b></span>(int <i>blurRectYRadius</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#blurRectYRadiusChanged">blurRectYRadiusChanged</a></b></span>(int <i>blurRectYRadius</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#blurRectXRadius">DBlurEffectWidget::blurRectXRadius</a>, <a href="dtk-widget-dblureffectwidget.html#setMaskPath">DBlurEffectWidget::setMaskPath</a>, and <a href="http://doc.qt.io/qt-5/qpainterpath.html#addRoundedRect">QPainterPath::addRoundedRect</a>.</p>
+<!-- @@@blurRectYRadius -->
+<!-- $$$full-prop$$$isFull$$$setFullbool$$$fullChangedbool -->
+<h3 class="fn" id="full-prop"><a name="full-prop"></a><span class="name">full</span> : <span class="type">bool</span></h3>
+<p>如果值为true，将模糊此控件所在顶层窗口的整个背景，而无论控件的大小和位置，否则使用控件的位置和大小 设置顶层窗口的模糊区域。需要注意的时，当控件本身就是顶层窗口且未设置 <a href="dtk-widget-dblureffectwidget.html#blurRectXRadius">blurRectXRadius</a> 和 <a href="dtk-widget-dblureffectwidget.html#blurRectYRadius">blurRectYRadius</a> 属性的情况下，无论 full 属性的值为多少，都将和值为 true 时的行为保持一致。</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Note: </b>此属性不影响蒙版的绘制区域</p>
+<p><b>Note: </b>只在模糊的混合模式为 <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">BehindWindowBlend</a> 或 <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::InWindowBlend</a> 时生效</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#isFull">isFull</a></b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#setFull">setFull</a></b></span>(bool <i>full</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>fullChanged</b></span>(bool <i>full</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#blurRectXRadius">DBlurEffectWidget::blurRectXRadius</a>, <a href="dtk-widget-dblureffectwidget.html#blurRectYRadius">DBlurEffectWidget::blurRectYRadius</a>, <a href="dtk-widget-dblureffectwidget.html#maskColor">DBlurEffectWidget::maskColor</a>, and <a href="dtk-widget-dblureffectwidget.html#blendMode">DBlurEffectWidget::blendMode</a>.</p>
+<!-- @@@full -->
+<!-- $$$maskAlpha-prop$$$maskAlpha$$$setMaskAlphaquint8$$$maskAlphaChangedquint8 -->
+<h3 class="fn" id="maskAlpha-prop"><a name="maskAlpha-prop"></a><span class="name">maskAlpha</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#quint8-typedef">quint8</a></span></h3>
+<p><a href="dtk-widget-dblureffectwidget.html#maskColor">maskColor</a> 的alpha通道值。当前窗口管理器支持混成（窗口背景透明）时默认值为102，否则为204</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> quint8 </td><td class="memItemRight bottomAlign"><span class="name"><b>maskAlpha</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#setMaskAlpha">setMaskAlpha</a></b></span>(quint8 <i>alpha</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#maskAlphaChanged">maskAlphaChanged</a></b></span>(quint8 <i>alpha</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#maskColor">DBlurEffectWidget::maskColor</a>.</p>
+<!-- @@@maskAlpha -->
+<!-- $$$maskColor-prop$$$maskColor$$$setMaskColorQColor$$$setMaskColorDtk::Widget::DBlurEffectWidget::MaskColorType$$$maskColorChangedQColor -->
+<h3 class="fn" id="maskColor-prop"><a name="maskColor-prop"></a><span class="name">maskColor</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qcolor.html">QColor</a></span></h3>
+<p>画在控件模糊背景之上的颜色，此颜色的alpha通道值会被 <i>maskAlpha</i> 属性影响 修改此属性会自动将颜色模式设置为 <a href="dtk-widget-dblureffectwidget.html#MaskColorType-enum">CustomColor</a>，设置后将不能再自动根据窗口管理器是否 支持混成和模糊来自动使用最佳的颜色</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QColor </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#maskColor">maskColor</a></b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#setMaskColor">setMaskColor</a></b></span>(QColor <i>maskColor</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#setMaskColor-1">setMaskColor</a></b></span>(Dtk::Widget::DBlurEffectWidget::MaskColorType <i>type</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#maskColorChanged">maskColorChanged</a></b></span>(QColor <i>maskColor</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#blurRectXRadius">DBlurEffectWidget::blurRectXRadius</a> and <a href="dtk-widget-dblureffectwidget.html#setMaskColor">DBlurEffectWidget::setMaskColor</a>().</p>
+<!-- @@@maskColor -->
+<!-- $$$mode-prop$$$mode$$$setModeDtk::Widget::DBlurEffectWidget::BlurMode$$$modeChangedDtk::Widget::DBlurEffectWidget::BlurMode -->
+<h3 class="fn" id="mode-prop"><a name="mode-prop"></a><span class="name">mode</span> : <span class="type"><a href="dtk-widget-dblureffectwidget.html#BlurMode-enum">BlurMode</a></span></h3>
+<p>所采用的模糊算法，默认值为 <i>GaussianBlur</i></p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Note: </b>只在模式为 <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::InWindowBlend</a> 时有效</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> Dtk::Widget::DBlurEffectWidget::BlurMode </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#mode">mode</a></b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#setMode">setMode</a></b></span>(Dtk::Widget::DBlurEffectWidget::BlurMode <i>mode</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#modeChanged">modeChanged</a></b></span>(Dtk::Widget::DBlurEffectWidget::BlurMode <i>mode</i>)</td></tr>
+</table></div>
+<!-- @@@mode -->
+<!-- $$$radius-prop$$$radius$$$setRadiusint$$$radiusChangedint -->
+<h3 class="fn" id="radius-prop"><a name="radius-prop"></a><span class="name">radius</span> : <span class="type">int</span></h3>
+<p>模糊效果计算时的取样范围，模糊的原理为：将此像素点和周围像素点合成计算得到得到新的值， 此属性表示像素点周围 radius 距离的所有像素点参与计算</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Note: </b>只在模式为 <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::InWindowBlend</a> 时有效</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#radius">radius</a></b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#setRadius">setRadius</a></b></span>(int <i>radius</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dblureffectwidget.html#radiusChanged">radiusChanged</a></b></span>(int <i>radius</i>)</td></tr>
+</table></div>
+<!-- @@@radius -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DBlurEffectWidget[overload1]$$$DBlurEffectWidgetQWidget* -->
+<h3 class="fn" id="DBlurEffectWidget"><a name="DBlurEffectWidget"></a>DBlurEffectWidget::<span class="name">DBlurEffectWidget</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>parent</i> = 0)</h3>
+<p><a href="dtk-widget-dblureffectwidget.html">DBlurEffectWidget::DBlurEffectWidget</a> constructs an instance of DBlurEffectWidget.</p>
+<p>和普通控件使用方式一样，可以作为任何控件的子控件。默认会开启 <a href="http://doc.qt.io/qt-5/qt.html#WidgetAttribute-enum">Qt::WA_TranslucentBackground</a>， 必须设置控件为背景透明，否则控件所在区域的内容重绘时，在此控件下方的区域不会被下层控件重新绘制</p>
+<p><i>parent</i> is passed to <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> constructor. <i>parent</i> 当父对象为空时，默认使用 <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::BehindWindowBlend</a> 模式，否则使用 <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::InWindowBlend</a> 模式</p>
+<!-- @@@DBlurEffectWidget -->
+<!-- $$$blendModeChanged -->
+<h3 class="fn" id="blendModeChanged"><a name="blendModeChanged"></a><code>[signal] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">blendModeChanged</span>(<span class="type"><a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">Dtk::Widget::DBlurEffectWidget::BlendMode</a></span> <i>blendMode</i>)</h3>
+<p>信号会在 <i>blendMode</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-dblureffectwidget.html#blendMode">blendMode</a>. </p>
+<!-- @@@blendModeChanged -->
+<!-- $$$blurRectXRadiusChanged -->
+<h3 class="fn" id="blurRectXRadiusChanged"><a name="blurRectXRadiusChanged"></a><code>[signal] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">blurRectXRadiusChanged</span>(<span class="type">int</span> <i>blurRectXRadius</i>)</h3>
+<p>信号会在 <i>blurRectXRadius</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-dblureffectwidget.html#blurRectXRadius">blurRectXRadius</a>. </p>
+<!-- @@@blurRectXRadiusChanged -->
+<!-- $$$blurRectYRadiusChanged -->
+<h3 class="fn" id="blurRectYRadiusChanged"><a name="blurRectYRadiusChanged"></a><code>[signal] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">blurRectYRadiusChanged</span>(<span class="type">int</span> <i>blurRectYRadius</i>)</h3>
+<p>信号会在 <i>blurRectYRadius</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-dblureffectwidget.html#blurRectYRadius">blurRectYRadius</a>. </p>
+<!-- @@@blurRectYRadiusChanged -->
+<!-- $$$maskAlphaChanged -->
+<h3 class="fn" id="maskAlphaChanged"><a name="maskAlphaChanged"></a><code>[signal] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">maskAlphaChanged</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#quint8-typedef">quint8</a></span> <i>alpha</i>)</h3>
+<p>信号会在 <i>alpha</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-dblureffectwidget.html#maskAlpha-prop">maskAlpha</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#maskAlpha-prop">DBlurEffectWidget::maskAlpha</a>.</p>
+<!-- @@@maskAlphaChanged -->
+<!-- $$$maskColorChanged -->
+<h3 class="fn" id="maskColorChanged"><a name="maskColorChanged"></a><code>[signal] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">maskColorChanged</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qcolor.html">QColor</a></span> <i>maskColor</i>)</h3>
+<p>信号会在 <i>maskColor</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-dblureffectwidget.html#maskColor">maskColor</a>. </p>
+<!-- @@@maskColorChanged -->
+<!-- $$$modeChanged -->
+<h3 class="fn" id="modeChanged"><a name="modeChanged"></a><code>[signal] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">modeChanged</span>(<span class="type"><a href="dtk-widget-dblureffectwidget.html#BlurMode-enum">Dtk::Widget::DBlurEffectWidget::BlurMode</a></span> <i>mode</i>)</h3>
+<p>信号会在 <i>mode</i> 属性的值改变时被发送.</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-dblureffectwidget.html#mode">mode</a>. </p>
+<!-- @@@modeChanged -->
+<!-- $$$radiusChanged -->
+<h3 class="fn" id="radiusChanged"><a name="radiusChanged"></a><code>[signal] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">radiusChanged</span>(<span class="type">int</span> <i>radius</i>)</h3>
+<p>信号会在 <i>radius</i> 属性的值改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-dblureffectwidget.html#radius">radius</a>. </p>
+<!-- @@@radiusChanged -->
+<!-- $$$setBlendMode -->
+<h3 class="fn" id="setBlendMode"><a name="setBlendMode"></a><code>[slot] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">setBlendMode</span>(<span class="type"><a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">Dtk::Widget::DBlurEffectWidget::BlendMode</a></span> <i>blendMode</i>)</h3>
+<p>DBlurEffectWidget::setBlendMode <i>blendMode</i> 窗口混合模式，模式设定变化发送<a href="dtk-widget-dblureffectwidget.html#blendModeChanged">blendModeChanged</a>信号</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dblureffectwidget.html#blendMode">blendMode</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#blendMode">blendMode</a>().</p>
+<!-- @@@setBlendMode -->
+<!-- $$$setBlurEnabled -->
+<h3 class="fn" id="setBlurEnabled"><a name="setBlurEnabled"></a><code>[slot] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">setBlurEnabled</span>(<span class="type">bool</span> <i>blurEnabled</i>)</h3>
+<p>DBlurEffectWidget::setBlurEnabled <i>blurEnabled</i> 设定模糊区域是否可以伸缩</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dblureffectwidget.html#blurEnabled">blurEnabled</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#blurEnabled">blurEnabled</a>().</p>
+<!-- @@@setBlurEnabled -->
+<!-- $$$setBlurRectXRadius -->
+<h3 class="fn" id="setBlurRectXRadius"><a name="setBlurRectXRadius"></a><code>[slot] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">setBlurRectXRadius</span>(<span class="type">int</span> <i>blurRectXRadius</i>)</h3>
+<p>DBlurEffectWidget::setBlurRectXRadius <i>blurRectXRadius</i> 模糊区域矩形的X圆角大小</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dblureffectwidget.html#blurRectXRadius">blurRectXRadius</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#blurRectXRadius">blurRectXRadius</a>().</p>
+<!-- @@@setBlurRectXRadius -->
+<!-- $$$setBlurRectYRadius -->
+<h3 class="fn" id="setBlurRectYRadius"><a name="setBlurRectYRadius"></a><code>[slot] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">setBlurRectYRadius</span>(<span class="type">int</span> <i>blurRectYRadius</i>)</h3>
+<p>DBlurEffectWidget::setBlurRectYRadius <i>blurRectYRadius</i> 模糊区域矩形的Y圆角大小</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dblureffectwidget.html#blurRectYRadius">blurRectYRadius</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#blurRectYRadius">blurRectYRadius</a>().</p>
+<!-- @@@setBlurRectYRadius -->
+<!-- $$$setFull -->
+<h3 class="fn" id="setFull"><a name="setFull"></a><code>[slot] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">setFull</span>(<span class="type">bool</span> <i>full</i>)</h3>
+<p>DBlurEffectWidget::setFull <i>full</i> 设置时候模糊区域占满整个窗口大小</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dblureffectwidget.html#full-prop">full</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#isFull">isFull</a>().</p>
+<!-- @@@setFull -->
+<!-- $$$setMaskAlpha -->
+<h3 class="fn" id="setMaskAlpha"><a name="setMaskAlpha"></a><code>[slot] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">setMaskAlpha</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qtglobal.html#quint8-typedef">quint8</a></span> <i>alpha</i>)</h3>
+<p>DBlurEffectWidget::setMaskAlpha <i>alpha</i> 设置Alpha通道,值变化发送<a href="dtk-widget-dblureffectwidget.html#maskAlphaChanged">maskAlphaChanged</a>信号</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dblureffectwidget.html#maskAlpha-prop">maskAlpha</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#maskAlpha-prop">maskAlpha</a>().</p>
+<!-- @@@setMaskAlpha -->
+<!-- $$$setMaskColor -->
+<h3 class="fn" id="setMaskColor-1"><a name="setMaskColor-1"></a><code>[slot] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">setMaskColor</span>(<span class="type"><a href="dtk-widget-dblureffectwidget.html#MaskColorType-enum">Dtk::Widget::DBlurEffectWidget::MaskColorType</a></span> <i>type</i>)</h3>
+<p>设置控件的颜色模式，默认值为 MaskColorType::CustomColor <i>type</i></p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dblureffectwidget.html#maskColor">maskColor</a>. </p>
+<!-- @@@setMaskColor -->
+<!-- $$$setMaskColor -->
+<h3 class="fn" id="setMaskColor"><a name="setMaskColor"></a><code>[slot] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">setMaskColor</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qcolor.html">QColor</a></span> <i>maskColor</i>)</h3>
+<p>DBlurEffectWidget::setMaskColor <i>maskColor</i> 设定mask的颜色</p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dblureffectwidget.html#maskColor">maskColor</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#maskColor">maskColor</a>().</p>
+<!-- @@@setMaskColor -->
+<!-- $$$setMode -->
+<h3 class="fn" id="setMode"><a name="setMode"></a><code>[slot] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">setMode</span>(<span class="type"><a href="dtk-widget-dblureffectwidget.html#BlurMode-enum">Dtk::Widget::DBlurEffectWidget::BlurMode</a></span> <i>mode</i>)</h3>
+<p>DBlurEffectWidget::setMode <i>mode</i> 设定模糊算法,默认为高斯模糊算法<a href="dtk-widget-dblureffectwidget.html#BlurMode-enum">GaussianBlur</a></p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dblureffectwidget.html#mode">mode</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#mode">mode</a>().</p>
+<!-- @@@setMode -->
+<!-- $$$setRadius -->
+<h3 class="fn" id="setRadius"><a name="setRadius"></a><code>[slot] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">setRadius</span>(<span class="type">int</span> <i>radius</i>)</h3>
+<p>DBlurEffectWidget::setRadius <i>radius</i> 模糊区域的圆角大小 如果设定值和原值不一致会发送信号<a href="dtk-widget-dblureffectwidget.html#radiusChanged">radiusChanged</a></p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dblureffectwidget.html#radius">radius</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#radius">radius</a>().</p>
+<!-- @@@setRadius -->
+<!-- $$$updateBlurSourceImage[overload1]$$$updateBlurSourceImageconstQRegion& -->
+<h3 class="fn" id="updateBlurSourceImage"><a name="updateBlurSourceImage"></a><code>[slot] </code><span class="type">void</span> DBlurEffectWidget::<span class="name">updateBlurSourceImage</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qregion.html">QRegion</a></span> &amp;<i>ren</i>)</h3>
+<p>DBlurEffectWidget::updateBlurSourceImage <i>ren</i> 设定模糊区域的背景图片</p>
+<!-- @@@updateBlurSourceImage -->
+<!-- $$$blendMode -->
+<h3 class="fn" id="blendMode"><a name="blendMode"></a><span class="type"><a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">Dtk::Widget::DBlurEffectWidget::BlendMode</a></span> DBlurEffectWidget::<span class="name">blendMode</span>() const</h3>
+<p>This property holds which mode is used to blend the widget and its background scene.</p>
+<p><b>Note: </b>Getter function for property blendMode. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#setBlendMode">setBlendMode</a>().</p>
+<!-- @@@blendMode -->
+<!-- $$$blurEnabled -->
+<h3 class="fn" id="blurEnabled"><a name="blurEnabled"></a><span class="type">bool</span> DBlurEffectWidget::<span class="name">blurEnabled</span>() const</h3>
+<p>DBlurEffectWidget::blurEnabled Returns true 模糊区域可伸缩调整</p>
+<p><b>Note: </b>Getter function for property blurEnabled. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#setBlurEnabled">setBlurEnabled</a>().</p>
+<!-- @@@blurEnabled -->
+<!-- $$$blurRectXRadius -->
+<h3 class="fn" id="blurRectXRadius"><a name="blurRectXRadius"></a><span class="type">int</span> DBlurEffectWidget::<span class="name">blurRectXRadius</span>() const</h3>
+<p>This property holds the xRadius of the effective background.</p>
+<p>The xRadius and yRadius specify the radius of the ellipses defining the corners of the effective background.</p>
+<p><b>Note: </b>Getter function for property blurRectXRadius. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#setBlurRectXRadius">setBlurRectXRadius</a>() and <a href="dtk-widget-dblureffectwidget.html#blurRectYRadius">DBlurEffectWidget::blurRectYRadius</a>.</p>
+<!-- @@@blurRectXRadius -->
+<!-- $$$blurRectYRadius -->
+<h3 class="fn" id="blurRectYRadius"><a name="blurRectYRadius"></a><span class="type">int</span> DBlurEffectWidget::<span class="name">blurRectYRadius</span>() const</h3>
+<p>This property holds the yRadius of the effective background.</p>
+<p>The xRadius and yRadius specify the radius of the ellipses defining the corners of the effective background.</p>
+<p><b>Note: </b>Getter function for property blurRectYRadius. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#setBlurRectYRadius">setBlurRectYRadius</a>() and <a href="dtk-widget-dblureffectwidget.html#blurRectXRadius">DBlurEffectWidget::blurRectXRadius</a>.</p>
+<!-- @@@blurRectYRadius -->
+<!-- $$$isFull -->
+<h3 class="fn" id="isFull"><a name="isFull"></a><span class="type">bool</span> DBlurEffectWidget::<span class="name">isFull</span>() const</h3>
+<p>DBlurEffectWidget::isFull Returns true 窗口占据了整个模糊区域,反之为false</p>
+<p><b>Note: </b>Getter function for property <a href="dtk-widget-dblureffectwidget.html#full-prop">full</a>. </p>
+<!-- @@@isFull -->
+<!-- $$$maskColor -->
+<h3 class="fn" id="maskColor"><a name="maskColor"></a><span class="type"><a href="http://doc.qt.io/qt-5/qcolor.html">QColor</a></span> DBlurEffectWidget::<span class="name">maskColor</span>() const</h3>
+<p>This property holds the background color of this widget.</p>
+<p>It returns predefined colors if the DBlurEffectWidget::maskColorType is set to <a href="dtk-widget-dblureffectwidget.html#MaskColorType-enum">DBlurEffectWidget::DarkColor</a> or BlurEffectWidget::LightColor, returns the color set by <a href="dtk-widget-dblureffectwidget.html#setMaskColor">DBlurEffectWidget::setMaskColor</a> if DBlurEffectWidget::maskColorType is set to BlurEffectWidget::CustomColor.</p>
+<p><b>Note: </b>Getter function for property maskColor. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#setMaskColor">setMaskColor</a>().</p>
+<!-- @@@maskColor -->
+<!-- $$$mode -->
+<h3 class="fn" id="mode"><a name="mode"></a><span class="type"><a href="dtk-widget-dblureffectwidget.html#BlurMode-enum">Dtk::Widget::DBlurEffectWidget::BlurMode</a></span> DBlurEffectWidget::<span class="name">mode</span>() const</h3>
+<p>This property holds which blur algorithm to be used.</p>
+<p>Currently it only supports <a href="dtk-widget-dblureffectwidget.html#BlurMode-enum">DBlurEffectWidget::GaussianBlur</a>.</p>
+<p><b>Note: </b>Getter function for property mode. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#setMode">setMode</a>().</p>
+<!-- @@@mode -->
+<!-- $$$radius -->
+<h3 class="fn" id="radius"><a name="radius"></a><span class="type">int</span> DBlurEffectWidget::<span class="name">radius</span>() const</h3>
+<p>This property holds the radius of the blur effect.</p>
+<p><b>Note: </b>This property has no effect with the <a href="dtk-widget-dblureffectwidget.html#blendMode">DBlurEffectWidget::blendMode</a> set to <a href="dtk-widget-dblureffectwidget.html#BlendMode-enum">DBlurEffectWidget::BehindWindowBlend</a>.</p>
+<p><b>Note: </b>Getter function for property radius. </p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#setRadius">setRadius</a>().</p>
+<!-- @@@radius -->
+<!-- $$$setMaskPath[overload1]$$$setMaskPathconstint& -->
+<h3 class="fn" id="setMaskPath"><a name="setMaskPath"></a><span class="type">void</span> DBlurEffectWidget::<span class="name">setMaskPath</span>(const <span class="type">int</span> &amp;<i>path</i>)</h3>
+<p>DBlurEffectWidget::setMaskPath set custom area as the effective background.</p>
+<p>设置模糊区域的路径，当未调用过此接口时，模糊区域为整个控件所占据的空间，此路径坐标原点为控件左上角</p>
+<p><i>path</i> a <a href="http://doc.qt.io/qt-5/qpainterpath.html">QPainterPath</a> to be used as the effectvie background.</p>
+<p><b>Warning:</b> 设置自定义路径之后，控件大小改变时不会再自动调整模糊区域大小</p>
+<p><b>See also </b><a href="dtk-widget-dblureffectwidget.html#blurRectXRadius">DBlurEffectWidget::blurRectXRadius</a> and <a href="dtk-widget-dblureffectwidget.html#blurRectYRadius">DBlurEffectWidget::blurRectYRadius</a>.</p>
+<!-- @@@setMaskPath -->
+<!-- $$$setSourceImage[overload1]$$$setSourceImageconstQImage&bool -->
+<h3 class="fn" id="setSourceImage"><a name="setSourceImage"></a><span class="type">void</span> DBlurEffectWidget::<span class="name">setSourceImage</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qimage.html">QImage</a></span> &amp;<i>image</i>, <span class="type">bool</span> <i>autoScale</i> = true)</h3>
+<p>DBlurEffectWidget::setSourceImage <i>image</i> <i>autoScale</i></p>
+<p><b>Warning:</b></p>
+<!-- @@@setSourceImage -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

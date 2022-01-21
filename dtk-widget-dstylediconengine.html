@@ -47,7 +47,7 @@
 <h1 class="title">DStyledIconEngine Class</h1>
 <span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DStyledIconEngine</span>
 <!-- $$$DStyledIconEngine-brief -->
-<p>DStyledIconEngine一个修改的 QIconEngine 类. <a href="#details">More...</a></p>
+<p>DStyledIconEngine一个修改的 <a href="http://doc.qt.io/qt-5/qiconengine.html">QIconEngine</a> 类. <a href="#details">More...</a></p>
 <!-- @@@DStyledIconEngine -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DStyledIconEngine&gt;</span>
@@ -57,12 +57,12 @@
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dstylediconengine.html#DStyledIconEngine">DStyledIconEngine</a></b>(Dtk::Widget::DStyledIconEngine::DrawFun <i>drawFun</i>, const int &amp;<i>iconName</i> = QString())</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dstylediconengine.html#DStyledIconEngine">DStyledIconEngine</a></b>(Dtk::Widget::DStyledIconEngine::DrawFun <i>drawFun</i>, const QString &amp;<i>iconName</i> = QString())</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dstylediconengine.html#bindDrawFun">bindDrawFun</a></b>(Dtk::Widget::DStyledIconEngine::DrawFun <i>drawFun</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int *</td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dstylediconengine.html#clone">clone</a></b>() const override</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dstylediconengine.html#paint">paint</a></b>(QPainter *<i>painter</i>, const int &amp;<i>palette</i>, const int &amp;<i>rect</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dstylediconengine.html#pixmap">pixmap</a></b>(<i>const int &amp;</i>, <i>int</i>, <i>int</i>) override</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dstylediconengine.html#setIconName">setIconName</a></b>(const int &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dstylediconengine.html#paint-1">paint</a></b>(QPainter *<i>painter</i>, const QRect &amp;<i>rect</i>, int <i>mode</i>, int <i>state</i>) override</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dstylediconengine.html#pixmap">pixmap</a></b>(const QSize &amp;<i>size</i>, int <i>mode</i>, int <i>state</i>) override</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dstylediconengine.html#setIconName">setIconName</a></b>(const QString &amp;<i>name</i>)</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$DStyledIconEngine-description -->
@@ -72,8 +72,8 @@
 <!-- @@@DStyledIconEngine -->
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$DStyledIconEngine[overload1]$$$DStyledIconEngineDtk::Widget::DStyledIconEngine::DrawFunconstint& -->
-<h3 class="fn" id="DStyledIconEngine"><a name="DStyledIconEngine"></a>DStyledIconEngine::<span class="name">DStyledIconEngine</span>(<span class="type">Dtk::Widget::DStyledIconEngine::DrawFun</span> <i>drawFun</i>, const <span class="type">int</span> &amp;<i>iconName</i> = QString())</h3>
+<!-- $$$DStyledIconEngine[overload1]$$$DStyledIconEngineDtk::Widget::DStyledIconEngine::DrawFunconstQString& -->
+<h3 class="fn" id="DStyledIconEngine"><a name="DStyledIconEngine"></a>DStyledIconEngine::<span class="name">DStyledIconEngine</span>(<span class="type">Dtk::Widget::DStyledIconEngine::DrawFun</span> <i>drawFun</i>, const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>iconName</i> = QString())</h3>
 <p><a href="dtk-widget-dstylediconengine.html">DStyledIconEngine::DStyledIconEngine</a> <i>drawFun</i> <i>iconName</i></p>
 <!-- @@@DStyledIconEngine -->
 <!-- $$$bindDrawFun[overload1]$$$bindDrawFunDtk::Widget::DStyledIconEngine::DrawFun -->
@@ -84,21 +84,22 @@
 <h3 class="fn" id="clone"><a name="clone"></a><span class="type">int</span> *DStyledIconEngine::<span class="name">clone</span>() const</h3>
 <p>DStyledIconEngine::clone</p>
 <p>Returns 返回一个该引擎的克隆.</p>
-<p><b>See also </b>QIconEngine::clone().</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qiconengine.html#clone">QIconEngine::clone</a>().</p>
 <!-- @@@clone -->
-<!-- $$$paint[overload1]$$$paintQPainter*constint&constint& -->
-<h3 class="fn" id="paint"><a name="paint"></a><span class="type">void</span> DStyledIconEngine::<span class="name">paint</span>(<span class="type">QPainter</span> *<i>painter</i>, const <span class="type">int</span> &amp;<i>palette</i>, const <span class="type">int</span> &amp;<i>rect</i>)</h3>
-<p>DStyledIconEngine::paint 重载paint <i>painter</i> 画家 <i>palette</i> 调色板 <i>rect</i> 绘制的矩形大小.</p>
-<p><b>See also </b>QIconEngine::paint().</p>
+<!-- $$$paint$$$paintQPainter*constQRect&intint -->
+<h3 class="fn" id="paint-1"><a name="paint-1"></a><span class="type">void</span> DStyledIconEngine::<span class="name">paint</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qpainter.html">QPainter</a></span> *<i>painter</i>, const <span class="type"><a href="http://doc.qt.io/qt-5/qrect.html">QRect</a></span> &amp;<i>rect</i>, <span class="type">int</span> <i>mode</i>, <span class="type">int</span> <i>state</i>)</h3>
+<p>DStyledIconEngine::paint</p>
+<p><i>painter</i> 画笔实例， <i>rect</i> 绘制的位置矩形，<i>mode</i> 图标模式，<i>state</i> 图标状态.</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qiconengine.html#paint">QIconEngine::paint</a>().</p>
 <!-- @@@paint -->
-<!-- $$$pixmap[overload1]$$$pixmapconstint&intint -->
-<h3 class="fn" id="pixmap"><a name="pixmap"></a><span class="type">int</span> DStyledIconEngine::<span class="name">pixmap</span>(<i>const int &amp;</i>, <i>int</i>, <i>int</i>)</h3>
+<!-- $$$pixmap[overload1]$$$pixmapconstQSize&intint -->
+<h3 class="fn" id="pixmap"><a name="pixmap"></a><span class="type">int</span> DStyledIconEngine::<span class="name">pixmap</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span> &amp;<i>size</i>, <span class="type">int</span> <i>mode</i>, <span class="type">int</span> <i>state</i>)</h3>
 <p>DStyledIconEngine::pixmap</p>
 <p><i>size</i> pixmap的大小， <i>mode</i> 图标模式的类型， <i>state</i> 图标的状态.</p>
-<p><b>See also </b>QIconEngine::pixmap().</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qiconengine.html#pixmap">QIconEngine::pixmap</a>().</p>
 <!-- @@@pixmap -->
-<!-- $$$setIconName[overload1]$$$setIconNameconstint& -->
-<h3 class="fn" id="setIconName"><a name="setIconName"></a><span class="type">void</span> DStyledIconEngine::<span class="name">setIconName</span>(const <span class="type">int</span> &amp;<i>name</i>)</h3>
+<!-- $$$setIconName[overload1]$$$setIconNameconstQString& -->
+<h3 class="fn" id="setIconName"><a name="setIconName"></a><span class="type">void</span> DStyledIconEngine::<span class="name">setIconName</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>name</i>)</h3>
 <p>DStyledIconEngine::setIconName设置icon名称 <i>name</i> 名称</p>
 <!-- @@@setIconName -->
 </div>

@@ -39,6 +39,9 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -46,12 +49,74 @@
 <h1 class="title">DTabBar Class</h1>
 <span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DTabBar</span>
 <!-- $$$DTabBar-brief -->
-<p>DTabBar 是一个标签栏控件，是在 QTabBar 基础之上进行扩展增强. <a href="#details">More...</a></p>
+<p>DTabBar 是一个标签栏控件，是在 <a href="http://doc.qt.io/qt-5/qtabbar.html">QTabBar</a> 基础之上进行扩展增强. <a href="#details">More...</a></p>
 <!-- @@@DTabBar -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DTabBar&gt;</span>
 </td></tr></table></div><ul>
+<li><a href="dtk-widget-dtabbar-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#autoHide-prop">autoHide</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#changeCurrentOnDrag-prop">changeCurrentOnDrag</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#count-prop">count</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#currentIndex-prop">currentIndex</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#documentMode-prop">documentMode</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#drawBase-prop">drawBase</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#elideMode-prop">elideMode</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#expanding-prop">expanding</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#flashColor-prop">flashColor</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#iconSize-prop">iconSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#dragable-prop">isDragable</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#movable-prop">isMovable</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#maskColor-prop">maskColor</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#selectionBehaviorOnRemove-prop">selectionBehaviorOnRemove</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#autoHide-prop">setAutoHide</a></b>(bool <i>hide</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#changeCurrentOnDrag-prop">setChangeCurrentOnDrag</a></b>(bool <i>change</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#documentMode-prop">setDocumentMode</a></b>(bool <i>set</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#dragable-prop">setDragable</a></b>(bool <i>dragable</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#drawBase-prop">setDrawBase</a></b>(bool <i>drawTheBase</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#elideMode-prop">setElideMode</a></b>(int <i>mode</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#expanding-prop">setExpanding</a></b>(bool <i>enabled</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#iconSize-prop">setIconSize</a></b>(const QSize &amp;<i>size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#movable-prop">setMovable</a></b>(bool <i>movable</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#selectionBehaviorOnRemove-prop">setSelectionBehaviorOnRemove</a></b>(int <i>behavior</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#shape-prop">setShape</a></b>(int <i>shape</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#setTabMaximumSize">setTabMaximumSize</a></b>(int <i>index</i>, const QSize &amp;<i>size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#setTabMinimumSize">setTabMinimumSize</a></b>(int <i>index</i>, const QSize &amp;<i>size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#tabsClosable-prop">setTabsClosable</a></b>(bool <i>closable</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#usesScrollButtons-prop">setUsesScrollButtons</a></b>(bool <i>useButtons</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#shape">shape</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#startDragDistance-prop">startDragDistance</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#tabsClosable-prop">tabsClosable</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#usesScrollButtons-prop">usesScrollButtons</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#visibleAddButton">visibleAddButton</a></b>() const</td></tr>
+</table></div>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#currentIndex-prop">setCurrentIndex</a></b>(int <i>index</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#flashColor-prop">setFlashColor</a></b>(int <i>flashColor</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#maskColor-prop">setMaskColor</a></b>(int <i>maskColor</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#startDragDistance-prop">setStartDragDistance</a></b>(int <i>startDragDistance</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#visibleAddButton-prop">setVisibleAddButton</a></b>(bool <i>visibleAddButton</i>)</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#currentChanged">currentChanged</a></b>(int <i>index</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#dragStarted">dragStarted</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#tabAddRequested">tabAddRequested</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#tabBarClicked">tabBarClicked</a></b>(int <i>index</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#tabBarDoubleClicked">tabBarDoubleClicked</a></b>(int <i>index</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#tabCloseRequested">tabCloseRequested</a></b>(int <i>index</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#tabIsInserted">tabIsInserted</a></b>(int <i>index</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#tabIsRemoved">tabIsRemoved</a></b>(int <i>index</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#tabMoved">tabMoved</a></b>(int <i>from</i>, int <i>to</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dtabbar.html#tabReleaseRequested">tabReleaseRequested</a></b>(int <i>index</i>)</td></tr>
+</table></div>
 <a name="details"></a>
 <!-- $$$DTabBar-description -->
 <div class="descr">
@@ -59,6 +124,82 @@
 <p>增加了许多特性，比如：新建按钮，支持向外拖放事件..&#x2e;该控件目前被深度编辑器中所使用。</p>
 </div>
 <!-- @@@DTabBar -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$currentChanged -->
+<h3 class="fn" id="currentChanged"><a name="currentChanged"></a><code>[signal] </code><span class="type">void</span> DTabBar::<span class="name">currentChanged</span>(<span class="type">int</span> <i>index</i>)</h3>
+<p>当前索引位置改变.</p>
+<p><i>index</i> 改变的索引值.</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-dtabbar.html#currentIndex-prop">currentIndex</a>. </p>
+<!-- @@@currentChanged -->
+<!-- $$$dragStarted[overload1]$$$dragStarted -->
+<h3 class="fn" id="dragStarted"><a name="dragStarted"></a><code>[signal] </code><span class="type">void</span> DTabBar::<span class="name">dragStarted</span>()</h3>
+<p>开始拖起.</p>
+<!-- @@@dragStarted -->
+<!-- $$$tabAddRequested[overload1]$$$tabAddRequested -->
+<h3 class="fn" id="tabAddRequested"><a name="tabAddRequested"></a><code>[signal] </code><span class="type">void</span> DTabBar::<span class="name">tabAddRequested</span>()</h3>
+<p>新标签加入.</p>
+<!-- @@@tabAddRequested -->
+<!-- $$$tabBarClicked[overload1]$$$tabBarClickedint -->
+<h3 class="fn" id="tabBarClicked"><a name="tabBarClicked"></a><code>[signal] </code><span class="type">void</span> DTabBar::<span class="name">tabBarClicked</span>(<span class="type">int</span> <i>index</i>)</h3>
+<p>点击索引标签.</p>
+<p><i>index</i> 点击标签的索引值.</p>
+<!-- @@@tabBarClicked -->
+<!-- $$$tabBarDoubleClicked[overload1]$$$tabBarDoubleClickedint -->
+<h3 class="fn" id="tabBarDoubleClicked"><a name="tabBarDoubleClicked"></a><code>[signal] </code><span class="type">void</span> DTabBar::<span class="name">tabBarDoubleClicked</span>(<span class="type">int</span> <i>index</i>)</h3>
+<p>双击索引标签.</p>
+<p><i>index</i> 双击标记的索引值.</p>
+<!-- @@@tabBarDoubleClicked -->
+<!-- $$$tabCloseRequested[overload1]$$$tabCloseRequestedint -->
+<h3 class="fn" id="tabCloseRequested"><a name="tabCloseRequested"></a><code>[signal] </code><span class="type">void</span> DTabBar::<span class="name">tabCloseRequested</span>(<span class="type">int</span> <i>index</i>)</h3>
+<p>点击关闭后发出.</p>
+<p><i>index</i> 关闭的索引值.</p>
+<!-- @@@tabCloseRequested -->
+<!-- $$$tabIsInserted[overload1]$$$tabIsInsertedint -->
+<h3 class="fn" id="tabIsInserted"><a name="tabIsInserted"></a><code>[signal] </code><span class="type">void</span> DTabBar::<span class="name">tabIsInserted</span>(<span class="type">int</span> <i>index</i>)</h3>
+<p>新标签已插入.</p>
+<p><i>index</i> 被插入标签的索引值.</p>
+<!-- @@@tabIsInserted -->
+<!-- $$$tabIsRemoved[overload1]$$$tabIsRemovedint -->
+<h3 class="fn" id="tabIsRemoved"><a name="tabIsRemoved"></a><code>[signal] </code><span class="type">void</span> DTabBar::<span class="name">tabIsRemoved</span>(<span class="type">int</span> <i>index</i>)</h3>
+<p>标签已删除.</p>
+<p><i>index</i> 被删除标签的索引值.</p>
+<!-- @@@tabIsRemoved -->
+<!-- $$$tabMoved[overload1]$$$tabMovedintint -->
+<h3 class="fn" id="tabMoved"><a name="tabMoved"></a><code>[signal] </code><span class="type">void</span> DTabBar::<span class="name">tabMoved</span>(<span class="type">int</span> <i>from</i>, <span class="type">int</span> <i>to</i>)</h3>
+<p>索引位置发生变化</p>
+<p><i>from</i> 索引位置变化的初始值， <i>to</i> 位置变化后的索引值.</p>
+<!-- @@@tabMoved -->
+<!-- $$$tabReleaseRequested[overload1]$$$tabReleaseRequestedint -->
+<h3 class="fn" id="tabReleaseRequested"><a name="tabReleaseRequested"></a><code>[signal] </code><span class="type">void</span> DTabBar::<span class="name">tabReleaseRequested</span>(<span class="type">int</span> <i>index</i>)</h3>
+<p>索引标签鼠标释放.</p>
+<p><i>index</i> 标签释放的索引值.</p>
+<!-- @@@tabReleaseRequested -->
+<!-- $$$setTabMaximumSize[overload1]$$$setTabMaximumSizeintconstQSize& -->
+<h3 class="fn" id="setTabMaximumSize"><a name="setTabMaximumSize"></a><span class="type">void</span> DTabBar::<span class="name">setTabMaximumSize</span>(<span class="type">int</span> <i>index</i>, const <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span> &amp;<i>size</i>)</h3>
+<p>设置索引标签的最大尺寸.</p>
+<p><i>index</i> 被设置标签的索引值，size ，<i>size</i> 最大大小.</p>
+<!-- @@@setTabMaximumSize -->
+<!-- $$$setTabMinimumSize[overload1]$$$setTabMinimumSizeintconstQSize& -->
+<h3 class="fn" id="setTabMinimumSize"><a name="setTabMinimumSize"></a><span class="type">void</span> DTabBar::<span class="name">setTabMinimumSize</span>(<span class="type">int</span> <i>index</i>, const <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span> &amp;<i>size</i>)</h3>
+<p>设置索引标签的最小尺寸.</p>
+<p><i>index</i> 被设置标签的索引值，size ，<i>size</i> 最小大小.</p>
+<!-- @@@setTabMinimumSize -->
+<!-- $$$shape -->
+<h3 class="fn" id="shape"><a name="shape"></a><span class="type">int</span> DTabBar::<span class="name">shape</span>() const</h3>
+<p>标签栏形状.</p>
+<p>Returns 返回当前 <a href="dtk-widget-dtabbar.html">DTabBar</a> 实例的标签栏形状.</p>
+<p><b>Note: </b>Getter function for property shape. </p>
+<p><b>See also </b><a href="dtk-widget-dtabbar.html#shape-prop">setShape</a>().</p>
+<!-- @@@shape -->
+<!-- $$$visibleAddButton -->
+<h3 class="fn" id="visibleAddButton"><a name="visibleAddButton"></a><span class="type">bool</span> DTabBar::<span class="name">visibleAddButton</span>() const</h3>
+<p>新建标签栏按钮是否可见.</p>
+<p>Returns 新建按钮可见，返回 ture 否则，返回 false 。</p>
+<p><b>Note: </b>Getter function for property visibleAddButton. </p>
+<p><b>See also </b><a href="dtk-widget-dtabbar.html#visibleAddButton-prop">setVisibleAddButton</a>().</p>
+<!-- @@@visibleAddButton -->
+</div>
         </div>
        </div>
    </div>

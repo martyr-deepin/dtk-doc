@@ -39,6 +39,8 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -51,12 +53,25 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DFloatingMessage&gt;</span>
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> Dtk::Widget::DFloatingWidget</td></tr></table></div><ul>
+<li><a href="dtk-widget-dfloatingmessage-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dfloatingmessage.html#MessageType-enum">MessageType</a></b> { TransientType, ResidentType }</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dfloatingmessage.html#setDuration">setDuration</a></b>(int <i>msec</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dfloatingmessage.html#setMessage">setMessage</a></b>(const QString &amp;<i>str</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dfloatingmessage.html#setWidget">setWidget</a></b>(QWidget *<i>w</i>)</td></tr>
+</table></div>
 <a name="details"></a>
 <!-- $$$DFloatingMessage-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>类似于 ios 的通知栏消息, 然后有每一个新的消息对象, 就添加到一个竖直布局里面, 然后一个消息的其布局模式是: icon (图标) + Message (消息) + QWidget (存放如控件按钮,可选) + closeButton (关闭按钮,可选) 多个消息均是以竖直布局存放在一个 DMessageManager (消息管理类) 里面的</p>
+<p>类似于 ios 的通知栏消息, 然后有每一个新的消息对象, 就添加到一个竖直布局里面, 然后一个消息的其布局模式是: icon (图标) + Message (消息) + <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> (存放如控件按钮,可选) + closeButton (关闭按钮,可选) 多个消息均是以竖直布局存放在一个 DMessageManager (消息管理类) 里面的</p>
   <pre style="font-family: FreeMono, Consolas, Menlo, 'Noto Mono', 'Courier New', Courier, monospace;line-height: 100%;">
   =============================================================================================
   =                                                                                           =
@@ -69,6 +84,32 @@
   <p>消息通知一共有两种类型,临时停留几秒和手动清除的永驻消息</p>
 </div>
 <!-- @@@DFloatingMessage -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$MessageType$$$TransientType$$$ResidentType -->
+<h3 class="fn" id="MessageType-enum"><a name="MessageType-enum"></a>enum DFloatingMessage::<span class="name">MessageType</span></h3>
+<p>DFloatingMessage::MessageType 定义了 <a href="dtk-widget-dfloatingmessage.html">DFloatingMessage</a> 通知类型</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DFloatingMessage::TransientType</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">临时的消息</td></tr>
+<tr><td class="topAlign"><code>Dtk::Widget::DFloatingMessage::ResidentType</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">常驻的消息</td></tr>
+</table></div>
+<!-- @@@MessageType -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$setDuration[overload1]$$$setDurationint -->
+<h3 class="fn" id="setDuration"><a name="setDuration"></a><span class="type">void</span> DFloatingMessage::<span class="name">setDuration</span>(<span class="type">int</span> <i>msec</i>)</h3>
+<p>若是为临时消息,则设置时间(毫秒)后会自动消失 <i>msec</i> 消息显示的毫秒数, 默认是4000毫秒</p>
+<!-- @@@setDuration -->
+<!-- $$$setMessage[overload1]$$$setMessageconstQString& -->
+<h3 class="fn" id="setMessage"><a name="setMessage"></a><span class="type">void</span> DFloatingMessage::<span class="name">setMessage</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> &amp;<i>str</i>)</h3>
+<p>设置显示的文本消息(文字) <i>str</i> 消息文本的具体文字内容</p>
+<!-- @@@setMessage -->
+<!-- $$$setWidget[overload1]$$$setWidgetQWidget* -->
+<h3 class="fn" id="setWidget"><a name="setWidget"></a><span class="type">void</span> DFloatingMessage::<span class="name">setWidget</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>w</i>)</h3>
+<p>消息里面的,水平布局里面的第三个位置, 用来存放一些自定义控件, 比如一个确定按钮 <i>w</i> 插入的具体控件, 若之前此处已经有其他的控件, 先删除挪出空位子, 在将 w 控件放到这个上面</p>
+<!-- @@@setWidget -->
+</div>
         </div>
        </div>
    </div>

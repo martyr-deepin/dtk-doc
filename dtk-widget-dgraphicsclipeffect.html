@@ -39,7 +39,10 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#properties">Properties</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -54,17 +57,36 @@
 </td></tr></table></div><ul>
 <li><a href="dtk-widget-dgraphicsclipeffect-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><a href="dtk-widget-dgraphicsclipeffect.html#clipPath-prop">clipPath</a></b> : QPainterPath</li>
+<li class="fn"><b><a href="dtk-widget-dgraphicsclipeffect.html#margins-prop">margins</a></b> : QMargins</li>
+</ul>
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dgraphicsclipeffect.html#clipPathChanged">clipPathChanged</a></b>(int <i>clipPath</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dgraphicsclipeffect.html#DGraphicsClipEffect">DGraphicsClipEffect</a></b>(QObject *<i>parent</i> = Q_NULLPTR)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dgraphicsclipeffect.html#clipPath-prop">clipPath</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QMargins </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dgraphicsclipeffect.html#margins-prop">margins</a></b>() const</td></tr>
+</table></div>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dgraphicsclipeffect.html#setClipPath">setClipPath</a></b>(const int &amp;<i>clipPath</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dgraphicsclipeffect.html#setMargins">setMargins</a></b>(const QMargins &amp;<i>margins</i>)</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dgraphicsclipeffect.html#clipPathChanged">clipPathChanged</a></b>(int <i>clipPath</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dgraphicsclipeffect.html#marginsChanged">marginsChanged</a></b>(QMargins <i>margins</i>)</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$DGraphicsClipEffect-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>支持使用 QPainterPath 设置一个区域，位于区域外的窗口内容将被裁剪,可以通过设置 margins 控制有效的裁剪区域。如下图所示：</p>
+<p>支持使用 <a href="http://doc.qt.io/qt-5/qpainterpath.html">QPainterPath</a> 设置一个区域，位于区域外的窗口内容将被裁剪,可以通过设置 margins 控制有效的裁剪区域。如下图所示：</p>
   <pre style="font-family: FreeMono, Consolas, Menlo, 'Noto Mono', 'Courier New', Courier, monospace;line-height: 100%;">
   ┏━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━┓
   ┃              │              ┃
@@ -86,21 +108,70 @@
   ┃              │              ┃
   ┗━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━┛
   </pre>
-  <p>A为被作用的控件区域，B为有效的被裁剪区域，C 为 clipPath 区域，m为 margins ，则被裁剪掉的区域为： B - C，裁掉的部分将显示 下层控件内容，如果下层没有其它控件，将显示主窗口背景。</p>
-<p><b>Warning:</b> 以这种方式实现对 QWidget 的剪切在性能上会有较大的影响，一般情况下，我们推荐使用 <a href="dtk-widget-dclipeffectwidget.html">DClipEffectWidget</a></p>
+  <p>A为被作用的控件区域，B为有效的被裁剪区域，C 为 <a href="dtk-widget-dgraphicsclipeffect.html#clipPath-prop">clipPath</a> 区域，m为 margins ，则被裁剪掉的区域为： B - C，裁掉的部分将显示 下层控件内容，如果下层没有其它控件，将显示主窗口背景。</p>
+<p><b>Warning:</b> 以这种方式实现对 <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> 的剪切在性能上会有较大的影响，一般情况下，我们推荐使用 <a href="dtk-widget-dclipeffectwidget.html">DClipEffectWidget</a></p>
 </div>
-<p><b>See also </b><a href="dtk-widget-dclipeffectwidget.html">DClipEffectWidget</a> and QWidget::setGraphicsEffect.</p>
+<p><b>See also </b><a href="dtk-widget-dclipeffectwidget.html">DClipEffectWidget</a> and <a href="http://doc.qt.io/qt-5/qwidget.html#setGraphicsEffect">QWidget::setGraphicsEffect</a>.</p>
 <!-- @@@DGraphicsClipEffect -->
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$clipPath-prop$$$clipPath$$$setClipPathconstint&$$$clipPathChangedint -->
+<h3 class="fn" id="clipPath-prop"><a name="clipPath-prop"></a><span class="name">clipPath</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qpainterpath.html">QPainterPath</a></span></h3>
+<p>被裁剪的区域，控件真实裁剪区域 = clipPath &amp; (boundingRect() - margins)</p>
+<p><b>Warning:</b> clipPath 必须是一个封闭的环状路径</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>clipPath</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dgraphicsclipeffect.html#setClipPath">setClipPath</a></b></span>(const int &amp;<i>clipPath</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dgraphicsclipeffect.html#clipPathChanged">clipPathChanged</a></b></span>(int <i>clipPath</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qpainterpath.html#closeSubpath">QPainterPath::closeSubpath</a>.</p>
+<!-- @@@clipPath -->
+<!-- $$$margins-prop$$$margins$$$setMarginsconstQMargins&$$$marginsChangedQMargins -->
+<h3 class="fn" id="margins-prop"><a name="margins-prop"></a><span class="name">margins</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qmargins.html">QMargins</a></span></h3>
+<p>用于调整目标控件的被裁剪区域，可以和 <a href="dtk-widget-dgraphicsclipeffect.html#clipPath-prop">clipPath</a> 组合更加灵活的裁剪控件</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QMargins </td><td class="memItemRight bottomAlign"><span class="name"><b>margins</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dgraphicsclipeffect.html#setMargins">setMargins</a></b></span>(const QMargins &amp;<i>margins</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dgraphicsclipeffect.html#marginsChanged">marginsChanged</a></b></span>(QMargins <i>margins</i>)</td></tr>
+</table></div>
+<!-- @@@margins -->
+</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$clipPathChanged[overload1]$$$clipPathChangedint -->
-<h3 class="fn" id="clipPathChanged"><a name="clipPathChanged"></a><span class="type">void</span> DGraphicsClipEffect::<span class="name">clipPathChanged</span>(<span class="type">int</span> <i>clipPath</i>)</h3>
+<!-- $$$DGraphicsClipEffect[overload1]$$$DGraphicsClipEffectQObject* -->
+<h3 class="fn" id="DGraphicsClipEffect"><a name="DGraphicsClipEffect"></a>DGraphicsClipEffect::<span class="name">DGraphicsClipEffect</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qobject.html">QObject</a></span> *<i>parent</i> = Q_NULLPTR)</h3>
+<p>构造 DGraphicsClipEffect 对象，和普通 <a href="http://doc.qt.io/qt-5/qobject.html">QObject</a> 一样，可以传入一个 <a href="http://doc.qt.io/qt-5/qobject.html">QObject</a> 对象 指针作为其父对象 <i>parent</i> 父对象</p>
+<!-- @@@DGraphicsClipEffect -->
+<!-- $$$clipPathChanged -->
+<h3 class="fn" id="clipPathChanged"><a name="clipPathChanged"></a><code>[signal] </code><span class="type">void</span> DGraphicsClipEffect::<span class="name">clipPathChanged</span>(<span class="type">int</span> <i>clipPath</i>)</h3>
 <p>这个信号在 <i>clipPath</i> 改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-dgraphicsclipeffect.html#clipPath-prop">clipPath</a>. </p>
 <!-- @@@clipPathChanged -->
-<!-- $$$setClipPath[overload1]$$$setClipPathconstint& -->
-<h3 class="fn" id="setClipPath"><a name="setClipPath"></a><span class="type">void</span> DGraphicsClipEffect::<span class="name">setClipPath</span>(const <span class="type">int</span> &amp;<i>clipPath</i>)</h3>
+<!-- $$$marginsChanged -->
+<h3 class="fn" id="marginsChanged"><a name="marginsChanged"></a><code>[signal] </code><span class="type">void</span> DGraphicsClipEffect::<span class="name">marginsChanged</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qmargins.html">QMargins</a></span> <i>margins</i>)</h3>
+<p>这个信号在 <i>margins</i> 改变时被发送</p>
+<p><b>Note: </b>Notifier signal for property <a href="dtk-widget-dgraphicsclipeffect.html#margins-prop">margins</a>. </p>
+<!-- @@@marginsChanged -->
+<!-- $$$setClipPath -->
+<h3 class="fn" id="setClipPath"><a name="setClipPath"></a><code>[slot] </code><span class="type">void</span> DGraphicsClipEffect::<span class="name">setClipPath</span>(const <span class="type">int</span> &amp;<i>clipPath</i>)</h3>
 <p><i>clipPath</i></p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dgraphicsclipeffect.html#clipPath-prop">clipPath</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dgraphicsclipeffect.html#clipPath-prop">clipPath</a>().</p>
 <!-- @@@setClipPath -->
+<!-- $$$setMargins -->
+<h3 class="fn" id="setMargins"><a name="setMargins"></a><code>[slot] </code><span class="type">void</span> DGraphicsClipEffect::<span class="name">setMargins</span>(const <span class="type"><a href="http://doc.qt.io/qt-5/qmargins.html">QMargins</a></span> &amp;<i>margins</i>)</h3>
+<p><i>margins</i></p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dgraphicsclipeffect.html#margins-prop">margins</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dgraphicsclipeffect.html#margins-prop">margins</a>().</p>
+<!-- @@@setMargins -->
 </div>
         </div>
        </div>

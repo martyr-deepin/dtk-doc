@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- dipv4lineedit.cpp -->
+  <title>DIpv4LineEdit Class | Dtk Reference Documentation 1.0.0</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li><a href="index.html">Dtk Doc</a></li>
+<li><a href="index.html">Dtk Reference Documentation</a></li>
+<li>DIpv4LineEdit</li>
+<li id="buildversion"><a href="index.html">Qt 5.15.2 Reference Documentation</a></li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">DIpv4LineEdit Class</h1>
+<span class="small-subtitle">class <a href="dtk.html">Dtk</a>::<a href="dtk-widget.html">Widget</a>::DIpv4LineEdit</span>
+<!-- $$$DIpv4LineEdit-brief -->
+<p>类DIpv4LineEdit是专门用于输入ipv4格式文本的编辑框. <a href="#details">More...</a></p>
+<!-- @@@DIpv4LineEdit -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">  <span class="preprocessor">#include &lt;DIpv4LineEdit&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="dtk-widget-dipv4lineedit-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<div class="table"><table class="propsummary">
+<tr><td class="topAlign"><ul>
+<li class="fn"><b><a href="dtk-widget-dipv4lineedit.html#acceptableInput-prop">acceptableInput</a></b> : const bool</li>
+<li class="fn"><b><a href="dtk-widget-dipv4lineedit.html#alignment-prop">alignment</a></b> : const Qt::Alignment</li>
+<li class="fn"><b><a href="dtk-widget-dipv4lineedit.html#clearButtonEnabled-prop">clearButtonEnabled</a></b> : const bool</li>
+<li class="fn"><b><a href="dtk-widget-dipv4lineedit.html#cursorPosition-prop">cursorPosition</a></b> : int</li>
+</ul></td><td class="topAlign"><ul>
+<li class="fn"><b><a href="dtk-widget-dipv4lineedit.html#displayText-prop">displayText</a></b> : const QString</li>
+<li class="fn"><b><a href="dtk-widget-dipv4lineedit.html#placeholderText-prop">placeholderText</a></b> : const QString</li>
+<li class="fn"><b><a href="dtk-widget-dipv4lineedit.html#readOnly-prop">readOnly</a></b> : bool</li>
+<li class="fn"><b><a href="dtk-widget-dipv4lineedit.html#selectedText-prop">selectedText</a></b> : const QString</li>
+</ul>
+</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dipv4lineedit.html#DIpv4LineEdit-1">DIpv4LineEdit</a></b>(QWidget *<i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Qt::Alignment </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dipv4lineedit.html#alignment">alignment</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dipv4lineedit.html#cursorPosition">cursorPosition</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dipv4lineedit.html#displayText">displayText</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dipv4lineedit.html#hasAcceptableInput">hasAcceptableInput</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dipv4lineedit.html#isReadOnly">isReadOnly</a></b>() const</td></tr>
+</table></div>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dipv4lineedit.html#selectAll">selectAll</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dipv4lineedit.html#setCursorPosition">setCursorPosition</a></b>(int <i>cursorPosition</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dipv4lineedit.html#setReadOnly">setReadOnly</a></b>(bool <i>readOnly</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="dtk-widget-dipv4lineedit.html#setSelection">setSelection</a></b>(int <i>start</i>, int <i>length</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$DIpv4LineEdit-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>此类内部由四个 <a href="http://doc.qt.io/qt-5/qlineedit.html">QLineEdit</a> 组合而成，输入框之间可以通过Tab/Shift+Tab快捷切 换光标，输入字符&quot;.&quot;时会自动跳到下一个输入框。在使用左右方向键移动光标时会自动跨 越输入框，和在同一个输入框内光标的没有区别。和 <a href="http://doc.qt.io/qt-5/qlineedit.html">QLineEdit</a> 一样也可以使用快捷 键方便的复制粘贴文本，在粘贴时会自动根据ipv4的规则过滤掉非法字符。每个输入框的文 本内容必须要满足以下的正则规则：</p>
+<pre class="cpp">
+ <span class="operator">^</span>(<span class="number">2</span><span class="operator">[</span><span class="number">0</span><span class="operator">-</span><span class="number">4</span><span class="operator">]</span>\d<span class="operator">|</span><span class="number">25</span><span class="operator">[</span><span class="number">0</span><span class="operator">-</span><span class="number">5</span><span class="operator">]</span><span class="operator">|</span><span class="operator">[</span><span class="number">01</span><span class="operator">]</span><span class="operator">?</span>\d\d<span class="operator">?</span>)<span class="operator">?</span>$
+</pre>
+<p><b>Warning:</b> 不能使用DLineEdit和<a href="http://doc.qt.io/qt-5/qlineedit.html">QLineEdit</a>中的功能性函数</p>
+</div>
+<!-- @@@DIpv4LineEdit -->
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$acceptableInput-prop$$$hasAcceptableInput -->
+<h3 class="fn" id="acceptableInput-prop"><a name="acceptableInput-prop"></a><span class="name">acceptableInput</span> : const <span class="type">bool</span></h3>
+<p><b>Note: </b>只读</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dipv4lineedit.html#hasAcceptableInput">hasAcceptableInput</a></b></span>() const</td></tr>
+</table></div>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qlineedit.html#acceptableInput-prop">QLineEdit::acceptableInput</a>.</p>
+<!-- @@@acceptableInput -->
+<!-- $$$alignment-prop$$$alignment -->
+<h3 class="fn" id="alignment-prop"><a name="alignment-prop"></a><span class="name">alignment</span> : const <span class="type"><a href="http://doc.qt.io/qt-5/qt.html#AlignmentFlag-enum">Qt::Alignment</a></span></h3>
+<p>文本内容对齐方式</p>
+<p>固定为 <a href="http://doc.qt.io/qt-5/qt.html#AlignmentFlag-enum">Qt::AlignHCenter</a></p>
+<p><b>Note: </b>只读</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> Qt::Alignment </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dipv4lineedit.html#alignment">alignment</a></b></span>() const</td></tr>
+</table></div>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qlineedit.html#alignment-prop">QLineEdit::alignment</a>.</p>
+<!-- @@@alignment -->
+<!-- $$$clearButtonEnabled-prop -->
+<h3 class="fn" id="clearButtonEnabled-prop"><a name="clearButtonEnabled-prop"></a><span class="name">clearButtonEnabled</span> : const <span class="type">bool</span></h3>
+<p>是否在输入框上显示清理按钮</p>
+<p><b>Note: </b>只读。默认为 false</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qlineedit.html#clearButtonEnabled-prop">QLineEdit::clearButtonEnabled</a>.</p>
+<!-- @@@clearButtonEnabled -->
+<!-- $$$cursorPosition-prop$$$cursorPosition$$$setCursorPositionint -->
+<h3 class="fn" id="cursorPosition-prop"><a name="cursorPosition-prop"></a><span class="name">cursorPosition</span> : <span class="type">int</span></h3>
+<p>当前光标所在位置</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dipv4lineedit.html#cursorPosition">cursorPosition</a></b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dipv4lineedit.html#setCursorPosition">setCursorPosition</a></b></span>(int <i>cursorPosition</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qlineedit.html#cursorPosition-prop">QLineEdit::cursorPosition</a>.</p>
+<!-- @@@cursorPosition -->
+<!-- $$$displayText-prop$$$displayText -->
+<h3 class="fn" id="displayText-prop"><a name="displayText-prop"></a><span class="name">displayText</span> : const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span></h3>
+<p>输入框显示的文本内容</p>
+<p>和 <a href="http://doc.qt.io/qt-5/qlineedit.html#displayText-prop">QLineEdit::displayText</a> 不同，无论 echoMode 值为多少，都返回和 <a href="http://doc.qt.io/qt-5/text.html">text</a> 同样的内容</p>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QString </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dipv4lineedit.html#displayText">displayText</a></b></span>() const</td></tr>
+</table></div>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qlineedit.html#echoMode-prop">QLineEdit::echoMode</a> and <a href="http://doc.qt.io/qt-5/qlineedit.html#text-prop">QLineEdit::text</a>.</p>
+<!-- @@@displayText -->
+<!-- $$$placeholderText-prop -->
+<h3 class="fn" id="placeholderText-prop"><a name="placeholderText-prop"></a><span class="name">placeholderText</span> : const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span></h3>
+<p>输入框未输入内容时的占位文本，通常显示为灰色，当输入任意字符后就会被隐藏</p>
+<p><b>Note: </b>只读。默认为空字符串</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qlineedit.html#placeholderText-prop">QLineEdit::placeholderText</a>.</p>
+<!-- @@@placeholderText -->
+<!-- $$$readOnly-prop$$$isReadOnly$$$setReadOnlybool -->
+<h3 class="fn" id="readOnly-prop"><a name="readOnly-prop"></a><span class="name">readOnly</span> : <span class="type">bool</span></h3>
+<p><b>Note: </b>可读可写</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dipv4lineedit.html#isReadOnly">isReadOnly</a></b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b><a href="dtk-widget-dipv4lineedit.html#setReadOnly">setReadOnly</a></b></span>(bool <i>readOnly</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qlineedit.html#readOnly-prop">QLineEdit::readOnly</a>.</p>
+<!-- @@@readOnly -->
+<!-- $$$selectedText-prop -->
+<h3 class="fn" id="selectedText-prop"><a name="selectedText-prop"></a><span class="name">selectedText</span> : const <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span></h3>
+<p>选中的文本内容</p>
+<p><b>Note: </b>只读</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qlineedit.html#selectedText-prop">QLineEdit::selectedText</a>.</p>
+<!-- @@@selectedText -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DIpv4LineEdit$$$DIpv4LineEditQWidget* -->
+<h3 class="fn" id="DIpv4LineEdit-1"><a name="DIpv4LineEdit-1"></a>DIpv4LineEdit::<span class="name">DIpv4LineEdit</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span> *<i>parent</i> = 0)</h3>
+<p>构造DIpv4LineEdit类，和普通 <a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> 一样，可以传入一个<a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a>指 针对象作为其父对象 管理的控件 <i>parent</i></p>
+<!-- @@@DIpv4LineEdit -->
+<!-- $$$selectAll[overload1]$$$selectAll -->
+<h3 class="fn" id="selectAll"><a name="selectAll"></a><code>[slot] </code><span class="type">void</span> DIpv4LineEdit::<span class="name">selectAll</span>()</h3>
+<p>选中所有输入框的全部内容</p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qlineedit.html#selectAll">QLineEdit::selectAll</a>.</p>
+<!-- @@@selectAll -->
+<!-- $$$setCursorPosition -->
+<h3 class="fn" id="setCursorPosition"><a name="setCursorPosition"></a><code>[slot] </code><span class="type">void</span> DIpv4LineEdit::<span class="name">setCursorPosition</span>(<span class="type">int</span> <i>cursorPosition</i>)</h3>
+<p><i>cursorPosition</i></p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dipv4lineedit.html#cursorPosition">cursorPosition</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dipv4lineedit.html#cursorPosition">cursorPosition</a>.</p>
+<!-- @@@setCursorPosition -->
+<!-- $$$setReadOnly -->
+<h3 class="fn" id="setReadOnly"><a name="setReadOnly"></a><code>[slot] </code><span class="type">void</span> DIpv4LineEdit::<span class="name">setReadOnly</span>(<span class="type">bool</span> <i>readOnly</i>)</h3>
+<p><i>readOnly</i></p>
+<p><b>Note: </b>Setter function for property <a href="dtk-widget-dipv4lineedit.html#readOnly-prop">readOnly</a>. </p>
+<p><b>See also </b><a href="dtk-widget-dipv4lineedit.html#isReadOnly">isReadOnly</a>() and <a href="dtk-widget-dipv4lineedit.html#readOnly-prop">readOnly</a>.</p>
+<!-- @@@setReadOnly -->
+<!-- $$$setSelection[overload1]$$$setSelectionintint -->
+<h3 class="fn" id="setSelection"><a name="setSelection"></a><code>[slot] </code><span class="type">void</span> DIpv4LineEdit::<span class="name">setSelection</span>(<span class="type">int</span> <i>start</i>, <span class="type">int</span> <i>length</i>)</h3>
+<p>使用此方法选中文本时会把四个输入框当做一个看待 <i>start</i> <i>length</i></p>
+<p><b>See also </b><a href="http://doc.qt.io/qt-5/qlineedit.html#setSelection">QLineEdit::setSelection</a>.</p>
+<!-- @@@setSelection -->
+<!-- $$$alignment -->
+<h3 class="fn" id="alignment"><a name="alignment"></a><span class="type"><a href="http://doc.qt.io/qt-5/qt.html#AlignmentFlag-enum">Qt::Alignment</a></span> DIpv4LineEdit::<span class="name">alignment</span>() const</h3>
+<p>Returns</p>
+<p><b>Note: </b>Getter function for property alignment. </p>
+<!-- @@@alignment -->
+<!-- $$$cursorPosition -->
+<h3 class="fn" id="cursorPosition"><a name="cursorPosition"></a><span class="type">int</span> DIpv4LineEdit::<span class="name">cursorPosition</span>() const</h3>
+<p>Returns</p>
+<p><b>Note: </b>Getter function for property cursorPosition. </p>
+<p><b>See also </b><a href="dtk-widget-dipv4lineedit.html#setCursorPosition">setCursorPosition</a>().</p>
+<!-- @@@cursorPosition -->
+<!-- $$$displayText -->
+<h3 class="fn" id="displayText"><a name="displayText"></a><span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> DIpv4LineEdit::<span class="name">displayText</span>() const</h3>
+<p>Returns</p>
+<p><b>Note: </b>Getter function for property displayText. </p>
+<!-- @@@displayText -->
+<!-- $$$hasAcceptableInput -->
+<h3 class="fn" id="hasAcceptableInput"><a name="hasAcceptableInput"></a><span class="type">bool</span> DIpv4LineEdit::<span class="name">hasAcceptableInput</span>() const</h3>
+<p>Returns</p>
+<p><b>Note: </b>Getter function for property <a href="dtk-widget-dipv4lineedit.html#acceptableInput-prop">acceptableInput</a>. </p>
+<!-- @@@hasAcceptableInput -->
+<!-- $$$isReadOnly -->
+<h3 class="fn" id="isReadOnly"><a name="isReadOnly"></a><span class="type">bool</span> DIpv4LineEdit::<span class="name">isReadOnly</span>() const</h3>
+<p>Returns</p>
+<p><b>Note: </b>Getter function for property <a href="dtk-widget-dipv4lineedit.html#readOnly-prop">readOnly</a>. </p>
+<!-- @@@isReadOnly -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2020 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>
